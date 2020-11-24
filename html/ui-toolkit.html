@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <!--{ {>core/preload}}-->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>UI Kit</title>
+
+  
+  
+  
+  <!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#1B74FD">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#1B74FD">
+<!-- Яндекс.Браузер -->
+<meta content="ya-title=#1B74FD,ya-dock=fade">
+<!-- Windows Phone -->
+<meta name="msapplication-config" content="../assets/images/favicon/browserconfig.xml">
+<meta name="msapplication-navbutton-color" content="#1B74FD">
+<meta name="msapplication-TileColor" content="#1B74FD">
+<link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#1B74FD">
+
+
+
+  <!--{ {>core/favicon}}-->
+
+  <link rel="stylesheet" href="../css/main.css?v=3852">
+</head>
+
+<body class="page">
+<div class="preloader js-preloader"></div>
+<div class="page__inner">
+
+<div class="project-ui">
+  <div class="project-ui__container">
+    <aside class="project-ui__sidebar">
+      <nav>
+        <ul>
+          <li>
+            <a class="js-scroll-to" href="#colors">Colors</a>
+          </li>    <li>
+            <a class="js-scroll-to" href="#buttons">Buttons</a>
+          </li>    <li>
+            <a class="js-scroll-to" href="#form">Form Elements</a>
+          </li>    <li>
+            <a class="js-scroll-to" href="#popups">Popups</a>
+          </li>    <li>
+            <a class="js-scroll-to" href="#loaders">Loaders</a>
+          </li>    <li>
+            <a class="js-scroll-to" href="#widgets">Widgets</a>
+          </li>  </ul>
+      </nav>
+    </aside>
+    <main class="project-ui__main">
+      <header class="project-ui__header">
+        <h1 class="project-ui__title">UI Kit</h1>
+      </header>
+      <div class="project-ui__content">
+        <!--Colors-->
+        <section class="project-ui__section" id="colors">
+          <header>
+            <h2 class="project-ui__section-title">Colors</h2>
+          </header>
+          <div class="project-ui__section-content">
+            <ul class="ui-colors">
+                <li>
+                  <table>
+                    <caption>Main</caption>
+                      <thead>
+                      <tr>
+                        <td>Name</td>
+                        <td>Color</td>
+                        <td>HEX</td>
+                        <td>RGB</td>
+                      </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>$color-primary</td>
+                          <td><span class style="background-color: #1B74FD;"></span></td>
+                          <td>#1B74FD</td>
+                          <td>rgb(27, 116, 253)</td>
+                        </tr>
+                        <tr>
+                          <td>$color-primary-hover</td>
+                          <td><span class style="background-color: #0042FF;"></span></td>
+                          <td>#0042FF</td>
+                          <td>rgb(0, 66, 255)</td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </li>
+                <li>
+                  <table>
+                    <caption>Apex</caption>
+                      <thead>
+                      <tr>
+                        <td>Name</td>
+                        <td>Color</td>
+                        <td>HEX</td>
+                        <td>RGB</td>
+                      </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>$color-black</td>
+                          <td><span class style="background-color: #000000;"></span></td>
+                          <td>#000000</td>
+                          <td>rgb(0, 0, 0)</td>
+                        </tr>
+                        <tr>
+                          <td>$color-white</td>
+                          <td><span class="dark" style="background-color: #FFFFFF;"></span></td>
+                          <td>#FFFFFF</td>
+                          <td>rgb(255, 255, 255)</td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </li>
+            </ul>
+          </div>
+        </section>
+        <!--Buttons-->
+        <section class="project-ui__section" id="buttons">
+          <header>
+            <h2 class="project-ui__section-title">Buttons</h2>
+          </header>
+          <div class="project-ui__section-content">
+            <ul>
+                <li class="project-ui__section-row">
+                    <a href="#" class="btn btn--large">.btn .btn--large</a>
+                    <a href="#" class="btn">.btn</a>
+                    <a href="#" class="btn btn--small">.btn .btn--small</a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn--primary">.btn .btn--primary</a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn--w100">.btn .btn--w100</a>
+                </li>    </ul>
+          </div>
+        </section>
+        <!--Form-->
+        <section class="project-ui__section" id="form">
+          <header>
+            <h2 class="project-ui__section-title">Form Elements</h2>
+          </header>
+          <div class="project-ui__section-content">
+            <ul>
+                <li class="project-ui__section-row">
+                  <h3>Inputs</h3>
+                  <div class="form-field">
+                    <input type="text" class="form-field__input " placeholder="Фамилия и имя*">
+                    
+                  </div>  <div class="form-field form-error">
+                    <input type="text" class="form-field__input " placeholder="Фамилия и имя*">
+                    <span class="form-field__message">Ошибка с текстом</span>
+                  </div></li>
+                <li>
+                  <h3>Textarea</h3>
+                  <div class="form-field">
+                    <textarea class="form-textarea" placeholder="Большое текстовое поле"></textarea>
+                  </div></li>
+                <li class="project-ui__section-row">
+                  <h3>Checkboxes</h3>
+                  <div class="form-checkbox">
+                    <label class="form-checkbox__label">
+                      <input type="checkbox" class="form-checkbox__input">
+                      <span class="form-checkbox__icon"><i class="form-checkbox__icon-container"></i></span>
+                      <span class="form-checkbox__label-text">Example label</span>
+                    </label>
+                  </div>
+                  <div class="form-checkbox">
+                    <label class="form-checkbox__label">
+                      <input type="checkbox" class="form-checkbox__input" checked>
+                      <span class="form-checkbox__icon"><i class="form-checkbox__icon-container"></i></span>
+                      <span class="form-checkbox__label-text">Example label 2</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="project-ui__section-row">
+                  <h3>Radio Buttons</h3>
+                  <div class="form-radio">
+                    <label class="form-radio__label">
+                      <input class="form-radio__input" type="radio" name="radio-example">
+                      <span class="form-radio__icon"></span> Example label</label>
+                  </div>  <div class="form-radio">
+                    <label class="form-radio__label">
+                      <input class="form-radio__input" type="radio" name="radio-example" checked="checked">
+                      <span class="form-radio__icon"></span> Example label 2</label>
+                  </div></li>
+                <li class="project-ui__section-row">
+                  <h3>Select</h3>
+                  <div class="form-field">
+                    <label class="form-field__label "></label>
+                    <select class="js-dropdown-box">
+                        <option value="1">Example text 1</option>
+                        <option value="2">Example text 2</option>
+                        <option value="3">Example text 3</option>
+                        <option value="4">Example text 4</option>
+                        <option value="5">Example text 5</option>
+                    </select>
+                  </div></li>
+                <li class="project-ui__section-row">
+                  <h3>Switcher</h3>
+                  <div class="form-switcher">
+                    <input type="checkbox" class="form-switcher__input" aria-label="Example label">
+                    <label class="form-switcher__label">
+                      <span></span>
+                    </label>
+                  </div>  <div class="form-switcher">
+                    <input type="checkbox" class="form-switcher__input" checked aria-label="Example label">
+                    <label class="form-switcher__label">
+                      <span></span>
+                    </label>
+                  </div></li>
+            </ul>
+          </div>
+        </section>
+        <!--Popups-->
+        <section class="project-ui__section" id="popups">
+          <header>
+            <h2 class="project-ui__section-title">Popups</h2>
+          </header>
+          <div class="project-ui__section-content">
+            <ul>
+                <li>
+                  <!--btn-->
+                    <a href="#" class="btn js-popup-open" data-popup="example">example</a>
+                  <!--content-->
+                  <div class="popup js-popup" data-popup-id="example">
+                    <div class="popup__wrapper">
+                      <div class="popup__inner">
+                        <button class="popup__close js-popup-close"></button>
+                  
+                        <div class="popup__window">
+                          <div class="popup__content">
+                              <div class="popup-call">
+                                <div class="popup-call__success" style="display: none">
+                                  <span class="popup-call__title">Звонок заказа</span>
+                                  <p class="popup-call__text">Обычно мы перезваниваем в течени 10 минут</p>
+                                  <div class="popup-call__submit">
+                                    <button class="btn btn--large btn--primary js-popup-close">Закрыть</button>
+                                  </div>
+                                </div>
+                                <div class="popup-call__failure" style="display: none">
+                                  <span class="popup-call__title">Ошибка отправки</span>
+                                  <p class="popup-call__text">К сожалению ваша заявка не была отправлена.<br>
+                                    Но вы можете попробовать отправить еще раз,
+                                    данные сохранились в форме.</p>
+                                  <div class="popup-call__submit">
+                                    <button class="btn btn--large btn--primary">Вернуться к заявке</button>
+                                  </div>
+                                </div>
+                                <div class="popup-call__normal" style="display: block">
+                                  <div class="popup-call__form">
+                                    <span class="popup-call__title">Заказ звонка</span>
+                                    <div class="popup-call__input">
+                                      <div class="form-field">
+                                        <input type="text" class="form-field__input " placeholder="Фамилия и имя*">
+                                        
+                                      </div>        </div>
+                                    <div class="popup-call__input">
+                                      <div class="form-field">
+                                        <input type="text" class="form-field__input " placeholder="Номер телефона*">
+                                        
+                                      </div>        </div>
+                                    <div class="popup-call__input">
+                                      <div class="form-field">
+                                        <input type="text" class="form-field__input " placeholder="Комментарий*">
+                                        
+                                      </div>        </div>
+                                  </div>
+                                  <div class="popup-call__submit">
+                                    <button class="btn btn--large btn--primary btn--w100">Отправить заявку</button>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>    </ul>
+          </div>
+        </section>
+        <!--Loaders-->
+        <section class="project-ui__section" id="loaders">
+          <header>
+            <h2 class="project-ui__section-title">Loaders</h2>
+          </header>
+          <div class="project-ui__section-content">
+            <ul>
+                <li>
+                  <div class="loader">
+                    <div class="loader__circle">Loading...</div>
+                    <div class="project-ui__section-row">
+                       <div class="form-field">
+                           <label class="form-field__label">Ваше имя</label>
+                         <input type="text" class="form-field__input " placeholder="Иван Иван Иванович">
+                         
+                       </div>       <div class="form-field form-error">
+                           <label class="form-field__label">Ваш пароль</label>
+                         <input type="password" class="form-field__input " placeholder="Не менее 6 символов">
+                         <span class="form-field__message">Неверный пароль</span>
+                       </div>    </div>
+                  </div>
+                </li>
+                
+                <li>
+                  <div class="loader loader--transparent">
+                    <div class="loader__circle">Loading...</div>
+                  </div>
+                </li>
+            </ul>
+          </div>
+        </section>
+        <!--Widgets-->
+        <section class="project-ui__section" id="widgets">
+          <header>
+            <h2 class="project-ui__section-title">Widgets</h2>
+          </header>
+          <div class="project-ui__section-content">
+            <ul>
+                <div class="ui-widgets__row">
+                <div class="ui-widgets__cell">
+                  <div class="ui-widgets__widget">
+                    <span class="ui-widgets__title">.widget-example</span>
+                    <div class="ui-widgets__content">
+                      <div class="ui-widgets__content-inner">
+                            Hello!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="../scripts/vendors.js?v=3852" defer></script>
+  <script src="../scripts/main.js?v=3852" defer></script>
+</div></body>
+</html>
