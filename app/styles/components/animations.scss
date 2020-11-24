@@ -1,0 +1,33 @@
+// For form fields
+@keyframes switchOnOff {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// For Buttons
+@keyframes clockwise {
+  to {
+    transform: rotate(360deg) translatez(0);
+  }
+}
+
+// Loader
+@keyframes spin {
+  from {
+    transform: rotate(0deg) translateZ(0);
+  }
+  to {
+    transform: rotate(360deg) translateZ(0);
+  }
+}
+
+//Preloader
+@keyframes preloader-out {
+  to {
+    opacity: 0;
+  }
+}
