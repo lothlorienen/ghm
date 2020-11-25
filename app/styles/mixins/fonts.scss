@@ -234,3 +234,18 @@
   line-height: 1;
   letter-spacing: 0.02em;
 }
+
+
+@mixin regular-text() {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+
+  @include media(tabletSmall) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+
