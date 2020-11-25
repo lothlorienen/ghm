@@ -2,8 +2,9 @@
 <html lang="ru">
 
 <head>
-  <!--{ {>core/preload}}-->
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preload" href="../assets/fonts/BookAntiqua-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/BookAntiqua-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
   <meta name="format-detection" content="telephone=no">
@@ -11,27 +12,8 @@
 
   <title>Каркас</title>
 
-  
-  
-  
-  <!-- Chrome, Firefox OS and Opera -->
-<meta name="theme-color" content="#1B74FD">
-<!-- iOS Safari -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#1B74FD">
-<!-- Яндекс.Браузер -->
-<meta content="ya-title=#1B74FD,ya-dock=fade">
-<!-- Windows Phone -->
-<meta name="msapplication-config" content="../assets/images/favicon/browserconfig.xml">
-<meta name="msapplication-navbutton-color" content="#1B74FD">
-<meta name="msapplication-TileColor" content="#1B74FD">
-<link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#1B74FD">
-
-
-
-  <!--{ {>core/favicon}}-->
-
-  <link rel="stylesheet" href="../css/main.css?v=1410">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="../css/main.css?v=2145" rel="stylesheet">
 </head>
 
 <body class="page">
@@ -68,12 +50,65 @@ Header
 </main>
 
 <footer class="page__footer footer">
-Footer
+  <div class="container">
+    <div class="footer__grid" role="navigation" aria-label="Дополнительное меню.">
+      <div class="footer__section">
+        <section class="company-info">
+          <ul>
+            <li class="company-info__item company-info__item--address">628011 г. Ханты-Мансийск, <br> ул. Мира, 2</li>
+            <li class="company-info__item company-info__item--tel">Tел: <a href="tel:+73467330868">+7 (3467) 33-08-68</a></li>
+            <li class="company-info__item company-info__item--mail">E-mail: <a href="mailto:ghm-hmao@mail.ru">ghm-hmao@mail.ru</a></li>
+            <li class="company-info__item company-info__item--schedule">Режим работы: <br>
+              с 11.00 - до 19.00 <br>
+              Выходной: понедельник-вторник <br>
+              <small>Последняя среда месяца - санитарный день</small>
+            </li>
+            <li class="company-info__item company-info__item--scheme"><a href="#">Схема расположения</a></li>
+          </ul>
+        </section>      </div>
+      <div class="footer__section">
+        <ul class="footer__list">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Карта сайта</a></li>
+          <li><a href="#">Поиск по сайту</a></li>
+          <li><a href="#">Версия для слабовидящих</a></li>
+          <li><a href="#">Обратная связь</a></li>
+          <li><a href="#">Старая версия сайта</a></li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <ul class="footer__list">
+          <li><a href="#">Льготные категории</a></li>
+          <li><a href="#">Правила посещения</a></li>
+          <li><a href="#">Правовая информация</a></li>
+          <li><a href="#">Услуги и цены</a></li>
+          <li><a href="#">Заказать услугу</a></li>
+          <li><a href="#">Купить билет</a></li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <ul class="footer__list">
+          <li><a href="#">Часто задаваемые вопросы</a></li>
+          <li><a href="#">Независимая оценка работы учреждения</a></li>
+          <li><a href="#">Антикоррупционная деятельность</a></li>
+          <li><a href="#">Паспорт доступности</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="#">Сведения о доходах и расходах</a></li>
+        </ul>
+        <div class="footer__socials">
+          <a href="#"><svg class="icon icon--socials-group">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#socials-group"/>
+</svg>
+ Музей в социальных сетях</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
 </div>
 
-<script src="../scripts/vendors.js?v=1410" defer></script>
-  <script src="../scripts/main.js?v=1410" defer></script>
+<script src="../scripts/vendors.js?v=2145" defer></script>
+  <script src="../scripts/main.js?v=2145" defer></script>
 </body>
 </html>
