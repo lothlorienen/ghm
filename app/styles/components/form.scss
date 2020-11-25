@@ -30,7 +30,7 @@
       top: 100%;
       margin-top: 2px;
       font-size: 12px;
-      color: $color-red-100;
+      color: $color-red-dark;
       left: 0;
     }
   }
@@ -73,7 +73,7 @@
       margin-right: 13px;
       width: $radio-value;
       height: $radio-value;
-      border: 2px solid $color-gray-40;
+      border: 2px solid $color-gray;
       border-radius: 50%;
     }
   }
@@ -134,7 +134,7 @@
       display: flex;
       align-items: center;
       padding: $switcher-padding;
-      background-color: $color-gray-100;
+      background-color: $color-gray;
       transition: all 350ms ease;
 
       span {
@@ -158,10 +158,10 @@
 
   &-error {
     * {
-      border-color: $color-red-100;
+      border-color: $color-red-dark;
 
       &:focus {
-        border-color: $color-red-100;
+        border-color: $color-red-dark;
       }
     }
   }
@@ -212,7 +212,7 @@
     margin-right: 13px;
     width: var(--checkbox-value);
     height: var(--checkbox-value);
-    border: 2px solid $color-gray-40;
+    border: 2px solid $color-gray;
     border-radius: 6px;
     @include transition;
   }

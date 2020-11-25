@@ -1,1 +1,17 @@
-$baseFontName: 'Font Name';
+$baseFontName: 'Ubuntu';
+
+@font-face {
+  font-family: 'Book Antiqua';
+  font-weight: 700;
+  font-style: normal;
+  src: url($fonts_dir + 'BookAntiqua-Bold.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Book Antiqua';
+  font-weight: 400;
+  font-style: normal;
+  src: url($fonts_dir + 'BookAntiqua-Regular.woff2') format('woff2');
+  font-display: swap;
+}

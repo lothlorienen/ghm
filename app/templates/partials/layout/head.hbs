@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-  <!--{ {>core/preload}}-->
+  {{>core/preload}}
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
@@ -11,17 +11,10 @@
 
   <title>{{page-title}}</title>
 
-  {{#ifCond theme-color 'var-1'}}{{>core/theme-color color="#532AD3"}}{{/ifCond}}
-  {{#ifCond theme-color 'var-2'}}{{>core/theme-color color="#D1535E"}}{{/ifCond}}
-  {{#ifCond theme-color 'var-3'}}{{>core/theme-color color="#ED5F2C"}}{{/ifCond}}
-  {{#ifCond theme-color undefined}}{{>core/theme-color color="#1B74FD"}}{{/ifCond}}
-
-  <!--{ {>core/favicon}}-->
-
-  <link rel="stylesheet" href="../css/main.css?v={{cache}}">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="../css/main.css?v={{cache}}" rel="stylesheet">
 </head>
 
-<body class="page{{#if page-mod}} {{page-mod}}{{/if}}{{#if page-class}} {{page-class}}{{/if}}{{#if
-    theme-color}} theme-{{theme-color}}{{/if}}">
+<body class="page{{#if page-mod}} {{page-mod}}{{/if}}{{#if page-class}} {{page-class}}{{/if}}">
 <div class="preloader js-preloader"></div>
 <div class="page__inner">

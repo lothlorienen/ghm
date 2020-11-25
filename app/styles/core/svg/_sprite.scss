@@ -1,3 +1,8 @@
-$icons: (sprite: (width: 26px, height: 26px, pngPath: '../assets/images/sprite.png', svgPath: '../assets/images/sprite.svg'),
-popup-close: (width: 26px, height: 26px, backgroundX: 0px, backgroundY: 0px),
+$icons: (sprite: (width: 146px, height: 151px, pngPath: '../assets/images/sprite.png', svgPath: '../assets/images/sprite.svg'),
+email: (width: 24px, height: 25px, backgroundX: 0px, backgroundY: 0px),
+location: (width: 24px, height: 25px, backgroundX: -24px, backgroundY: -25px),
+map: (width: 24px, height: 25px, backgroundX: -48px, backgroundY: -50px),
+phone: (width: 24px, height: 25px, backgroundX: -72px, backgroundY: -75px),
+popup-close: (width: 26px, height: 26px, backgroundX: -96px, backgroundY: -100px),
+time: (width: 24px, height: 25px, backgroundX: -122px, backgroundY: -126px),
 );

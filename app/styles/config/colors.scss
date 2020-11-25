@@ -1,11 +1,19 @@
 :root {
   //Primary
-  --color-primary: var(--color-blue-70);
-  --color-primary-hover: var(--color-blue-80);
+  --color-primary: var(--color-gold);
+  --color-primary-hover: var(--color-gold-light);
 
-  // Blue
-  --color-blue-80: #0042FF;
-  --color-blue-70: #1B74FD;
+  --color-white: #FFFFFF;
+  --color-dark: #2B2B3E;
+  --color-light: #F9F6F3;
+  --color-gray: #BAB8B5;
+  --color-gold: #CFA968;
+  --color-gold-light: #F3CD8A;
+  --color-red-dark: #5A061F;
+
+  //// Blue
+  //--color-blue-80: #0042FF;
+  //--color-blue-70: #1B74FD;
 
   // Gray
   --color-gray-100: #363C4E;
@@ -17,11 +25,11 @@
   --color-gray-20: #F2F4F8;
   --color-gray-10: #F6F9FF;
 
-  // Green
-  --color-green-100: #0BB578;
+  //// Green
+  //--color-green-100: #0BB578;
 
-  // Red
-  --color-red-100: #ED143B;
+  //// Red
+  //--color-red-100: #ED143B;
 
   // White
   --color-white-100: #FFFFFF;
@@ -46,30 +54,37 @@ $color-gray-40: var(--color-gray-40);
 $color-gray-20: var(--color-gray-20);
 $color-gray-10: var(--color-gray-10);
 
-// Blue
-$color-blue-80: var(--color-blue-80);
-$color-blue-70: var(--color-blue-70);
-
-// Green
-$color-green-100: var(--color-green-100);
-
-// Red
-$color-red-100: var(--color-red-100);
+//// Blue
+//$color-blue-80: var(--color-blue-80);
+//$color-blue-70: var(--color-blue-70);
+//
+//// Green
+//$color-green-100: var(--color-green-100);
+//
+//// Red
+//$color-red-100: var(--color-red-100);
 
 // Apex
-$color-white: var(--color-white-100);
+$color-white: var(--color-white);
+$color-dark: var(--color-dark);
+$color-light: var(--color-light);
+$color-gray: var(--color-gray);
+$color-gold: var(--color-gold);
+$color-gold-light: var(--color-gold-light);
+$color-red-dark: var(--color-red-dark);
+$color-black: #000000;
+
 $color-white-80: var(--color-white-80);
 $color-white-70: var(--color-white-70);
 $color-white-50: var(--color-white-50);
 $color-white-20: var(--color-white-20);
 $color-white-10: var(--color-white-10);
-$color-black: #000000;
 
 
-//Making a theme
-$color-var1: #532AD3;
-
-.theme-var1 {
-  --color-primary: #{$color-var1};
-  --color-primary-hover: #{darken($color-var1, 10)};
-}
+////Making a theme
+//$color-var1: #532AD3;
+//
+//.theme-var1 {
+//  --color-primary: #{$color-var1};
+//  --color-primary-hover: #{darken($color-var1, 10)};
+//}

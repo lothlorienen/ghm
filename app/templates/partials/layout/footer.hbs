@@ -1,7 +1,46 @@
 </main>
 
 <footer class="page__footer footer">
-Footer
+  <div class="container">
+    <div class="footer__grid" role="navigation" aria-label="Дополнительное меню.">
+      <div class="footer__section">
+        {{>blocks/company-info}}
+      </div>
+      <div class="footer__section">
+        <ul class="footer__list">
+          <li><a {{#ifCond current-page 'home'}}class="current" {{/ifCond}}href="#">Главная</a></li>
+          <li><a href="#">Карта сайта</a></li>
+          <li><a href="#">Поиск по сайту</a></li>
+          <li><a href="#">Версия для слабовидящих</a></li>
+          <li><a href="#">Обратная связь</a></li>
+          <li><a href="#">Старая версия сайта</a></li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <ul class="footer__list">
+          <li><a href="#">Льготные категории</a></li>
+          <li><a href="#">Правила посещения</a></li>
+          <li><a href="#">Правовая информация</a></li>
+          <li><a href="#">Услуги и цены</a></li>
+          <li><a href="#">Заказать услугу</a></li>
+          <li><a href="#">Купить билет</a></li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <ul class="footer__list">
+          <li><a href="#">Часто задаваемые вопросы</a></li>
+          <li><a href="#">Независимая оценка работы учреждения</a></li>
+          <li><a href="#">Антикоррупционная деятельность</a></li>
+          <li><a href="#">Паспорт доступности</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="#">Сведения о доходах и расходах</a></li>
+        </ul>
+        <div class="footer__socials">
+          <a href="#">{{>ui/svg name="socials-group"}} Музей в социальных сетях</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
 </div>

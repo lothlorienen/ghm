@@ -1,0 +1,54 @@
+.company-info {
+  &__item {
+    position: relative;
+    padding-left: 30px;
+    margin-top: 20px;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: -4px;
+      left: 0;
+      content: '';
+    }
+
+    &--address::before {
+      @include sprite('location');
+    }
+
+    &--tel::before {
+      @include sprite('phone');
+    }
+
+    &--mail::before {
+      @include sprite('email');
+    }
+
+    &--schedule::before {
+      @include sprite('time');
+    }
+
+    &--scheme {
+      &::before {
+        @include sprite('map');
+      }
+
+      a {
+        text-transform: none;
+        text-decoration: underline;
+      }
+    }
+
+    small {
+      flex: 1 1 100%;
+      font-size: 13px;
+      font-weight: 300;
+    }
+  }
+}

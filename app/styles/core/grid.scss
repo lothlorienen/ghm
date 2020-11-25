@@ -9,11 +9,11 @@ html {
 
 .container {
   width: 100%;
-  max-width: 1220px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 0 12px;
+  padding: 0 20px;
 
   @include media(mobile) {
-    padding: 0 15px;
+    padding: 0 10px;
   }
 }
