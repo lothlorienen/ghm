@@ -1,0 +1,75 @@
+.main-news {
+  &__container {
+    padding: 40px 0;
+  }
+
+  &__grid {
+    display: flex;
+    overflow: auto;
+    @include hide-scrollbar;
+
+    @include media(mobile, up) {
+      margin: 0 -20px;
+    }
+
+    @include media(mobile) {
+      margin: 0 -10px;
+    }
+
+    ul {
+      display: grid;
+
+      @include media(tabletSmall, up) {
+        grid-template-columns: repeat(3, minmax(350px, 1fr));
+        gap: 40px;
+      }
+
+      @include media(tabletSmall) {
+        grid-template-columns: repeat(3, minmax(270px, 1fr));
+        gap: 20px;
+      }
+
+      @include media(mobile, up) {
+        padding: 0 20px;
+      }
+
+      @include media(mobile) {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  &__action {
+    display: flex;
+    justify-content: center;
+
+    @include media(mobile, up) {
+      margin-top: 50px;
+    }
+
+    @include media(mobile) {
+      margin-top: 40px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 11px 50px 9px;
+    border: 1.5px solid currentColor;
+    color: $color-primary;
+    font-family: 'Book Antiqua', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $color-primary-hover;
+    }
+
+    &:active {
+      color: $color-dark;
+    }
+  }
+}

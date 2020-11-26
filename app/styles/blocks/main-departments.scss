@@ -1,0 +1,32 @@
+.main-departments {
+  &__container {
+    padding: 100px 0;
+
+    @include media(mobile) {
+      padding: 50px 0;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+    @include media(tabletSmall) {
+      gap: 30px;
+    }
+
+    @include media(mobile) {
+      grid-template-columns: 1fr;
+      gap: 0;
+      margin: -18px 0;
+    }
+  }
+
+  &__item {
+    &:first-child .department-item {
+      border-top: unset;
+    }
+  }
+}
+

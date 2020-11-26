@@ -1,0 +1,12 @@
+<section class="department-item{{#if current}} department-item--current{{/if}}">
+  <a class="department-item__link" href="{{link}}"
+     aria-label="Перейти на страницу {{{title}}}"></a>
+  <div class="department-item__top">
+    <div class="department-item__image department-item__image--main">{{>ui/svg name=name}}</div>
+    <h2 class="department-item__title">{{{title}}}</h2>
+  </div>
+  <div class="department-item__bottom">
+    <p class="department-item__location">{{location}}</p>
+    <p class="department-item__schedule">Пн, Вт — выходной <br>Ср - Вс 11:00 — 19:00</p>
+  </div>
+</section>

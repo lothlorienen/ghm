@@ -1,42 +1,60 @@
-<section class="home-museums">
+<section class="main-departments">
   <div class="container">
-    <div class="home-museums__container">
-      <ul class="home-museums__grid">
-        <li class="home-museums__item home-museums__item--current">
-          <a class="home-museums__link" href="#"
-             aria-label="Перейти на страницу Государственный художественный музей"></a>
-          <div class="home-museums__top">
-            <div class="home-museums__image home-museums__image--main">{{>ui/svg name="ghm-main"}}</div>
-            <h2 class="home-museums__title">Государственный художественный музей</h2>
-          </div>
-          <div class="home-museums__bottom">
-            <p class="home-museums__location">ул. Мира, 2 </p>
-            <p class="home-museums__schedule">Пн, Вт — выходной <br>Ср - Вс 11:00 — 19:00</p>
-          </div>
+    <div class="main-departments__container">
+      <ul class="main-departments__grid">
+        <li class="main-departments__item">
+          {{#if current-home}}
+            {{>widgets/department-item
+                link="./home.html"
+                title="Государственный художественный музей"
+                name="ghm-main"
+                location="ул. Мира, 2"
+                current=current-home
+            }}
+          {{else}}
+            {{>widgets/department-item
+                link="./home.html"
+                title="Государственный художественный музей"
+                name="ghm-main"
+                location="ул. Мира, 2"
+            }}
+          {{/if}}
         </li>
-        <li class="home-museums__item">
-          <a class="home-museums__link" href="#"
-             aria-label="Перейти на страницу Галерея-мастерская художника Г.&nbsp;С.&nbsp;Райшева"></a>
-          <div class="home-museums__top">
-            <div class="home-museums__image home-museums__image--raishev">{{>ui/svg name="ghm-raishev"}}</div>
-            <h2 class="home-museums__title">Галерея-мастерская художника Г.&nbsp;С.&nbsp;Райшева</h2>
-          </div>
-          <div class="home-museums__bottom">
-            <p class="home-museums__location">ул. Чехова, 1</p>
-            <p class="home-museums__schedule">Пн, Вт — выходной <br>Ср - Вс 11:00 — 19:00</p>
-          </div>
+        <li class="main-departments__item">
+          {{#if current-raishev}}
+            {{>widgets/department-item
+                link="./department.html"
+                title="Галерея-мастерская художника Г.&nbsp;С.&nbsp;Райшева"
+                name="ghm-raishev"
+                location="ул. Чехова, 1"
+                current=current-raishev
+            }}
+          {{else}}
+            {{>widgets/department-item
+                link="./department.html"
+                title="Галерея-мастерская художника Г.&nbsp;С.&nbsp;Райшева"
+                name="ghm-raishev"
+                location="ул. Чехова, 1"
+            }}
+          {{/if}}
         </li>
-        <li class="home-museums__item">
-          <a class="home-museums__link" href="#"
-             aria-label="Перейти на страницу Дом-музей народного художника СССР В.&nbsp;А.&nbsp;Игошева"></a>
-          <div class="home-museums__top">
-            <div class="home-museums__image home-museums__image--igoshev">{{>ui/svg name="ghm-igoshev"}}</div>
-            <h2 class="home-museums__title">Дом-музей народного художника СССР В.&nbsp;А.&nbsp;Игошева</h2>
-          </div>
-          <div class="home-museums__bottom">
-            <p class="home-museums__location">ул. Лопарева, 7</p>
-            <p class="home-museums__schedule">Пн, Вт — выходной <br>Ср - Вс 11:00 — 19:00</p>
-          </div>
+        <li class="main-departments__item">
+          {{#if current-igoshev}}
+            {{>widgets/department-item
+                link="./department.html"
+                title="Дом-музей народного художника СССР В.&nbsp;А.&nbsp;Игошева"
+                name="ghm-igoshev"
+                location="ул. Лопарева, 7"
+                current=current-igoshev
+            }}
+          {{else}}
+            {{>widgets/department-item
+                link="./department.html"
+                title="Дом-музей народного художника СССР В.&nbsp;А.&nbsp;Игошева"
+                name="ghm-igoshev"
+                location="ул. Лопарева, 7"
+            }}
+          {{/if}}
         </li>
       </ul>
     </div>

@@ -1,60 +1,26 @@
-.home-museums {
-  &__container {
-    padding: 100px 0;
+.department-item {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 75px;
 
-    @include media(mobile) {
-      padding: 50px 0;
-    }
+  > * {
+    flex: 1 1 100%;
   }
 
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-
-    @include media(tabletSmall) {
-      gap: 30px;
-    }
-
-    @include media(mobile) {
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
+  @include media(tabletSmall) {
+    padding-left: 60px;
   }
 
-  &__item {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 75px;
+  @include media(mobile) {
+    padding: 18px 0;
+    border-top: 1.5px solid $color-gray;
+  }
 
-    > * {
-      flex: 1 1 100%;
-    }
-
-    @include media(tabletSmall) {
-      padding-left: 60px;
-    }
-
-    @include media(mobile) {
-      padding: 18px 0;
-      border-top: 1.5px solid $color-gray;
-
-      &:first-child {
-        padding-top: 0;
-        border-top: unset;
-      }
-
-      &:last-child {
-        padding-bottom: 0;
-      }
-    }
-
-    &--current {
-      .icon,
-      .home-museums__title {
-        color: $color-red-dark;
-      }
+  &--current {
+    .icon,
+    .department-item__title {
+      color: $color-red-dark;
     }
   }
 
@@ -63,7 +29,7 @@
     z-index: z(default);
 
     &:hover {
-      ~ * .home-museums__title {
+      ~ * .department-item__title {
         color: $color-red-dark;
       }
     }
