@@ -1,0 +1,28 @@
+.slider-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    margin-left: 40px;
+    color: $color-primary;
+    @include transition;
+
+    &:hover {
+      color: $color-primary-hover;
+    }
+
+    &:active {
+      color: $color-dark;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

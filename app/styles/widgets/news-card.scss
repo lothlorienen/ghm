@@ -82,12 +82,12 @@
     &:active {
       color: $color-dark;
 
-      .arrow-left {
+      .arrow-right {
         color: $color-dark;
       }
     }
 
-    .arrow-left {
+    .arrow-right {
       color: $color-primary;
       position: absolute;
       top: 50%;

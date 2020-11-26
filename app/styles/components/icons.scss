@@ -1,4 +1,4 @@
-.arrow-left {
+.arrow-right {
   cursor: pointer;
   position: relative;
   width: 23px;
@@ -35,5 +35,45 @@
     height: 2px;
     background-color: currentColor;
     transform: rotate(45deg);
+  }
+}
+
+.arrow-left {
+  cursor: pointer;
+  position: relative;
+  width: 23px;
+  height: 10px;
+
+  span {
+    position: relative;
+    top: 50%;
+    right: 0;
+    width: 23px;
+    height: 2px;
+    display: block;
+    background-color: currentColor;
+    transform: translateY(-50%);
+  }
+
+  span::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: -2px;
+    width: 10px;
+    height: 2px;
+    background-color: currentColor;
+    transform: rotate(45deg);
+  }
+
+  span::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -2px;
+    width: 10px;
+    height: 2px;
+    background-color: currentColor;
+    transform: rotate(-45deg);
   }
 }
