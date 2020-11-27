@@ -1,6 +1,8 @@
 <div class="partner-card">
-  <div class="partner-card__image">
-    {{>components/image img=(concat 'partners/' img) ext="png"}}
-  </div>
-  <span class="partner-card__title">{{title}}</span>
+  <a class="partner-card__link" href="#">
+    <div class="partner-card__image">
+      {{>components/image img=(concat 'partners/' img) ext="png"}}
+    </div>
+    <span class="partner-card__title">{{title}}</span>
+  </a>
 </div>

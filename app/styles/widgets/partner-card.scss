@@ -1,4 +1,16 @@
 .partner-card {
+  &__link {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:hover {
+      .partner-card__title {
+        color: $color-red-dark;
+      }
+    }
+  }
+
   &__image {
     position: relative;
     max-width: 60px;
@@ -26,5 +38,6 @@
     line-height: 17px;
     text-align: center;
     text-transform: uppercase;
+    @include transition;
   }
 }
