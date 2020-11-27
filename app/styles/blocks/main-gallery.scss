@@ -48,6 +48,18 @@
   &__link {
     flex: 0 1 auto;
     height: 100%;
+
+    &::after {
+      content: '';
+      @include fill;
+      opacity: 0;
+      background: rgba(0, 0, 0, 0.2);
+      transition: opacity 350ms ease;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
   }
 
   &__image {
