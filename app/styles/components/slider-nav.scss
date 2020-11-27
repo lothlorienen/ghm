@@ -1,8 +1,4 @@
 .slider-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   &__btn {
     display: inline-flex;
     align-items: center;
@@ -24,5 +20,11 @@
     &:first-child {
       margin-left: 0;
     }
+  }
+
+  &--center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

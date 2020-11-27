@@ -9,7 +9,7 @@ import 'lazysizes/plugins/native-loading/ls.native-loading';
 import 'lazysizes/plugins/object-fit/ls.object-fit';
 import svgPolyfill from 'svg4everybody';
 // import jquery from 'jquery';
-import swiper from 'swiper';
+import swiper from 'swiper/bundle';
 import PhotoSwipe from 'photoswipe';
 import PhotoSwipeUI from 'photoswipe/dist/photoswipe-ui-default';
 

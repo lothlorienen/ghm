@@ -1,0 +1,85 @@
+.main-hero {
+  position: relative;
+
+  &__content {
+    display: flex;
+    min-height: 650px;
+    padding-bottom: 75px;
+
+    @include media(tabletSmall) {
+      padding-bottom: 140px;
+      min-height: calc(100 * var(--vh));
+    }
+
+    @include media(mobile) {
+      padding-bottom: 65px;
+    }
+  }
+
+  &__slider {
+    margin-top: auto;
+  }
+
+  &__item {
+    height: auto;
+  }
+
+  &__nav {
+    display: inline-flex ;
+    margin-top: 40px;
+  }
+
+  &__pag {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    z-index: z(default);
+    display: flex;
+    align-items: center;
+    width: auto;
+    transform: translateX(-50%);
+
+    > * + * {
+      margin-left: 5px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 7px;
+      height: 7px;
+      background: $color-light;
+      border: 1px solid $color-light;
+      opacity: 1;
+
+      &-active {
+        background: transparent;
+      }
+    }
+  }
+
+  &__bg {
+    @include fill;
+    z-index: z(backdrop);
+    opacity: 0;
+    transition: opacity 350ms ease;
+
+    &::after {
+      content: '';
+      @include fill;
+      display: block;
+      z-index: z(default) - 1;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.05) 100%);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}

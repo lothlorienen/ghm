@@ -1,0 +1,105 @@
+.hero-slide {
+  position: relative;
+  height: 100%;
+  max-width: 550px;
+  color: $color-light;
+
+  @include media(tabletSmall, only) {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(60 * var(--vh));
+  }
+
+  &__date {
+    color: $color-primary;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+
+    span {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin: 48px 0 0;
+    font-family: 'Book Antiqua', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 60px;
+
+    @include media(tabletSmall, only) {
+      margin: auto 0 0;
+    }
+
+    @include media(mobile) {
+      margin-top: 40px;
+      font-size: 36px;
+      line-height: 36px;
+    }
+  }
+
+  &__text {
+    display: block;
+    margin: 0;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    @include media(tabletSmall, only) {
+      margin: 0 0 auto;
+    }
+
+    @include media(mobile) {
+      margin-top: 20px;
+      font-size: 13px;
+      line-height: 15px;
+    }
+  }
+
+  &__action {
+    margin-top: 22px;
+
+    @include media(mobile) {
+      margin-top: 34px;
+    }
+  }
+
+  &__location {
+    display: block;
+    margin: 52px 0 0;
+
+    @include media(mobile) {
+      margin-top: 28px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    .icon {
+      margin-right: 13px;
+      width: 23px;
+      height: 27px;
+
+      @include media(mobile) {
+        width: 20px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__bg {
+    display: none;
+  }
+}
