@@ -7,29 +7,32 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(55px, auto);
-    //grid-template-areas: 'afisha afisha tickets tickets' 'afisha afisha services expo';
     gap: 10px;
+
+    @include media(mobile) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto) [last];
+    }
   }
 
   &__item {
-    &--afisha {
-      //grid-area: afisha;
-      grid-column: 1 / span 2;
-      grid-row: 1 / span 2;
+    &--big {
+      @include media(mobile, up) {
+        grid-column: auto / span 2;
+        grid-row: auto / span 2;
+      }
     }
 
-    &--tickets {
-      grid-column: 3 / span 2;
-
-      //grid-area: tickets;
+    &--wide {
+      @include media(mobile, up) {
+        grid-column: auto / span 2;
+      }
     }
 
-    &--services {
-      //grid-area: services;
-    }
-
-    &--expo {
-      //grid-area: expo;
+    &--m-last {
+      @include media(mobile) {
+        grid-row: last;
+      }
     }
   }
 }
