@@ -59,6 +59,7 @@
     "jquery": "^3.3.1",
     "lazysizes": "^5.2.0-beta1",
     "normalize-scss": "^7.0.1",
+    "photoswipe": "^4.1.3",
     "picturefill": "^3.0.3",
     "svg4everybody": "^2.1.9",
     "swiper": "^6.3.2"

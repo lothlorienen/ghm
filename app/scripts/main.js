@@ -13,9 +13,9 @@ import './src/utils/scroll-to';
 import './src/utils/scroll-to-link';
 
 import './src/widgets/popups';
-// import './src/widgets/example';
 import './src/widgets/sliders/sliders';
 import './src/widgets/sliders/partners-slider';
+import './src/widgets/sliders/gallery-slider';
 
 import './src/app';
 

@@ -10,10 +10,14 @@ import 'lazysizes/plugins/object-fit/ls.object-fit';
 import svgPolyfill from 'svg4everybody';
 // import jquery from 'jquery';
 import swiper from 'swiper';
+import PhotoSwipe from 'photoswipe';
+import PhotoSwipeUI from 'photoswipe/dist/photoswipe-ui-default';
 
 // window.$ = window.jQuery = jquery;
 window.svg4everybody = svgPolyfill;
 window.Swiper = swiper;
+window.PhotoSwipe = PhotoSwipe;
+window.PhotoSwipeUI = PhotoSwipeUI;
 
 lazySizes.cfg.lazyClass = 'lazy';
 lazySizes.cfg.srcAttr = 'data-original';
