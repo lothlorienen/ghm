@@ -1,9 +1,40 @@
 .news-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
 
-  &__image-link {
+  &__link {
+    @include fill;
+    z-index: z(default) + 1;
+    cursor: pointer;
+
+    &:hover {
+      ~ .news-card__image::after {
+        opacity: 1;
+      }
+
+      ~ .news-card__action > .news-card__btn {
+        color: $color-primary;
+
+        .arrow-right {
+          transform: translateX(100%);
+        }
+      }
+    }
+
+    &:active {
+      ~ .news-card__action > .news-card__btn {
+        color: $color-dark;
+
+        .arrow-right {
+          color: $color-dark;
+        }
+      }
+    }
+  }
+
+  &__image {
     position: relative;
     display: block;
     overflow: hidden;
@@ -14,10 +45,13 @@
       padding-top: 54%;
     }
 
-    &:hover {
-      img {
-        transform: scale(1.2);
-      }
+    &::after {
+      content: '';
+      display: block;
+      @include fill;
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0.2);
+      @include transition(opacity, 500ms)
     }
 
     img {
@@ -26,7 +60,6 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
-      @include transition(transform, 350ms, linear);
     }
   }
 
@@ -45,7 +78,7 @@
     }
   }
 
-  &__text {
+  &__title {
     display: block;
     margin: 2px 0 0;
     padding-bottom: 30px;
@@ -59,7 +92,7 @@
     overflow: hidden;
   }
 
-  &__link {
+  &__btn {
     position: relative;
     display: inline-block;
     padding-right: 10px;
@@ -71,29 +104,20 @@
     line-height: 16px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
-    transform: translateX(-100%);
+    //transform: translateX(-100%);
     transition: all 500ms ease;
-
-    &:hover {
-      color: $color-primary;
-      transform: translateY(0);
-    }
-
-    &:active {
-      color: $color-dark;
-
-      .arrow-right {
-        color: $color-dark;
-      }
-    }
 
     .arrow-right {
       color: $color-primary;
       position: absolute;
-      top: 50%;
-      left: 100%;
-      transform: translateY(-50%);
-      transition: color 500ms ease;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $color-white;
+      //transform: translateY(-50%);
+      transition: all 500ms ease;
     }
   }
 }

@@ -114,7 +114,7 @@
 
     &:active span {
       color: transparent;
-      transform: scale(0.75);
+      animation: pulse-active 750ms ease forwards;
     }
 
     span {

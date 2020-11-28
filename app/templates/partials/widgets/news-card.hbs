@@ -1,12 +1,9 @@
 <article class="news-card">
-  <div class="news-card__image">
-    <a class="news-card__image-link" href="#">
-      {{>components/image img=img ext="jpg"}}
-    </a>
-  </div>
+  <a class="news-card__link" href="#" aria-label="Перейти на страницу новости."></a>
+  <div class="news-card__image">{{>components/image img=img ext="jpg"}}</div>
   <time class="news-card__time" datetime="{{datetime}}">{{time}}</time>
-  <p class="news-card__text">{{text}}</p>
+  <p class="news-card__title">{{text}}</p>
   <div class="news-card__action">
-    <a class="news-card__link" href="#">подробнее {{>icons/arrow-right}}</a>
+    <a class="news-card__btn" href="#">подробнее {{>icons/arrow-right}}</a>
   </div>
 </article>
