@@ -1,7 +1,6 @@
 .hero-slide {
   position: relative;
   height: 100%;
-  max-width: 550px;
   color: $color-light;
 
   @include media(tabletSmall, only) {
@@ -44,6 +43,7 @@
 
   &__text {
     display: block;
+    max-width: 550px;
     margin: 0;
     font-weight: normal;
     font-size: 18px;

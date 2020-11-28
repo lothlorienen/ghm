@@ -73,11 +73,11 @@
   }
 
   &--primary {
-    color: $color-primary;
+    color: $color-light;
     border-color: $color-primary;
 
     &:hover {
-      color: $color-light;
+      border-color: $color-primary-hover;
     }
 
     &:active {
