@@ -15,6 +15,7 @@
 
     @include media(mobile) {
       padding-bottom: 65px;
+      min-height: unset;
     }
   }
 

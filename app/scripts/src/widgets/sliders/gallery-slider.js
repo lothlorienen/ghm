@@ -22,14 +22,11 @@ class GallerySlider_Slider extends Widget {
     this.slider = this.queryElement('.slider');
     this.swiper = null;
 
-    this.resizeEvents = this.resizeEvents.bind(this);
-
     this.events();
   }
 
   events() {
     this.swiperSetup();
-    onResize(this.resizeEvents);
   }
 
   swiperSetup() {
@@ -46,11 +43,6 @@ class GallerySlider_Slider extends Widget {
     })
   }
 
-  resizeEvents() {
-    // this.swiper.update();
-    console.log('upd')
-  }
-
   initSwiper() {
     this.swiper = new Swiper(this.slider, {
       loop: true,
@@ -60,10 +52,6 @@ class GallerySlider_Slider extends Widget {
         768: {
           slidesPerView: 'auto',
         },
-        // 1200: {
-        //   slidesPerView: 3.25,
-        //   spaceBetween: 40,
-        // },
       },
     });
   }
