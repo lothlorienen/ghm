@@ -10,6 +10,7 @@
     @include media(tabletSmall) {
       padding-bottom: 140px;
       min-height: calc(100 * var(--vh));
+      transition: min-height 350ms ease;
     }
 
     @include media(mobile) {
