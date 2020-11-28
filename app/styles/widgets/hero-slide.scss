@@ -69,22 +69,14 @@
   }
 
   &__location {
-    display: block;
+    display: flex;
+    align-items: center;
     margin: 52px 0 0;
 
     @include media(mobile) {
       margin-top: 28px;
       font-size: 12px;
       line-height: 15px;
-    }
-
-    a {
-      display: flex;
-      align-items: center;
-
-      &:hover {
-        color: $color-primary;
-      }
     }
 
     .icon {

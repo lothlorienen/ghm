@@ -35,6 +35,9 @@ class HeroSlider extends Widget {
   initSwiper() {
     this.swiper = new Swiper(this.slider, {
       loop: true,
+      autoplay: {
+        delay: 5500,
+      },
       slidesPerView: 1,
       spaceBetween: 20,
       pagination: {
