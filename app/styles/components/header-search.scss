@@ -70,7 +70,7 @@
 
   &__close {
     position: absolute;
-    top: 22px;
+    top: 28px;
     right: 24px;
     display: flex;
     align-items: center;
@@ -81,7 +81,12 @@
   }
 
   &__results {
+    display: none;
     margin-top: 20px;
+
+    &.visible {
+      display: initial;
+    }
   }
 
   &__results-list {
