@@ -1,0 +1,19 @@
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-left: 49px;
+
+    @include media(tabletSmall) {
+      margin-left: 40px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

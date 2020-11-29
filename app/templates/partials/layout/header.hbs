@@ -1,16 +1,11 @@
 <header class="page__header header js-header">
   <div class="container">
-    <div class="header__top">
-      <div class="header__top-item">
-        {{>header/header-search}}
-      </div>
-      <div class="header__top-item">{{>ui/btn-ticket label="Купить билет"}}</div>
-      <div class="header__top-item"><a class="action-link action-link--tel" href="tel:+73467330868"><span>+7 (3467)</span><b>33-08-68</b></a></div>
-      <div class="header__top-item"><a class="action-link" href="#">{{>ui/svg name="eye"}}</a></div>
-    </div>
-    <div class="header__bottom">
+    <div class="header__grid">
       <div class="header__brand">
         {{>components/page-logo}}
+      </div>
+      <div class="header__actions">
+        {{>header/header-actions}}
       </div>
       <div class="header__menu">
         {{>header/header-menu menu=active-menu active=current-page}}

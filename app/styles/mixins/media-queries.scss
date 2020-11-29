@@ -62,7 +62,7 @@
 ***/
 
 // Экспериментальный миксин
-@mixin media($breakpoint, $statement: down, $isHeight: false) {
+@mixin media($breakpoint, $statement: down, $isHeight: false, $orientation: false) {
   @if $isHeight == false {
     $widthBreakpoints: map-get($breakpoints, index-to-key($breakpoints, 1)); // Получаем массив значений для width
 
@@ -153,8 +153,15 @@
 
     @if map-has-key($heightBreakpoints, $breakpoint) {
       @if $statement == down {
-        @media (max-height: #{map-get($heightBreakpoints, $breakpoint)}px) {
-          @content;
+        @if $orientation != false {
+          @media (max-height: #{map-get($heightBreakpoints, $breakpoint)}px) and (orientation: $orientation) {
+            @content;
+          }
+        }
+        @else {
+          @media (max-height: #{map-get($heightBreakpoints, $breakpoint)}px) {
+            @content;
+          }
         }
       }
     } @else {

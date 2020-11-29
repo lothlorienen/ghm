@@ -82,15 +82,16 @@ class HeaderSearch extends Widget {
   onCloseClick(e) {
     e.stopPropagation();
     e.preventDefault();
+    this.close();
 
-    if (Layout.isDesktopLayout()) {
-      this.close();
-    } else {
-      this.$input.value = '';
-      this.showSearchIntro();
-      this.$closeButton.classList.remove('visible');
-      this.$input.focus();
-    }
+    // if (Layout.isTabletLayout() || Layout.isDesktopLayout()) {
+    //   this.close();
+    // } else {
+    //   this.$input.value = '';
+    //   this.showSearchIntro();
+    //   this.$closeButton.classList.remove('visible');
+    //   this.$input.focus();
+    // }
   }
 
   open() {

@@ -1,5 +1,7 @@
 .header-search {
-  position: relative;
+  @include media(tabletSmall, up) {
+    position: relative;
+  }
 
   &__btn {
     display: block;
@@ -15,6 +17,11 @@
       color: $color-dark;
     }
 
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+
     .active & {
       pointer-events: none;
     }
@@ -22,14 +29,24 @@
 
   &__opened {
     position: absolute;
-    top: 27px + 20px + 1px;
-    right: -43px;
     z-index: z(header) + 1;
-    width: calc(100vw - 440px);
-    max-width: 880px;
     opacity: 0;
     pointer-events: none;
     @include transition;
+
+    @include media(tabletSmall, up) {
+      top: 27px + 20px + 1px;
+      right: -43px;
+      width: calc(100vw - 440px);
+      max-width: 880px;
+    }
+
+    @include media(tabletSmall) {
+      top: 100%;
+      right: 20px;
+      left: 20px;
+      width: calc(100vw - 40px);
+    }
 
     &.active {
       opacity: 1;
@@ -38,10 +55,17 @@
   }
 
   &__inner {
-    padding: 11px 70px 10px;
     background-color: $color-light;
     opacity: 0.95;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include media(mobile, up) {
+      padding: 11px 70px 10px;
+    }
+
+    @include media(mobile) {
+      padding: 11px 35px 10px;
+    }
   }
 
   &__header {

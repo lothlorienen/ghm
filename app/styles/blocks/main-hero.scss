@@ -14,8 +14,12 @@
     }
 
     @include media(mobile) {
-      padding-bottom: 65px;
-      min-height: unset;
+      padding: 100px 0 65px;
+      min-height: 500px;
+    }
+
+    @include media(md, down, height, landscape) {
+      min-height: 650px;
     }
   }
 
