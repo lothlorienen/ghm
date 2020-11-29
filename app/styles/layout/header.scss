@@ -15,6 +15,8 @@
   }
 
   &__top-item {
+    display: flex;
+    align-items: center;
     margin-left: 49px;
 
     &:first-child {

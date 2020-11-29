@@ -14,6 +14,10 @@ import './src/utils/scroll-to-link';
 import './src/utils/mobile-height-fix';
 
 import './src/widgets/popups';
+
+import './src/widgets/header/header-search';
+
+
 import './src/widgets/sliders/partners-slider';
 import './src/widgets/sliders/gallery-slider';
 import './src/widgets/sliders/hero-slider';

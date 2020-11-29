@@ -38,17 +38,19 @@
     align-self: stretch;
     content: '';
     display: inline-flex;
-    width: 6px;
+    width: 7px;
     height: 100%;
     background-color: $color-primary;
     @include transition;
   }
 
   &::before {
+    margin-right: -1px;
     mask-image: radial-gradient(circle at -2px 50%, transparent 6px, black 6px);
   }
 
   &::after {
+    margin-left: -1px;
     mask-image: radial-gradient(circle at 8px 50%, transparent 6px, black 6px);
   }
 
