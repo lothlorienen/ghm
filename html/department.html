@@ -13,16 +13,47 @@
   <title>Филиал</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
-  <link href="../css/main.css?v=4993" rel="stylesheet">
+  <link href="../css/main.css?v=1239" rel="stylesheet">
 </head>
 
 <body class="page">
 <div class="preloader js-preloader"></div>
 <div class="page__inner">
 
-<header class="header page__header">
+<header class="page__header header js-header">
   <div class="container">
-    Header
+    <div class="header__top">
+      <div class="header__top-item">
+        <div class="header-search">
+          <button type="button" aria-label="Открыть / закрыть поиск."><svg class="icon icon--search">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#search"/>
+        </svg>
+        </button>
+        </div>      </div>
+      <div class="header__top-item"><a class="btn-ticket" href="#" aria-label="Описание кнопки."><span>Купить билет</span></a></div>
+      <div class="header__top-item"><a class="action-link action-link--tel" href="tel:+73467330868"><span>+7 (3467)</span><b>33-08-68</b></a></div>
+      <div class="header__top-item"><a class="action-link" href="#"><svg class="icon icon--eye">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#eye"/>
+</svg>
+</a></div>
+    </div>
+    <div class="header__bottom">
+      <div class="header__brand">
+        <a href="./home.html" class="page-logo">
+          <svg class="icon icon--ghm-main">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#ghm-main"/>
+          </svg>
+          Государственный <br> художественный <br> музей
+        </a>
+      </div>
+      <div class="header__menu">
+        <nav class="header-menu">
+        
+          <ul class="header-menu__list">
+          </ul>
+        </nav>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -35,9 +66,10 @@
         <div class="main-hero__wrapper swiper-wrapper">
           <div class="main-hero__item swiper-slide">
             <div class="hero-slide">
-              <div class="hero-slide__bg">  <picture>
-            
-            
+              <div class="hero-slide__bg">
+              <picture>
+                
+                
                 <source data-srcset="../assets/images/hero/02.jpg, ../assets/images/hero/02@2x.jpg 2x" type="image/jpeg">
                 <img class="lazy" data-sizes="auto" data-original="../assets/images/hero/02.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
               </picture>
@@ -54,9 +86,10 @@
             </div>          </div>
           <div class="main-hero__item swiper-slide">
             <div class="hero-slide">
-              <div class="hero-slide__bg">  <picture>
-            
-            
+              <div class="hero-slide__bg">
+              <picture>
+                
+                
                 <source data-srcset="../assets/images/hero/01.jpg, ../assets/images/hero/01@2x.jpg 2x" type="image/jpeg">
                 <img class="lazy" data-sizes="auto" data-original="../assets/images/hero/01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
               </picture>
@@ -73,9 +106,10 @@
             </div>          </div>
           <div class="main-hero__item swiper-slide">
             <div class="hero-slide">
-              <div class="hero-slide__bg">  <picture>
-            
-            
+              <div class="hero-slide__bg">
+              <picture>
+                
+                
                 <source data-srcset="../assets/images/hero/01.jpg, ../assets/images/hero/01@2x.jpg 2x" type="image/jpeg">
                 <img class="lazy" data-sizes="auto" data-original="../assets/images/hero/01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
               </picture>
@@ -92,9 +126,10 @@
             </div>          </div>
           <div class="main-hero__item swiper-slide">
             <div class="hero-slide">
-              <div class="hero-slide__bg">  <picture>
-            
-            
+              <div class="hero-slide__bg">
+              <picture>
+                
+                
                 <source data-srcset="../assets/images/hero/02.jpg, ../assets/images/hero/02@2x.jpg 2x" type="image/jpeg">
                 <img class="lazy" data-sizes="auto" data-original="../assets/images/hero/02.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
               </picture>
@@ -183,9 +218,10 @@
         <li class="main-services__item main-services__item--big">
           <div class="service-card service-card--afisha">
             <a class="service-card__link service-card__link--with-img" href="./announcements.html">
+              
                 <picture>
-              
-              
+                  
+                  
                   <source data-srcset="../assets/images/services/afisha.jpg, ../assets/images/services/afisha@2x.jpg 2x" type="image/jpeg">
                   <img class="lazy" data-sizes="auto" data-original="../assets/images/services/afisha.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
                 </picture>
@@ -210,9 +246,10 @@
         <li class="main-services__item">
           <div class="service-card service-card--expo">
             <a class="service-card__link service-card__link--with-img" href="#">
+              
                 <picture>
-              
-              
+                  
+                  
                   <source data-srcset="../assets/images/services/expo.png, ../assets/images/services/expo@2x.png 2x" type="image/png">
                   <img class="lazy" data-sizes="auto" data-original="../assets/images/services/expo.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
                 </picture>
@@ -232,9 +269,10 @@
           <li>
             <article class="news-card">
               <a class="news-card__link" href="#" aria-label="Перейти на страницу новости."></a>
-              <div class="news-card__image">  <picture>
-            
-            
+              <div class="news-card__image">
+              <picture>
+                
+                
                 <source data-srcset="../assets/images/news/01.jpg, ../assets/images/news/01@2x.jpg 2x" type="image/jpeg">
                 <img class="lazy" data-sizes="auto" data-original="../assets/images/news/01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
               </picture>
@@ -249,9 +287,10 @@
           <li>
             <article class="news-card">
               <a class="news-card__link" href="#" aria-label="Перейти на страницу новости."></a>
-              <div class="news-card__image">  <picture>
-            
-            
+              <div class="news-card__image">
+              <picture>
+                
+                
                 <source data-srcset="../assets/images/news/02.jpg, ../assets/images/news/02@2x.jpg 2x" type="image/jpeg">
                 <img class="lazy" data-sizes="auto" data-original="../assets/images/news/02.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
               </picture>
@@ -266,9 +305,10 @@
           <li>
             <article class="news-card">
               <a class="news-card__link" href="#" aria-label="Перейти на страницу новости."></a>
-              <div class="news-card__image">  <picture>
-            
-            
+              <div class="news-card__image">
+              <picture>
+                
+                
                 <source data-srcset="../assets/images/news/03.jpg, ../assets/images/news/03@2x.jpg 2x" type="image/jpeg">
                 <img class="lazy" data-sizes="auto" data-original="../assets/images/news/03.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
               </picture>
@@ -365,9 +405,10 @@
             <div class="partner-card">
               <a class="partner-card__link" href="#">
                 <div class="partner-card__image">
+                  
                     <picture>
-                  
-                  
+                      
+                      
                       <source data-srcset="../assets/images/partners/01.png, ../assets/images/partners/01@2x.png 2x" type="image/png">
                       <img class="lazy" data-sizes="auto" data-original="../assets/images/partners/01.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
                     </picture>
@@ -379,9 +420,10 @@
             <div class="partner-card">
               <a class="partner-card__link" href="#">
                 <div class="partner-card__image">
+                  
                     <picture>
-                  
-                  
+                      
+                      
                       <source data-srcset="../assets/images/partners/02.png, ../assets/images/partners/02@2x.png 2x" type="image/png">
                       <img class="lazy" data-sizes="auto" data-original="../assets/images/partners/02.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
                     </picture>
@@ -393,9 +435,10 @@
             <div class="partner-card">
               <a class="partner-card__link" href="#">
                 <div class="partner-card__image">
+                  
                     <picture>
-                  
-                  
+                      
+                      
                       <source data-srcset="../assets/images/partners/03.png, ../assets/images/partners/03@2x.png 2x" type="image/png">
                       <img class="lazy" data-sizes="auto" data-original="../assets/images/partners/03.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
                     </picture>
@@ -407,9 +450,10 @@
             <div class="partner-card">
               <a class="partner-card__link" href="#">
                 <div class="partner-card__image">
+                  
                     <picture>
-                  
-                  
+                      
+                      
                       <source data-srcset="../assets/images/partners/04.png, ../assets/images/partners/04@2x.png 2x" type="image/png">
                       <img class="lazy" data-sizes="auto" data-original="../assets/images/partners/04.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
                     </picture>
@@ -421,9 +465,10 @@
             <div class="partner-card">
               <a class="partner-card__link" href="#">
                 <div class="partner-card__image">
+                  
                     <picture>
-                  
-                  
+                      
+                      
                       <source data-srcset="../assets/images/partners/05.png, ../assets/images/partners/05@2x.png 2x" type="image/png">
                       <img class="lazy" data-sizes="auto" data-original="../assets/images/partners/05.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
                     </picture>
@@ -435,9 +480,10 @@
             <div class="partner-card">
               <a class="partner-card__link" href="#">
                 <div class="partner-card__image">
+                  
                     <picture>
-                  
-                  
+                      
+                      
                       <source data-srcset="../assets/images/partners/default.png, ../assets/images/partners/default@2x.png 2x" type="image/png">
                       <img class="lazy" data-sizes="auto" data-original="../assets/images/partners/default.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
                     </picture>
@@ -449,9 +495,10 @@
             <div class="partner-card">
               <a class="partner-card__link" href="#">
                 <div class="partner-card__image">
+                  
                     <picture>
-                  
-                  
+                      
+                      
                       <source data-srcset="../assets/images/partners/default.png, ../assets/images/partners/default@2x.png 2x" type="image/png">
                       <img class="lazy" data-sizes="auto" data-original="../assets/images/partners/default.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
                     </picture>
@@ -463,9 +510,10 @@
             <div class="partner-card">
               <a class="partner-card__link" href="#">
                 <div class="partner-card__image">
+                  
                     <picture>
-                  
-                  
+                      
+                      
                       <source data-srcset="../assets/images/partners/default.png, ../assets/images/partners/default@2x.png 2x" type="image/png">
                       <img class="lazy" data-sizes="auto" data-original="../assets/images/partners/default.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
                     </picture>
@@ -477,9 +525,10 @@
             <div class="partner-card">
               <a class="partner-card__link" href="#">
                 <div class="partner-card__image">
+                  
                     <picture>
-                  
-                  
+                      
+                      
                       <source data-srcset="../assets/images/partners/default.png, ../assets/images/partners/default@2x.png 2x" type="image/png">
                       <img class="lazy" data-sizes="auto" data-original="../assets/images/partners/default.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
                     </picture>
@@ -491,9 +540,10 @@
             <div class="partner-card">
               <a class="partner-card__link" href="#">
                 <div class="partner-card__image">
+                  
                     <picture>
-                  
-                  
+                      
+                      
                       <source data-srcset="../assets/images/partners/default.png, ../assets/images/partners/default@2x.png 2x" type="image/png">
                       <img class="lazy" data-sizes="auto" data-original="../assets/images/partners/default.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
                     </picture>
@@ -505,9 +555,10 @@
             <div class="partner-card">
               <a class="partner-card__link" href="#">
                 <div class="partner-card__image">
+                  
                     <picture>
-                  
-                  
+                      
+                      
                       <source data-srcset="../assets/images/partners/default.png, ../assets/images/partners/default@2x.png 2x" type="image/png">
                       <img class="lazy" data-sizes="auto" data-original="../assets/images/partners/default.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
                     </picture>
@@ -519,9 +570,10 @@
             <div class="partner-card">
               <a class="partner-card__link" href="#">
                 <div class="partner-card__image">
+                  
                     <picture>
-                  
-                  
+                      
+                      
                       <source data-srcset="../assets/images/partners/default.png, ../assets/images/partners/default@2x.png 2x" type="image/png">
                       <img class="lazy" data-sizes="auto" data-original="../assets/images/partners/default.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
                     </picture>
@@ -604,7 +656,7 @@
 
 </div>
 
-<script src="../scripts/vendors.js?v=4993" defer></script>
-  <script src="../scripts/main.js?v=4993" defer></script>
+<script src="../scripts/vendors.js?v=1239" defer></script>
+  <script src="../scripts/main.js?v=1239" defer></script>
 </body>
 </html>

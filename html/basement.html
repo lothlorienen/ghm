@@ -13,16 +13,47 @@
   <title>Каркас</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
-  <link href="../css/main.css?v=4993" rel="stylesheet">
+  <link href="../css/main.css?v=1239" rel="stylesheet">
 </head>
 
 <body class="page">
 <div class="preloader js-preloader"></div>
 <div class="page__inner">
 
-<header class="header page__header">
+<header class="page__header header js-header">
   <div class="container">
-    Header
+    <div class="header__top">
+      <div class="header__top-item">
+        <div class="header-search">
+          <button type="button" aria-label="Открыть / закрыть поиск."><svg class="icon icon--search">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#search"/>
+        </svg>
+        </button>
+        </div>      </div>
+      <div class="header__top-item"><a class="btn-ticket" href="#" aria-label="Описание кнопки."><span>Купить билет</span></a></div>
+      <div class="header__top-item"><a class="action-link action-link--tel" href="tel:+73467330868"><span>+7 (3467)</span><b>33-08-68</b></a></div>
+      <div class="header__top-item"><a class="action-link" href="#"><svg class="icon icon--eye">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#eye"/>
+</svg>
+</a></div>
+    </div>
+    <div class="header__bottom">
+      <div class="header__brand">
+        <a href="./home.html" class="page-logo">
+          <svg class="icon icon--ghm-main">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#ghm-main"/>
+          </svg>
+          Государственный <br> художественный <br> музей
+        </a>
+      </div>
+      <div class="header__menu">
+        <nav class="header-menu">
+        
+          <ul class="header-menu__list">
+          </ul>
+        </nav>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -110,7 +141,7 @@
 
 </div>
 
-<script src="../scripts/vendors.js?v=4993" defer></script>
-  <script src="../scripts/main.js?v=4993" defer></script>
+<script src="../scripts/vendors.js?v=1239" defer></script>
+  <script src="../scripts/main.js?v=1239" defer></script>
 </body>
 </html>
