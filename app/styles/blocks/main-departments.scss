@@ -1,10 +1,14 @@
 .main-departments {
-  &__container {
-    padding: 100px 0;
+  @include media(tabletSmall, up) {
+    padding: 100px 0 50px;
+  }
 
-    @include media(mobile) {
-      padding: 50px 0;
-    }
+  @include media(tabletSmall) {
+    padding: 60px 0 50px;
+  }
+
+  @include media(mobile) {
+    padding: 55px 0 50px;
   }
 
   &__grid {

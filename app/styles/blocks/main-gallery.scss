@@ -1,8 +1,12 @@
 .main-gallery {
   overflow: hidden;
 
-  &__container {
-    padding: 40px 0;
+  @include media(mobile, up) {
+    padding: 50px 0;
+  }
+
+  @include media(mobile) {
+    padding: 45px 0;
   }
 
   &__slider {
@@ -70,6 +74,10 @@
 
   &__caption {
     @extend .visually-hidden;
+  }
+
+  &__nav {
+    margin-top: 25px;
   }
 }
 

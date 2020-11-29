@@ -1,0 +1,30 @@
+.btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 33px 10px;
+  font-family: 'Book Antiqua', sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  border: 1.5px solid currentColor;
+  @include transition;
+
+  .arrow {
+    margin-left: 20px;
+  }
+
+  &--primary {
+    color: $color-light;
+    border-color: $color-primary;
+
+    &:hover {
+      border-color: $color-primary-hover;
+    }
+
+    &:active {
+      color: $color-primary;
+    }
+  }
+}

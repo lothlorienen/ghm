@@ -1,0 +1,74 @@
+.btn-ticket {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: repeat(3, auto);
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-light;
+  @include transition;
+
+  &:active,
+  &:hover {
+    color: $color-light;
+
+    &::before,
+    &::after {
+      background-color: $color-primary-hover;
+    }
+
+    span {
+      background-color: $color-primary-hover;
+
+      &::before {
+        background: linear-gradient(to bottom, transparent 50%, $color-primary-hover 50%), white;
+        background-size: 1px 7.5px, 100% 7.5px;
+      }
+    }
+  }
+
+  &:active {
+    color: $color-dark;
+  }
+
+  &::before,
+  &::after {
+    align-self: stretch;
+    content: '';
+    display: inline-flex;
+    width: 6px;
+    height: 100%;
+    background-color: $color-primary;
+    @include transition;
+  }
+
+  &::before {
+    mask-image: radial-gradient(circle at -2px 50%, transparent 6px, black 6px);
+  }
+
+  &::after {
+    mask-image: radial-gradient(circle at 8px 50%, transparent 6px, black 6px);
+  }
+
+  span {
+    display: block;
+    padding: 7px 26px 6px 9px;
+    background-color: $color-primary;
+    @include transition;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 85%;
+      z-index: z(default);
+      content: '';
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 50%, $color-primary 50%), white;
+      background-size: 1px 7.5px, 100% 7.5px;
+    }
+  }
+}

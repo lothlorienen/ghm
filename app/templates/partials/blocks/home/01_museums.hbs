@@ -1,62 +1,60 @@
 <section class="main-departments">
   <div class="container">
-    <div class="main-departments__container">
-      <ul class="main-departments__grid">
-        <li class="main-departments__item">
-          {{#if current-home}}
-            {{>widgets/department-item
-                link="./home.html"
-                title="Государственный художественный музей"
-                name="ghm-main"
-                location="ул. Мира, 2"
-                current=current-home
-            }}
-          {{else}}
-            {{>widgets/department-item
-                link="./home.html"
-                title="Государственный художественный музей"
-                name="ghm-main"
-                location="ул. Мира, 2"
-            }}
-          {{/if}}
-        </li>
-        <li class="main-departments__item">
-          {{#if current-raishev}}
-            {{>widgets/department-item
-                link="./department.html"
-                title="Галерея-мастерская художника Г.&nbsp;С.&nbsp;Райшева"
-                name="ghm-raishev"
-                location="ул. Чехова, 1"
-                current=current-raishev
-            }}
-          {{else}}
-            {{>widgets/department-item
-                link="./department.html"
-                title="Галерея-мастерская художника Г.&nbsp;С.&nbsp;Райшева"
-                name="ghm-raishev"
-                location="ул. Чехова, 1"
-            }}
-          {{/if}}
-        </li>
-        <li class="main-departments__item">
-          {{#if current-igoshev}}
-            {{>widgets/department-item
-                link="./department.html"
-                title="Дом-музей народного художника СССР В.&nbsp;А.&nbsp;Игошева"
-                name="ghm-igoshev"
-                location="ул. Лопарева, 7"
-                current=current-igoshev
-            }}
-          {{else}}
-            {{>widgets/department-item
-                link="./department.html"
-                title="Дом-музей народного художника СССР В.&nbsp;А.&nbsp;Игошева"
-                name="ghm-igoshev"
-                location="ул. Лопарева, 7"
-            }}
-          {{/if}}
-        </li>
-      </ul>
-    </div>
+    <ul class="main-departments__grid">
+      <li class="main-departments__item">
+        {{#if current-home}}
+          {{>widgets/department-item
+              link="./home.html"
+              title="Государственный художественный музей"
+              name="ghm-main"
+              location="ул. Мира, 2"
+              current=current-home
+          }}
+        {{else}}
+          {{>widgets/department-item
+              link="./home.html"
+              title="Государственный художественный музей"
+              name="ghm-main"
+              location="ул. Мира, 2"
+          }}
+        {{/if}}
+      </li>
+      <li class="main-departments__item">
+        {{#if current-raishev}}
+          {{>widgets/department-item
+              link="./department.html"
+              title="Галерея-мастерская художника Г.&nbsp;С.&nbsp;Райшева"
+              name="ghm-raishev"
+              location="ул. Чехова, 1"
+              current=current-raishev
+          }}
+        {{else}}
+          {{>widgets/department-item
+              link="./department.html"
+              title="Галерея-мастерская художника Г.&nbsp;С.&nbsp;Райшева"
+              name="ghm-raishev"
+              location="ул. Чехова, 1"
+          }}
+        {{/if}}
+      </li>
+      <li class="main-departments__item">
+        {{#if current-igoshev}}
+          {{>widgets/department-item
+              link="./department.html"
+              title="Дом-музей народного художника СССР В.&nbsp;А.&nbsp;Игошева"
+              name="ghm-igoshev"
+              location="ул. Лопарева, 7"
+              current=current-igoshev
+          }}
+        {{else}}
+          {{>widgets/department-item
+              link="./department.html"
+              title="Дом-музей народного художника СССР В.&nbsp;А.&nbsp;Игошева"
+              name="ghm-igoshev"
+              location="ул. Лопарева, 7"
+          }}
+        {{/if}}
+      </li>
+    </ul>
   </div>
 </section>
