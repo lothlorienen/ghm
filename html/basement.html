@@ -13,7 +13,7 @@
   <title>Каркас</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
-  <link href="../css/main.css?v=1059" rel="stylesheet">
+  <link href="../css/main.css?v=2144" rel="stylesheet">
 </head>
 
 <body class="page">
@@ -22,51 +22,7 @@
 
 <header class="page__header header js-header">
   <div class="container">
-    <div class="header__top">
-      <div class="header__top-item">
-        <div class="header-search js-header-search">
-          <button class="header-search__btn js-header-search__open" type="button" aria-label="Воспользоваться поиском."><svg class="icon icon--search">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#search"/>
-        </svg>
-        </button>
-        
-          <div class="header-search__opened js-header-search__dropdown">
-            <div class="header-search__inner">
-              <form>
-                <div class="header-search__header">
-                  <div class="header-search__field">
-                    <label class="header-search__label">
-                      <input class="header-search__input js-header-search__input" type="search" name="q" autocomplete="off" placeholder="Поиск">
-                    </label>
-                  </div>
-                  <button class="header-search__close js-header-search__close" type="button"><span class="icon-close"></span></button>
-                </div>
-                <div class="header-search__results js-header-search__results">
-                  <ul class="header-search__results-list">
-                    <li class="header-search__results-item"><a class="header-search__results-link" href="#">Часто задаваемые вопросы</a></li>
-                    <li class="header-search__results-item"><a class="header-search__results-link" href="#">Независимая оценка работы учреждения</a></li>
-                    <li class="header-search__results-item"><a class="header-search__results-link" href="#">Антикоррупционная деятельность</a></li>
-                    <li class="header-search__results-item"><a class="header-search__results-link" href="#">Паспорт доступности</a></li>
-                    <li class="header-search__results-item"><a class="header-search__results-link" href="#">Политика конфиденциальности</a></li>
-                    <li class="header-search__results-item"><a class="header-search__results-link" href="#">Сведения о доходах и расходах</a></li>
-                  </ul>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="header__top-item"><a class="btn-ticket" href="#" aria-label="Описание кнопки.">
-  <span>Купить билет</span>
-</a>
-</div>
-      <div class="header__top-item"><a class="action-link action-link--tel" href="tel:+73467330868"><span>+7 (3467)</span><b>33-08-68</b></a></div>
-      <div class="header__top-item"><a class="action-link" href="#"><svg class="icon icon--eye">
-    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#eye"/>
-</svg>
-</a></div>
-    </div>
-    <div class="header__bottom">
+    <div class="header__grid">
       <div class="header__brand">
         <a href="./home.html" class="page-logo">
           <svg class="icon icon--ghm-main">
@@ -74,6 +30,57 @@
           </svg>
           Государственный <br> художественный <br> музей
         </a>
+      </div>
+      <div class="header__actions">
+        <div class="header-actions">
+          <div class="header-actions__item">
+            <div class="header-search js-header-search">
+              <button class="header-search__btn js-header-search__open" type="button" aria-label="Воспользоваться поиском."><svg class="icon icon--search">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#search"/>
+            </svg>
+            </button>
+            
+              <div class="header-search__opened js-header-search__dropdown">
+                <div class="header-search__inner">
+                  <form>
+                    <div class="header-search__header">
+                      <div class="header-search__field">
+                        <label class="header-search__label">
+                          <input class="header-search__input js-header-search__input" type="search" name="q" autocomplete="off" placeholder="Поиск">
+                        </label>
+                      </div>
+                      <button class="header-search__close js-header-search__close" type="button"><span class="icon-close"></span></button>
+                    </div>
+                    <div class="header-search__results js-header-search__results">
+                      <ul class="header-search__results-list">
+                        <li class="header-search__results-item"><a class="header-search__results-link" href="#">Часто задаваемые вопросы</a></li>
+                        <li class="header-search__results-item"><a class="header-search__results-link" href="#">Независимая оценка работы учреждения</a></li>
+                        <li class="header-search__results-item"><a class="header-search__results-link" href="#">Антикоррупционная деятельность</a></li>
+                        <li class="header-search__results-item"><a class="header-search__results-link" href="#">Паспорт доступности</a></li>
+                        <li class="header-search__results-item"><a class="header-search__results-link" href="#">Политика конфиденциальности</a></li>
+                        <li class="header-search__results-item"><a class="header-search__results-link" href="#">Сведения о доходах и расходах</a></li>
+                      </ul>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-actions__item _mobile-hidden"><a class="btn-ticket" href="#" aria-label="Описание кнопки.">
+          <span>Купить билет</span>
+        </a>
+        </div>
+          <div class="header-actions__item _mobile-hidden"><a class="action-link action-link--tel" href="tel:+73467330868"><span>+7 (3467)</span><b>33-08-68</b></a></div>
+          <div class="header-actions__item _tabletSmall-hidden"><a class="action-link" href="#"><svg class="icon icon--eye">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#eye"/>
+        </svg>
+        </a></div>
+          <div class="header-actions__item _tabletSmall-visible">
+            <button class="mobile-menu" type="button">
+              <span class="mobile-menu__icon"></span>
+            </button>
+          </div>
+        </div>
       </div>
       <div class="header__menu">
         <nav class="header-menu">
@@ -170,7 +177,7 @@
 
 </div>
 
-<script src="../scripts/vendors.js?v=1059" defer></script>
-  <script src="../scripts/main.js?v=1059" defer></script>
+<script src="../scripts/vendors.js?v=2144" defer></script>
+  <script src="../scripts/main.js?v=2144" defer></script>
 </body>
 </html>
