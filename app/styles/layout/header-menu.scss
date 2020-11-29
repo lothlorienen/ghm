@@ -1,0 +1,41 @@
+.header-menu {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    display: block;
+    padding: 14px 20px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &:active {
+      color: $color-dark;
+    }
+
+    &.current {
+      color: $color-primary;
+
+      &:hover {
+        color: $color-primary-hover;
+      }
+
+      &:active {
+        color: $color-dark;
+      }
+    }
+  }
+
+  &__submenu {
+    display: none;
+  }
+}

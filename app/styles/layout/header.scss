@@ -1,6 +1,40 @@
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  z-index: z(header);
+  color: $color-light;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(#F9F6F3, 0.7);
+  }
+
+  &__top-item {
+    margin-left: 49px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  &__menu {
+    margin-left: auto;
+  }
+
+  &--white {
+    color: $color-dark;
+    background-color: $color-white;
+  }
 }
+

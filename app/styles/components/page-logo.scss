@@ -1,0 +1,15 @@
+.page-logo {
+  display: flex;
+  align-items: center;
+  font-family: 'Book Antiqua', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 13px;
+
+  .icon {
+    margin-right: 17px;
+    width: 70px;
+    height: 44px;
+  }
+}

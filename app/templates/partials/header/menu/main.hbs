@@ -1,0 +1,31 @@
+<li class="header-menu__item js-header__item">
+  <a class="header-menu__link js-header__link{{#ifCond active 'afisha'}} header-menu__link--current{{/ifCond}}"
+     href="#">Афиша</a>
+</li>
+<li class="header-menu__item js-header__item">
+  <a class="header-menu__link js-header__link{{#ifCond active 'news'}} header-menu__link--current{{/ifCond}}"
+     href="#">Новости</a>
+</li>
+<li class="header-menu__item js-header__item">
+  <a class="header-menu__link js-header__link{{#ifCond active 'collections'}} header-menu__link--current{{/ifCond}}"
+     href="#">Коллекции</a>
+</li>
+<li class="header-menu__item js-header__item">
+  <a class="header-menu__link js-header__link{{#ifCond active 'expo'}} header-menu__link--current{{/ifCond}}"
+     href="#">Выставки</a>
+</li>
+<li class="header-menu__item js-header__item">
+  <a class="header-menu__link js-header__link{{#ifCond active 'about'}} header-menu__link--current{{/ifCond}}"
+     href="#">О музее</a>
+</li>
+<li class="header-menu__item js-header__item">
+  <a class="header-menu__link js-header__link{{#ifCond active 'departments'}} header-menu__link--current{{/ifCond}}"
+     href="#">Филиалы</a>
+</li>
+<li class="header-menu__item js-header__item">
+  <a class="header-menu__link js-header__link{{#ifCond active 'visitors'}} header-menu__link--current{{/ifCond}}"
+     href="#">Посетителям</a>
+  <div class="header-menu__submenu">
+    {{>header/submenu/visitors}}
+  </div>
+</li>

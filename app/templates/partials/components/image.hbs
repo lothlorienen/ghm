@@ -1,15 +1,7 @@
-{{#ifCond ext 'svg'}}
-  <img src="../assets/images/{{img}}.{{ext}}"/>
-{{else}}
+{{#ifCond ext 'svg'}}<img src="../assets/images/{{img}}.{{ext}}"/>{{else}}
   <picture>
-    {{#if mobile-img}}
-      {{>core/picture-source media="max-width: 767px" img=mobile-img}}
-    {{/if}}
-
-    {{#if tablet-img}}
-      {{>core/picture-source media="max-width: 1279px" img=tablet-img}}
-    {{/if}}
-
+    {{#if mobile-img}}{{>core/picture-source media="max-width: 767px" img=mobile-img}}{{/if}}
+    {{#if tablet-img}}{{>core/picture-source media="max-width: 1279px" img=tablet-img}}{{/if}}
     {{>core/picture-source}}
 
     <img class="lazy"

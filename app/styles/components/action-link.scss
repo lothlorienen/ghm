@@ -1,0 +1,45 @@
+.action-link {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  line-height: 17px;
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  &:active {
+    color: $color-primary;
+  }
+
+  .icon {
+    width: 26px;
+    height: 18px;
+  }
+
+  &--tel {
+    transition: 0s;
+
+    &:hover {
+      b {
+        color: $color-primary-hover;
+      }
+    }
+
+    &:active {
+      b {
+        color: $color-primary;
+        transition: 0s;
+      }
+    }
+
+    span {
+      transition: color 350ms ease;
+    }
+
+    b {
+      margin-left: 5px;
+      transition: color 350ms ease;
+    }
+  }
+}
