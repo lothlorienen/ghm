@@ -12,6 +12,7 @@
 
     @include media(tabletSmall, up) {
       grid-template-areas: 'actions actions' 'brand menu';
+      padding-bottom: 25px;
     }
 
     @include media(tabletSmall) {

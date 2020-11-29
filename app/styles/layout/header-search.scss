@@ -6,7 +6,7 @@
   &__btn {
     display: block;
     padding: 4px 0;
-    color: $color-light;
+    color: inherit;
     @include transition;
 
     &:hover {
