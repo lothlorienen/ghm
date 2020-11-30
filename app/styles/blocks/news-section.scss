@@ -21,7 +21,7 @@
     &:first-child {
       > * {
         @include media(mobile, up) {
-          padding: 15px 20px;
+          padding: 10px 20px 13px;
         }
       }
 
