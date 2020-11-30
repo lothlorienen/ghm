@@ -87,16 +87,15 @@
   }
 
   &__action {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     margin-top: auto;
     overflow: hidden;
   }
 
   &__btn {
-    position: relative;
     display: inline-block;
     padding-right: 10px;
-    color: transparent;
     font-family: 'Book Antiqua', sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -104,20 +103,41 @@
     line-height: 16px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
-    //transform: translateX(-100%);
-    transition: all 500ms ease;
+
+    @include media(tabletSmall, up) {
+      position: relative;
+      color: transparent;
+      transition: all 500ms ease;
+    }
+
+    @include media(tabletSmall) {
+      display: flex;
+      align-items: center;
+      color: $color-primary;
+    }
 
     .arrow-right {
       color: $color-primary;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: $color-white;
-      //transform: translateY(-50%);
       transition: all 500ms ease;
+
+      @include media(tabletSmall, up) {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-white;
+      }
+
+      @include media(tabletSmall) {
+        margin-left: 10px;
+      }
+
+      @include media(mobile) {
+        position: relative;
+        bottom: 2px;
+      }
     }
   }
 }

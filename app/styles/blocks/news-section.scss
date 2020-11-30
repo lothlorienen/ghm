@@ -1,0 +1,110 @@
+.news-section {
+  &__tabs {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    white-space: nowrap;
+    @include hide-scrollbar;
+
+    @include media(mobile, up) {
+      margin: -10px -20px 0;
+      padding-left: 20px;
+    }
+
+    @include media(mobile) {
+      margin: -10px -10px 0;
+      padding-left: 10px;
+    }
+  }
+
+  &__tabs-item {
+    &:first-child {
+      > * {
+        @include media(mobile, up) {
+          padding: 15px 20px;
+        }
+      }
+
+      + * > * {
+        @include media(mobile, up) {
+          padding-left: 40px;
+        }
+      }
+    }
+
+    &:last-child {
+      padding-right: 20px;
+
+      @include media(mobile) {
+        padding-right: 10px;
+      }
+    }
+  }
+
+  &__tabs-link {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-bottom: 1px solid currentColor;
+
+    @include media(mobile, up) {
+      padding: 10px 30px 13px;
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    @include media(mobile) {
+      padding: 10px 10px 13px;
+      font-size: 11px;
+      line-height: 13px;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &--current {
+      position: relative;
+      font-weight: bold;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 3px;
+        background-color: currentColor;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+
+    @include media(tabletSmall, up) {
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+    }
+
+    @include media(tabletSmall) {
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
+    }
+
+    @include media(mobile) {
+      gap: 45px;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+
+    @include media(mobile) {
+      margin-top: 60px;
+    }
+  }
+}

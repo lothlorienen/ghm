@@ -1,4 +1,4 @@
-<header class="page__header header js-header">
+<header class="page__header header{{#if header-mod}} header--{{header-mod}}{{/if}} js-header">
   <div class="container">
     <div class="header__grid">
       <div class="header__brand">
@@ -14,4 +14,4 @@
   </div>
 </header>
 
-<main class="page__content">
+<main class="page__content{{#if no-offset}} page__content--no-offset{{/if}}">

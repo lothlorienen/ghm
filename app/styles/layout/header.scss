@@ -4,7 +4,8 @@
   left: 0;
   right: 0;
   z-index: z(header);
-  color: $color-light;
+  color: $color-dark;
+  background-color: $color-white;
 
   &__grid {
     display: grid;
@@ -12,7 +13,7 @@
 
     @include media(tabletSmall, up) {
       grid-template-areas: 'actions actions' 'brand menu';
-      padding-bottom: 25px;
+      padding-bottom: 10px;
     }
 
     @include media(tabletSmall) {
@@ -47,9 +48,9 @@
     }
   }
 
-  &--white {
-    color: $color-dark;
-    background-color: $color-white;
+  &--main {
+    color: $color-light;
+    background-color: transparent;
   }
 }
 

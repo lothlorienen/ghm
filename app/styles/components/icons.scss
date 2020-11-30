@@ -13,28 +13,34 @@
     display: block;
     background-color: currentColor;
     transform: translateY(-50%);
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 2px;
+      background-color: currentColor;
+    }
+
+    &::before {
+      top: 3px;
+      right: -2px;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      top: -3px;
+      right: -2px;
+      transform: rotate(45deg);
+    }
   }
 
-  span::before {
-    content: '';
-    position: absolute;
-    top: 3px;
-    right: -2px;
-    width: 10px;
-    height: 2px;
-    background-color: currentColor;
-    transform: rotate(-45deg);
-  }
-
-  span::after {
-    content: '';
-    position: absolute;
-    top: -3px;
-    right: -2px;
-    width: 10px;
-    height: 2px;
-    background-color: currentColor;
-    transform: rotate(45deg);
+  &--thin {
+    span {
+      width: 32px;
+      transform: scale(0.75);
+    }
   }
 }
 
