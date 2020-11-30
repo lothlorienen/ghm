@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preload" href="../assets/fonts/BookAntiqua-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/BookAntiqua-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Новости</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="../css/main.css?v=4718" rel="stylesheet">
+</head>
+
+<body class="page">
+<div class="preloader js-preloader"></div>
+<div class="page__inner">
+
+<header class="page__header header js-header">
+  <div class="container">
+    <div class="header__grid">
+      <div class="header__brand">
+        <a href="./home.html" class="page-logo">
+          <svg class="icon icon--ghm-main">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#ghm-main"/>
+          </svg>
+          Государственный <br> художественный <br> музей
+        </a>
+      </div>
+      <div class="header__actions">
+        <div class="header-actions">
+          <div class="header-actions__item">
+            <div class="header-search js-header-search">
+              <button class="header-search__btn js-header-search__open" type="button" aria-label="Воспользоваться поиском."><svg class="icon icon--search">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#search"/>
+            </svg>
+            </button>
+            
+              <div class="header-search__opened js-header-search__dropdown">
+                <div class="header-search__inner">
+                  <form>
+                    <div class="header-search__header">
+                      <div class="header-search__field">
+                        <label class="header-search__label">
+                          <input class="header-search__input js-header-search__input" type="search" name="q" autocomplete="off" placeholder="Поиск">
+                        </label>
+                      </div>
+                      <button class="header-search__close js-header-search__close" type="button"><span class="icon-close"></span></button>
+                    </div>
+                    <div class="header-search__results js-header-search__results">
+                      <ul class="header-search__results-list">
+                        <li class="header-search__results-item"><a class="header-search__results-link" href="#">Часто задаваемые вопросы</a></li>
+                        <li class="header-search__results-item"><a class="header-search__results-link" href="#">Независимая оценка работы учреждения</a></li>
+                        <li class="header-search__results-item"><a class="header-search__results-link" href="#">Антикоррупционная деятельность</a></li>
+                        <li class="header-search__results-item"><a class="header-search__results-link" href="#">Паспорт доступности</a></li>
+                        <li class="header-search__results-item"><a class="header-search__results-link" href="#">Политика конфиденциальности</a></li>
+                        <li class="header-search__results-item"><a class="header-search__results-link" href="#">Сведения о доходах и расходах</a></li>
+                      </ul>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-actions__item _mobile-hidden"><a class="btn-ticket" href="#" aria-label="Описание кнопки.">
+          <span>Купить билет</span>
+        </a>
+        </div>
+          <div class="header-actions__item _mobile-hidden"><a class="action-link action-link--tel" href="tel:+73467330868"><span>+7 (3467)</span><b>33-08-68</b></a></div>
+          <div class="header-actions__item _tabletSmall-hidden"><a class="action-link" href="#"><svg class="icon icon--eye">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#eye"/>
+        </svg>
+        </a></div>
+          <div class="header-actions__item _tabletSmall-visible">
+            <button class="mobile-menu" type="button">
+              <span class="mobile-menu__icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="header__menu">
+        <nav class="header-menu">
+        
+          <ul class="header-menu__list">
+              <li class="header-menu__item js-header__item">
+                <a class="header-menu__link js-header__link" href="./events.html">Афиша</a>
+              </li>
+              <li class="header-menu__item js-header__item">
+                <a class="header-menu__link js-header__link header-menu__link--current" href="./news.html">Новости</a>
+              </li>
+              <li class="header-menu__item js-header__item">
+                <a class="header-menu__link js-header__link" href="./collections.html">Коллекции</a>
+              </li>
+              <li class="header-menu__item js-header__item">
+                <a class="header-menu__link js-header__link" href="./expo.html">Выставки</a>
+              </li>
+              <li class="header-menu__item js-header__item">
+                <a class="header-menu__link js-header__link" href="#">О музее</a>
+              </li>
+              <li class="header-menu__item js-header__item">
+                <a class="header-menu__link js-header__link" href="./department.html">Филиалы</a>
+              </li>
+              <li class="header-menu__item js-header__item">
+                <span class="header-menu__link js-header__link">Посетителям</span>
+                <div class="header-menu__submenu">
+                  <div class="header-submenu">
+                    <div class="header-submenu__container">
+                      <ul class="header-submenu__list">
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Режим работы</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Схема расположения</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Услуги и цены</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Правила посещения</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Льготные категории</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Афиша мероприятий</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Виртуальная экскурсия</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Заказать услугу</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Купить билет</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Подписка на e-mail-рассылку</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Книга отзывов</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Обратная связь</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Телефоны доверия</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Правовая информация</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Музей в соцсетях</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Сувенирная продукция</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Часто задаваемые вопросы</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Музей на bus.gov.ru</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Артефакт</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Аудиогид IZI Travel</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Анкета посетителя</a></li>
+                        <li class="header-submenu__item">
+                          <span class="header-submenu__link">Музей – детям</span>
+                          <div class="header-submenu__menu">
+                            <div class="header-submenu">
+                              <div class="header-submenu__container">
+                                <ul class="header-submenu__list">
+                                  <li class="header-submenu__item"><a class="header-submenu__link" href="#">Музейно-образовательные программы</a></li>
+                                  <li class="header-submenu__item"><a class="header-submenu__link" href="#">Театральная студия</a></li>
+                                  <li class="header-submenu__item"><a class="header-submenu__link" href="#">Я рисую</a></li>
+                                  <li class="header-submenu__item"><a class="header-submenu__link" href="#">Окружная выставка-конкурс «Волшебный калейдоскоп»</a></li>
+                                  <li class="header-submenu__item"><a class="header-submenu__link" href="#">Конкурс детского рисунка «Я в музее»</a></li>
+                                  <li class="header-submenu__item"><a class="header-submenu__link" href="#">Цикл мероприятий «Музей – школе»</a></li>
+                                  <li class="header-submenu__item"><a class="header-submenu__link" href="#">Школьный праздник в музее</a></li>
+                                  <li class="header-submenu__item"><a class="header-submenu__link" href="#">Родителям детей с РАС</a></li>
+                                  <li class="header-submenu__item"><a class="header-submenu__link" href="#">Памятки для детей и родителей</a></li>
+                                  <li class="header-submenu__item"><a class="header-submenu__link" href="#">Наши мероприятия</a></li>
+                                  <li class="header-submenu__item"><a class="header-submenu__link" href="#">Мастер-классы</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                          </div>
+                        </li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Музей. Доступная среда</a></li>
+                        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Мастер-классы</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="page__content">
+
+<section class="section news-section">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">Новости</h2>
+    </div>
+      <div class="section__nav">
+        <ul class="news-section__tabs">
+          <li class="news-section__tabs-item">
+            <a class="news-section__tabs-link news-section__tabs-link--current" href="#">все новости</a>
+          </li>
+          <li class="news-section__tabs-item">
+            <a class="news-section__tabs-link" href="#">2020</a>
+          </li>
+          <li class="news-section__tabs-item">
+            <a class="news-section__tabs-link" href="#">2019</a>
+          </li>
+          <li class="news-section__tabs-item">
+            <a class="news-section__tabs-link" href="#">2018</a>
+          </li>
+          <li class="news-section__tabs-item">
+            <a class="news-section__tabs-link" href="#">2017</a>
+          </li>
+          <li class="news-section__tabs-item">
+            <a class="news-section__tabs-link" href="#">2016</a>
+          </li>
+          <li class="news-section__tabs-item">
+            <a class="news-section__tabs-link" href="#">2015</a>
+          </li>
+        </ul>
+      </div>
+      <div class="section__content">
+        <div class="news-section__grid">
+          <ul class="news-section__list">
+            <li>
+              <article class="news-card">
+                <a class="news-card__link" href="#" aria-label="Перейти на страницу новости."></a>
+                <div class="news-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/news/01.jpg, ../assets/images/news/01@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/news/01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <time class="news-card__time" datetime="10-02-2020">10.02.2020</time>
+                <p class="news-card__title">Apparently we had reached a great height in the atmosphere.</p>
+                <div class="news-card__action">
+                  <a class="news-card__btn" href="#">подробнее <span class="arrow arrow-right arrow-right--thin"><span></span></span>
+              </a>
+                </div>
+              </article>        </li>
+            <li>
+              <article class="news-card">
+                <a class="news-card__link" href="#" aria-label="Перейти на страницу новости."></a>
+                <div class="news-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/news/02.jpg, ../assets/images/news/02@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/news/02.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <time class="news-card__time" datetime="10-02-2020">10.02.2020</time>
+                <p class="news-card__title">Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. </p>
+                <div class="news-card__action">
+                  <a class="news-card__btn" href="#">подробнее <span class="arrow arrow-right arrow-right--thin"><span></span></span>
+              </a>
+                </div>
+              </article>        </li>
+            <li>
+              <article class="news-card">
+                <a class="news-card__link" href="#" aria-label="Перейти на страницу новости."></a>
+                <div class="news-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/news/03.jpg, ../assets/images/news/03@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/news/03.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <time class="news-card__time" datetime="10-02-2020">10.02.2020</time>
+                <p class="news-card__title">Apparently we had reached a great height in the atmosphere, for the sky was a dead black.</p>
+                <div class="news-card__action">
+                  <a class="news-card__btn" href="#">подробнее <span class="arrow arrow-right arrow-right--thin"><span></span></span>
+              </a>
+                </div>
+              </article>        </li>
+            <li>
+              <article class="news-card">
+                <a class="news-card__link" href="#" aria-label="Перейти на страницу новости."></a>
+                <div class="news-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/news/01.jpg, ../assets/images/news/01@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/news/01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <time class="news-card__time" datetime="10-02-2020">10.02.2020</time>
+                <p class="news-card__title">Apparently we had reached a great height in the atmosphere.</p>
+                <div class="news-card__action">
+                  <a class="news-card__btn" href="#">подробнее <span class="arrow arrow-right arrow-right--thin"><span></span></span>
+              </a>
+                </div>
+              </article>        </li>
+            <li>
+              <article class="news-card">
+                <a class="news-card__link" href="#" aria-label="Перейти на страницу новости."></a>
+                <div class="news-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/news/02.jpg, ../assets/images/news/02@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/news/02.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <time class="news-card__time" datetime="10-02-2020">10.02.2020</time>
+                <p class="news-card__title">Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. </p>
+                <div class="news-card__action">
+                  <a class="news-card__btn" href="#">подробнее <span class="arrow arrow-right arrow-right--thin"><span></span></span>
+              </a>
+                </div>
+              </article>        </li>
+            <li>
+              <article class="news-card">
+                <a class="news-card__link" href="#" aria-label="Перейти на страницу новости."></a>
+                <div class="news-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/news/03.jpg, ../assets/images/news/03@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/news/03.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <time class="news-card__time" datetime="10-02-2020">10.02.2020</time>
+                <p class="news-card__title">Apparently we had reached a great height in the atmosphere, for the sky was a dead black.</p>
+                <div class="news-card__action">
+                  <a class="news-card__btn" href="#">подробнее <span class="arrow arrow-right arrow-right--thin"><span></span></span>
+              </a>
+                </div>
+              </article>        </li>
+            <li>
+              <article class="news-card">
+                <a class="news-card__link" href="#" aria-label="Перейти на страницу новости."></a>
+                <div class="news-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/news/01.jpg, ../assets/images/news/01@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/news/01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <time class="news-card__time" datetime="10-02-2020">10.02.2020</time>
+                <p class="news-card__title">Apparently we had reached a great height in the atmosphere.</p>
+                <div class="news-card__action">
+                  <a class="news-card__btn" href="#">подробнее <span class="arrow arrow-right arrow-right--thin"><span></span></span>
+              </a>
+                </div>
+              </article>        </li>
+            <li>
+              <article class="news-card">
+                <a class="news-card__link" href="#" aria-label="Перейти на страницу новости."></a>
+                <div class="news-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/news/02.jpg, ../assets/images/news/02@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/news/02.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <time class="news-card__time" datetime="10-02-2020">10.02.2020</time>
+                <p class="news-card__title">Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. </p>
+                <div class="news-card__action">
+                  <a class="news-card__btn" href="#">подробнее <span class="arrow arrow-right arrow-right--thin"><span></span></span>
+              </a>
+                </div>
+              </article>        </li>
+            <li>
+              <article class="news-card">
+                <a class="news-card__link" href="#" aria-label="Перейти на страницу новости."></a>
+                <div class="news-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/news/03.jpg, ../assets/images/news/03@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/news/03.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <time class="news-card__time" datetime="10-02-2020">10.02.2020</time>
+                <p class="news-card__title">Apparently we had reached a great height in the atmosphere, for the sky was a dead black.</p>
+                <div class="news-card__action">
+                  <a class="news-card__btn" href="#">подробнее <span class="arrow arrow-right arrow-right--thin"><span></span></span>
+              </a>
+                </div>
+              </article>        </li>
+          </ul>
+        </div>
+        <div class="news-section__pagination">
+          <div class="page-pagination">
+            <ul class="page-pagination__list">
+              <li><a class="page-pagination__item page-pagination__item--arrow" href="#"><span class="arrow arrow-left"><span></span></span>
+          </a></li>
+              <li><a class="page-pagination__item page-pagination__item--current" href="#">1</a></li>
+              <li><a class="page-pagination__item" href="#">2</a></li>
+              <li><a class="page-pagination__item" href="#">3</a></li>
+              <li><a class="page-pagination__item" href="#">4</a></li>
+              <li><a class="page-pagination__item page-pagination__item--arrow" href="#"><span class="arrow arrow-right"><span></span></span>
+          </a></li>
+            </ul>
+          </div>    </div>
+      </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="page__footer footer">
+  <div class="container">
+    <div class="footer__grid" role="navigation" aria-label="Дополнительное меню.">
+      <div class="footer__section">
+        <section class="company-info">
+          <ul>
+            <li class="company-info__item company-info__item--address">628011 г. Ханты-Мансийск, <br> ул. Мира, 2</li>
+            <li class="company-info__item company-info__item--tel">Tел: <a href="tel:+73467330868">+7 (3467) 33-08-68</a></li>
+            <li class="company-info__item company-info__item--mail">E-mail: <a href="mailto:ghm-hmao@mail.ru">ghm-hmao@mail.ru</a></li>
+            <li class="company-info__item company-info__item--schedule">Режим работы: <br>
+              с 11.00 - до 19.00 <br>
+              Выходной: понедельник-вторник <br>
+              <small>Последняя среда месяца - санитарный день</small>
+            </li>
+            <li class="company-info__item company-info__item--scheme"><a href="#">Схема расположения</a></li>
+          </ul>
+        </section>      </div>
+      <div class="footer__section">
+        <ul class="footer__list">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Карта сайта</a></li>
+          <li><a href="#">Поиск по сайту</a></li>
+          <li><a href="#">Версия для слабовидящих</a></li>
+          <li><a href="#">Обратная связь</a></li>
+          <li><a href="#">Старая версия сайта</a></li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <ul class="footer__list">
+          <li><a href="#">Льготные категории</a></li>
+          <li><a href="#">Правила посещения</a></li>
+          <li><a href="#">Правовая информация</a></li>
+          <li><a href="#">Услуги и цены</a></li>
+          <li><a href="#">Заказать услугу</a></li>
+          <li><a href="#">Купить билет</a></li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <ul class="footer__list">
+          <li><a href="#">Часто задаваемые вопросы</a></li>
+          <li><a href="#">Независимая оценка работы учреждения</a></li>
+          <li><a href="#">Антикоррупционная деятельность</a></li>
+          <li><a href="#">Паспорт доступности</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="#">Сведения о доходах и расходах</a></li>
+        </ul>
+        <div class="footer__socials">
+          <a href="#"><svg class="icon icon--socials-group">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#socials-group"/>
+</svg>
+ Музей в социальных сетях</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<script src="../scripts/vendors.js?v=4718" defer></script>
+  <script src="../scripts/main.js?v=4718" defer></script>
+</body>
+</html>
