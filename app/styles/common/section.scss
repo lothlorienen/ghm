@@ -12,6 +12,15 @@
   }
 
   &__header {
+    &--with-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__header-label {
+    color: $color-primary;
   }
 
   &__title {
