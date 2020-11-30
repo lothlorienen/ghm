@@ -9,9 +9,8 @@
     top: 50%;
     left: 0;
     width: 23px;
-    height: 2px;
     display: block;
-    background-color: currentColor;
+    border-bottom: 2px solid;
     transform: translateY(-50%);
 
     &::after,
@@ -19,8 +18,7 @@
       content: '';
       position: absolute;
       width: 10px;
-      height: 2px;
-      background-color: currentColor;
+      border-bottom: 2px solid;
     }
 
     &::before {
@@ -55,32 +53,36 @@
     top: 50%;
     right: 0;
     width: 23px;
-    height: 2px;
     display: block;
-    background-color: currentColor;
+    border-bottom: 2px solid;
     transform: translateY(-50%);
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      border-bottom: 2px solid;
+    }
+
+    &::before {
+      top: 3px;
+      left: -2px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      top: -3px;
+      left: -2px;
+      transform: rotate(-45deg);
+    }
   }
 
-  span::before {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: -2px;
-    width: 10px;
-    height: 2px;
-    background-color: currentColor;
-    transform: rotate(45deg);
-  }
-
-  span::after {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -2px;
-    width: 10px;
-    height: 2px;
-    background-color: currentColor;
-    transform: rotate(-45deg);
+  &--thin {
+    span {
+      width: 32px;
+      transform: scale(0.75);
+    }
   }
 }
 
