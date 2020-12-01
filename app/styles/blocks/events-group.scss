@@ -1,0 +1,141 @@
+.events-group {
+  @include media(mobile, up) {
+    display: grid;
+    align-items: flex-start;
+  }
+
+  @include media(tabletSmall, up) {
+    grid-template-columns: minmax(100px, 290px) minmax(700px, auto);
+  }
+
+  @include media(tabletSmall, only) {
+    grid-template-columns: minmax(100px, 165px) 1fr;
+  }
+
+  &__date {
+    align-items: center;
+    justify-content: center;
+
+    @include media(mobile, up) {
+      display: flex;
+      margin-top: 39px + 80px;
+      padding: 20px 15px;
+      min-height: 126px;
+    }
+
+    @include media(mobile) {
+      display: inline-flex;
+      padding: 13px 15px 13px 12px;
+      margin-left: -10px;
+      background-color: $color-gold-layout;
+    }
+  }
+
+  &__single-day {
+    display: block;
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    color: $color-primary;
+
+    @include media(mobile, up) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @include media(mobile) {
+      font-size: 11px;
+      line-height: 13px;
+    }
+  }
+
+  &__single-date {
+    display: block;
+    margin: 3px 0 0;
+    font-style: normal;
+    font-weight: bold;
+
+    @include media(tabletSmall, up) {
+      font-size: 36px;
+      line-height: 41px;
+    }
+
+    @include media(tabletSmall, only) {
+      font-size: 30px;
+      line-height: 34px;
+    }
+
+    @include media(mobile) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &__single-month {
+    display: block;
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+
+    @include media(tabletSmall, up) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include media(tabletSmall) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__period {
+    display: block;
+    padding: 0;
+    margin: 0;
+    max-width: 150px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__period-date {
+    display: block;
+  }
+
+  &__period-day {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  &__content {
+    @include media(mobile, up) {
+      border-left: 2px solid $color-gray;
+    }
+
+    @include media(tabletSmall, up) {
+      padding-left: 40px;
+    }
+
+    @include media(tabletSmall, only) {
+      padding-left: 25px;
+    }
+
+    @include media(mobile) {
+      margin-top: 15px;
+    }
+  }
+
+  &__item {
+    @include media(mobile, up) {
+      padding-top: 80px;
+      overflow: hidden;
+    }
+
+    @include media(mobile) {
+      padding-top: 60px;
+    }
+  }
+}

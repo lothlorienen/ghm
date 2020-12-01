@@ -1,0 +1,16 @@
+<li class="events-group__item">
+  <div class="events-card">
+    <div class="events-card__image">{{>components/image img=(concat 'events/ex-' card-img) ext="jpg"}}</div>
+    {{#if time}}<span class="events-card__time">{{time}}</span>{{/if}}
+    {{#if entrance}}<span class="events-card__entrance">{{entrance}}</span>{{/if}}
+    <div class="events-card__header">
+      <span class="events-card__category">{{category}}</span>
+      <h3 class="events-card__title">{{title}}</h3>
+    </div>
+    <p class="events-card__text">{{text}}</p>
+    <div class="events-card__actions">
+      {{>ui/btn-arrow btn-mode="inline" arrow-mode="thin"}}
+      {{#if buy-ticket}}{{>ui/btn-ticket label="Купить билет"}}{{/if}}
+    </div>
+  </div>
+</li>

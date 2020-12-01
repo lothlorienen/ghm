@@ -1,4 +1,4 @@
-{{#>blocks/common/section section-class="events-all" title="Афиша" pagination=1}}
+{{#>blocks/common/section title="Афиша" pagination=1}}
   <div class="section__nav">
     <div class="section-nav">
       <ul class="section-nav__tabs">
@@ -27,10 +27,94 @@
     </div>
   </div>
   <div class="section__content">
-    <div class="events-all__grid">
-      <ul class="events-all__list">
-        <li>
-          
+    <div class="events-grid">
+      <ul class="events-grid__list">
+        <li class="events-grid__item">
+          {{#>widgets/events-group single-day="СБ" single-number="20" single-month="июня"}}
+            {{>widgets/events-card
+                card-img="01"
+                time="17:00"
+                entrance="Вход: 100 руб"
+                category="Категория"
+                title="Название события в две строчки уместится, даже если оно очень длинное"
+                text="Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle."
+                buy-ticket=1
+            }}
+            {{>widgets/events-card
+                card-img="02"
+                time="17:00"
+                entrance="Вход бесплатный"
+                category="Категория"
+                title="Название события"
+                text="Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle."
+            }}
+          {{/widgets/events-group}}
+        </li>
+        <li class="events-grid__item">
+          {{#>widgets/events-group date-1="23" month-1="сентября" date-2="08" month-2="ноября"}}
+            {{>widgets/events-card
+                card-img="03"
+                category="Категория"
+                title="Название события в две строчки уместится, даже если оно очень длинное"
+                text="Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle."
+                buy-ticket=1
+            }}
+          {{/widgets/events-group}}
+        </li>
+        <li class="events-grid__item">
+          {{#>widgets/events-group date-1="21" month-1="января" date-2="17" month-2="февраля"}}
+            {{>widgets/events-card
+                card-img="01"
+                time="17:00"
+                entrance="Вход: 100 руб"
+                category="Категория"
+                title="Название события в две строчки уместится, даже если оно очень длинное"
+                text="Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle."
+                buy-ticket=1
+            }}
+            {{>widgets/events-card
+                card-img="02"
+                time="17:00"
+                entrance="Вход бесплатный"
+                category="Категория"
+                title="Название события"
+                text="Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle."
+            }}
+            {{>widgets/events-card
+                card-img="01"
+                time="17:00"
+                entrance="Вход: 100 руб"
+                category="Категория"
+                title="Название события в две строчки уместится, даже если оно очень длинное"
+                text="Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle."
+                buy-ticket=1
+            }}
+            {{>widgets/events-card
+                card-img="02"
+                time="17:00"
+                entrance="Вход бесплатный"
+                category="Категория"
+                title="Название события"
+                text="Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle."
+            }}
+            {{>widgets/events-card
+                card-img="01"
+                time="17:00"
+                entrance="Вход: 100 руб"
+                category="Категория"
+                title="Название события в две строчки уместится, даже если оно очень длинное"
+                text="Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle."
+                buy-ticket=1
+            }}
+            {{>widgets/events-card
+                card-img="02"
+                time="17:00"
+                entrance="Вход бесплатный"
+                category="Категория"
+                title="Название события"
+                text="Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle."
+            }}
+          {{/widgets/events-group}}
         </li>
       </ul>
     </div>

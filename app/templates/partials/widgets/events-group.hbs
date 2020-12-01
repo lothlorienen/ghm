@@ -1,0 +1,21 @@
+<div class="events-group">
+  <div class="events-group__date">
+    {{#if single-day}}
+      <p class="events-group__single">
+        <span class="events-group__single-day">{{single-day}}</span>
+        <span class="events-group__single-date">{{single-number}}</span>
+        <span class="events-group__single-month">{{single-month}}</span>
+      </p>
+    {{else}}
+      <p class="events-group__period">
+        <span class="events-group__period-date"><span class="events-group__period-day">{{date-1}}</span> {{month-1}} — </span>
+        <span class="events-group__period-date"><span class="events-group__period-day">{{date-2}}</span> {{month-2}}</span>
+      </p>
+    {{/if}}
+  </div>
+  <div class="events-group__content">
+    <ul class="events-group__list">
+      {{>@partial-block}}
+    </ul>
+  </div>
+</div>
