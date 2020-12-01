@@ -1,10 +1,6 @@
 .main-services {
-  @include media(mobile, up) {
-    padding: 50px 0;
-  }
-
   @include media(mobile) {
-    padding: 0 0 45px;
+    padding-top: 0;
   }
 
   &__grid {

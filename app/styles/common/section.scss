@@ -61,12 +61,22 @@
   }
 
   &--no-pt {
-    padding-top: 0;
+    padding-top: 0!important;
   }
 
   &--half-pt {
     @include media(tabletSmall, up) {
       padding-top: 25px;
     }
+  }
+}
+
+.section-home {
+  @include media(mobile, up) {
+    padding: 50px 0;
+  }
+
+  @include media(mobile) {
+    padding: 45px 0;
   }
 }

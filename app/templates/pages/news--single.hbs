@@ -1,13 +1,12 @@
 {{!Новость / Агрегатор простых страниц}}
 
 {{>layout/head page-title="Новость / Агрегатор простых страниц"}}
-
 {{>layout/header current-page="news--single" active-menu="main"}}
 
 {{>blocks/news--single/main}}
-{{>blocks/common/gallery section-mode="no-pt"}}
-{{>blocks/common/gallery--video section-mode="no-pt"}}
-{{>blocks/common/partners section-mode="half-pt"}}
+{{>blocks/common/gallery section-mode="no-pt" section-class="section-gallery"}}
+{{>blocks/common/gallery--video section-mode="no-pt" section-class="section-gallery"}}
+{{>blocks/common/partners section-mode="half-pt" section-class="section-partners"}}
 {{>blocks/common/social-share section-mode="no-pt"}}
 
 {{>layout/footer current-page="news"}}

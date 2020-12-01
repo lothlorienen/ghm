@@ -1,14 +1,14 @@
 .main-departments {
   @include media(tabletSmall, up) {
-    padding: 100px 0 50px;
+    padding-top: 100px;
   }
 
-  @include media(tabletSmall) {
-    padding: 60px 0 50px;
+  @include media(tabletSmall, only) {
+    padding-top: 65px;
   }
 
   @include media(mobile) {
-    padding: 55px 0 50px;
+    padding: 50px 0;
   }
 
   &__grid {
@@ -28,8 +28,16 @@
   }
 
   &__item {
-    &:first-child .department-item {
-      border-top: unset;
+    &:first-child {
+      .department-item {
+        border-top: unset;
+      }
+
+      .icon {
+        @include media(mobile) {
+          height: 40px;
+        }
+      }
     }
   }
 }

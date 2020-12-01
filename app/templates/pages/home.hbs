@@ -4,11 +4,11 @@
 
 {{>layout/header active-menu="main" current-page="home" header-mod="main" no-offset=1}}
 
-{{>blocks/home/00_hero isStreamNow=true}}
-{{>blocks/home/01_museums current-home=1}}
+{{>blocks/hero/home isStreamNow=true}}
+{{>blocks/common/all-departments current-home=1}}
 {{>blocks/home/02_services}}
 {{>blocks/home/03_news}}
-{{>blocks/home/04_gallery}}
-{{>blocks/home/05_partners}}
+{{>blocks/common/gallery section-home=1}}
+{{>blocks/common/partners section-home=1}}
 
 {{>layout/footer current-page="home"}}

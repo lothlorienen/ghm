@@ -1,0 +1,17 @@
+.section-gallery {
+  @include media(mobile, up) {
+    padding: 50px 0;
+  }
+
+  @include media(mobile) {
+    padding: 45px 0;
+  }
+
+  + .section-gallery {
+    padding-top: 5px;
+  }
+}
+
+.pswp__img {
+  object-fit: contain;
+}

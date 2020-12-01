@@ -1,41 +1,44 @@
-<section class="section{{#if section-mode}} section--{{section-mode}}{{/if}} gallery-section js-slider-gallery">
-  <div class="container">
-    <div class="gallery-section__slider swiper-container js-slider-gallery__slider">
-      <div class="gallery-section__grid swiper-wrapper js-slider-gallery__gallery">
-        <div class="gallery-section__item swiper-slide">
-          {{>widgets/gallery-item img="1"}}
-        </div>
-        <div class="gallery-section__item swiper-slide">
-          {{>widgets/gallery-item img="2"}}
-        </div>
-        <div class="gallery-section__item swiper-slide">
-          {{>widgets/gallery-item img="3"}}
-        </div>
-        <div class="gallery-section__item swiper-slide">
-          {{>widgets/gallery-item img="1"}}
-        </div>
-        <div class="gallery-section__item swiper-slide">
-          {{>widgets/gallery-item img="2"}}
-        </div>
-        <div class="gallery-section__item swiper-slide">
-          {{>widgets/gallery-item img="2"}}
-        </div>
-        <div class="gallery-section__item swiper-slide">
-          {{>widgets/gallery-item img="2"}}
-        </div>
-        <div class="gallery-section__item swiper-slide">
-          {{>widgets/gallery-item img="1"}}
-        </div>
-        <div class="gallery-section__item swiper-slide">
-          {{>widgets/gallery-item img="3"}}
-        </div>
-        <div class="gallery-section__item swiper-slide">
-          {{>widgets/gallery-item img="2"}}
+{{#>blocks/common/section-base}}
+  <div class="gallery-section js-slider-gallery">
+    <div class="container">
+      <div class="gallery-section__slider swiper-container js-slider-gallery__slider">
+        <div class="gallery-section__grid swiper-wrapper js-slider-gallery__gallery">
+          <div class="gallery-section__item swiper-slide">
+            {{>widgets/gallery-item img="1"}}
+          </div>
+          <div class="gallery-section__item swiper-slide">
+            {{>widgets/gallery-item img="2"}}
+          </div>
+          <div class="gallery-section__item swiper-slide">
+            {{>widgets/gallery-item img="3"}}
+          </div>
+          <div class="gallery-section__item swiper-slide">
+            {{>widgets/gallery-item img="1"}}
+          </div>
+          <div class="gallery-section__item swiper-slide">
+            {{>widgets/gallery-item img="2"}}
+          </div>
+          <div class="gallery-section__item swiper-slide">
+            {{>widgets/gallery-item img="2"}}
+          </div>
+          <div class="gallery-section__item swiper-slide">
+            {{>widgets/gallery-item img="2"}}
+          </div>
+          <div class="gallery-section__item swiper-slide">
+            {{>widgets/gallery-item img="1"}}
+          </div>
+          <div class="gallery-section__item swiper-slide">
+            {{>widgets/gallery-item img="3"}}
+          </div>
+          <div class="gallery-section__item swiper-slide">
+            {{>widgets/gallery-item img="2"}}
+          </div>
         </div>
       </div>
-    </div>
-    <div class="gallery-section__nav">
-      {{>components/slider-nav nav-mode="center" class="js-slider-gallery"}}
+      <div class="gallery-section__nav">
+        {{>components/slider-nav nav-mode="center" class="js-slider-gallery"}}
+      </div>
     </div>
   </div>
-</section>
+{{/blocks/common/section-base}}
+

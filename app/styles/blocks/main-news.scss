@@ -1,12 +1,4 @@
 .main-news {
-  @include media(mobile, up) {
-    padding: 50px 0;
-  }
-
-  @include media(mobile) {
-    padding: 45px 0;
-  }
-
   &__title {
     display: block;
     margin: 0;

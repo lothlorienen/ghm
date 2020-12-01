@@ -1,0 +1,9 @@
+.section-partners {
+  @include media(tabletSmall, only) {
+    padding-bottom: 60px;
+  }
+
+  @include media(mobile) {
+    padding: 45px 0 80px;
+  }
+}
