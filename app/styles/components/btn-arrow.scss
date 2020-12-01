@@ -2,6 +2,7 @@
   display: inline-flex;
   align-items: center;
   padding: 11px 33px 10px;
+  color: inherit;
   font-family: 'Book Antiqua', sans-serif;
   font-weight: bold;
   font-size: 13px;
@@ -25,6 +26,15 @@
 
     &:active {
       color: $color-primary;
+    }
+  }
+
+  &--inline {
+    padding: 0;
+    border: unset;
+
+    .arrow {
+      margin-left: 10px;
     }
   }
 }

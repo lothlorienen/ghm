@@ -1,36 +1,38 @@
 .arrow-right {
   cursor: pointer;
   position: relative;
-  width: 23px;
-  height: 10px;
+  display: inline-flex;
+  align-items: center;
 
   span {
-    position: relative;
-    top: 50%;
-    left: 0;
-    width: 23px;
-    display: block;
-    border-bottom: 2px solid;
-    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    width: 25px;
+    height: 25px;
 
     &::after,
     &::before {
       content: '';
       position: absolute;
       width: 10px;
-      border-bottom: 2px solid;
     }
 
     &::before {
-      top: 3px;
-      right: -2px;
-      transform: rotate(-45deg);
+      top: 50%;
+      width: 100%;
+      display: block;
+      border-bottom: 2px solid;
+      transform: translateY(-50%);
     }
 
     &::after {
-      top: -3px;
-      right: -2px;
-      transform: rotate(45deg);
+      top: 50%;
+      right: 0;
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid;
+      border-bottom: 2px solid;
+      transform: translateY(-50%) rotate(-45deg);
     }
   }
 
