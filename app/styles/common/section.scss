@@ -1,14 +1,10 @@
 .section {
-  @include media(tabletSmall, up) {
+  @include media(mobile, up) {
     padding: 50px 0;
   }
 
-  @include media(tabletSmall, only) {
-    padding: 30px 0;
-  }
-
   @include media(mobile) {
-    padding: 20px 0;
+    padding: 25px 0;
   }
 
   &__header {
@@ -21,6 +17,11 @@
 
   &__header-label {
     color: $color-primary;
+
+    @include media(mobile) {
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 
   &__title {

@@ -48,6 +48,12 @@
       width: calc(100vw - 40px);
     }
 
+    @include media(mobile) {
+      right: 10px;
+      left: 10px;
+      width: calc(100vw - 20px);
+    }
+
     &.active {
       opacity: 1;
       pointer-events: auto;

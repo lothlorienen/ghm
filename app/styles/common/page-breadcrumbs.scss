@@ -15,10 +15,19 @@
     display: flex;
     align-items: center;
     color: $color-primary;
+    white-space: nowrap;
+    overflow: auto;
+    @include hide-scrollbar;
+    margin: 0 -10px;
+    padding-left: 10px;
+
+    > *:last-child {
+      padding-right: 10px;
+    }
   }
 
   &__item {
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;

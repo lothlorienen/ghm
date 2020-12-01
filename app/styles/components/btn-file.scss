@@ -3,11 +3,20 @@
   align-items: center;
   font-style: normal;
   font-weight: bold;
-  font-size: 15px;
-  line-height: 17px;
   color: #5A061F;
 
+  @include media(mobile, up) {
+    font-size: 15px;
+    line-height: 17px;
+  }
+
+  @include media(mobile) {
+    font-size: 13px;
+    line-height: 15px;
+  }
+
   .icon {
+    flex: 0 0 auto;
     width: 40px;
     height: 52px;
     margin-right: 18px;

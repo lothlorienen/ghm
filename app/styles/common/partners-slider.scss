@@ -1,6 +1,7 @@
 .partners-slider {
   @include media(mobile) {
-    padding-top: 55px;
+    padding-top: 0;
+    padding-bottom: 80px;
   }
 
   &__nav {

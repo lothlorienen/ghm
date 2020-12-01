@@ -72,16 +72,10 @@
         </div>
       </div>
 
-      <div class="two-columns">
-        <div class="two-columns__item">
-          {{>ui/btn-file btn-name="pdf" label="Геннадий Степанович Райшев.pdf"}}
-        </div>
-        <div class="two-columns__item">
-          {{>ui/btn-file btn-name="word" label="Геннадий Степанович Райшев.word"}}
-        </div>
-        <div class="two-columns__item">
-          {{>ui/btn-file btn-name="exel" label="Название файла более длинное в несколько&nbsp;строчек.exel"}}
-        </div>
+      <div class="buttons-grid">
+        {{>ui/btn-file btn-name="pdf" label="Геннадий Степанович Райшев.pdf"}}
+        {{>ui/btn-file btn-name="word" label="Геннадий Степанович Райшев.word"}}
+        {{>ui/btn-file btn-name="exel" label="Название файла более длинное в несколько&nbsp;строчек.exel"}}
       </div>
 
       <p>Нумерованный список</p>
@@ -129,60 +123,64 @@
 
       <p>Таблица</p>
 
-      <table>
-        <tbody>
-        <tr class="visually-hidden">
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td colspan="3">Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and
-            the stars
-            had ceased to twinkle.
-          </td>
-          <td>1000</td>
-        </tr>
-        <tr>
-          <td colspan="3">Apparently we had reached a great height in the atmosphere.</td>
-          <td>2000</td>
-        </tr>
-        </tbody>
-      </table>
+      <div class="static-table">
+        <table>
+          <tbody>
+          <tr class="visually-hidden">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="3">Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and
+              the stars
+              had ceased to twinkle.
+            </td>
+            <td>1000</td>
+          </tr>
+          <tr>
+            <td colspan="3">Apparently we had reached a great height in the atmosphere.</td>
+            <td>2000</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
 
-      <table>
-        <thead>
-        <tr class="visually-hidden">
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>Заголовок</th>
-          <th>1000</th>
-          <th>Заголовок</th>
-          <th>For the sky was a dead</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>Заголовок</td>
-          <td>2000</td>
-          <td>Заголовок</td>
-          <td>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars
-            had ceased to twinkle.
-          </td>
-        </tr>
-        <tr>
-          <td>Заголовок</td>
-          <td>3000</td>
-          <td>Заголовок</td>
-          <td>Apparently we had reached a great height in the atmosphere.</td>
-        </tr>
-        </tbody>
-      </table>
+      <div class="static-table">
+        <table>
+          <thead>
+          <tr class="visually-hidden">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Заголовок</th>
+            <th>1000</th>
+            <th>Заголовок</th>
+            <th>For the sky was a dead</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>Заголовок</td>
+            <td>2000</td>
+            <td>Заголовок</td>
+            <td>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars
+              had ceased to twinkle.
+            </td>
+          </tr>
+          <tr>
+            <td>Заголовок</td>
+            <td>3000</td>
+            <td>Заголовок</td>
+            <td>Apparently we had reached a great height in the atmosphere.</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
 
       <blockquote>
         Цитата: директор Государственного художественного музея; кандидат педагогических наук.
