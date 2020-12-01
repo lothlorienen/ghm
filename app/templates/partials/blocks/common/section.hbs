@@ -5,5 +5,10 @@
       {{#if header-label}}<span class="section__header-label">{{header-label}}</span>{{/if}}
     </div>
     {{>@partial-block}}
+    {{#if pagination}}
+      <div class="section__pagination">
+        {{>blocks/common/page-pagination}}
+      </div>
+    {{/if}}
   </div>
 </section>

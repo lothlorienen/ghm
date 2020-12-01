@@ -1,0 +1,95 @@
+.section-nav {
+  &__tabs {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    white-space: nowrap;
+    @include hide-scrollbar;
+
+    @include media(mobile, up) {
+      margin: -10px -20px 0;
+      padding-left: 20px;
+    }
+
+    @include media(mobile) {
+      margin: -10px -10px 0;
+      padding-left: 10px;
+    }
+  }
+
+  &__tabs-item {
+    &:first-child {
+      > * {
+        @include media(mobile, up) {
+          padding: 10px 20px 13px;
+        }
+      }
+
+      + * > * {
+        @include media(mobile, up) {
+          padding-left: 40px;
+        }
+      }
+    }
+
+    &:last-child {
+      padding-right: 20px;
+
+      @include media(mobile) {
+        padding-right: 10px;
+      }
+    }
+  }
+
+  &__tabs-link {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+
+    @include media(mobile, up) {
+      padding: 10px 30px 13px;
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    @include media(mobile) {
+      padding: 10px 10px 13px;
+      font-size: 11px;
+      line-height: 13px;
+    }
+
+    &:hover {
+      color: $color-primary;
+      border-color: $color-primary;
+    }
+
+    &:active {
+      color: $color-primary-hover;
+      border-color: $color-primary-hover;
+    }
+
+    &--current {
+      position: relative;
+      font-weight: bold;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border-bottom: 3px solid;
+      }
+
+      &:hover::after {
+        border-color: $color-primary;
+      }
+
+      &:active::after {
+        border-color: $color-primary-hover;
+      }
+    }
+  }
+}
