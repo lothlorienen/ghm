@@ -20,6 +20,7 @@ import './src/widgets/header/header-search';
 
 import './src/widgets/sliders/partners-slider';
 import './src/widgets/sliders/gallery-slider';
+import './src/widgets/sliders/gallery-slider--video';
 import './src/widgets/sliders/hero-slider';
 import './src/widgets/sliders/sliders';
 

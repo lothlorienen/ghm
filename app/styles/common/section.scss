@@ -1,14 +1,14 @@
 .section {
   @include media(tabletSmall, up) {
-    padding: 50px 0 100px;
+    padding: 50px 0;
   }
 
   @include media(tabletSmall, only) {
-    padding: 30px 0 100px;
+    padding: 30px 0;
   }
 
   @include media(mobile) {
-    padding: 20px 0 100px;
+    padding: 20px 0;
   }
 
   &__header {
@@ -56,6 +56,16 @@
 
     @include media(mobile) {
       margin-top: 40px;
+    }
+  }
+
+  &--no-pt {
+    padding-top: 0;
+  }
+
+  &--half-pt {
+    @include media(tabletSmall, up) {
+      padding-top: 25px;
     }
   }
 }

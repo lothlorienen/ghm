@@ -1,0 +1,23 @@
+<section class="section{{#if section-mode}} section--{{section-mode}}{{/if}} gallery-section js-slider-gallery--video">
+  <div class="container">
+    <div class="gallery-section__slider swiper-container js-slider-gallery--video__slider">
+      <div class="gallery-section__grid swiper-wrapper">
+        <div class="gallery-section__item swiper-slide">
+          {{>widgets/gallery-item--video link="https://www.youtube.com/embed/QkmLRgUFzUY"}}
+        </div>
+        <div class="gallery-section__item swiper-slide">
+          {{>widgets/gallery-item--video link="https://www.youtube.com/embed/FHO6LL04YmI"}}
+        </div>
+        <div class="gallery-section__item swiper-slide">
+          {{>widgets/gallery-item--video link="https://www.youtube.com/embed/nfu5TL6MsUo"}}
+        </div>
+        <div class="gallery-section__item swiper-slide">
+          {{>widgets/gallery-item--video link="https://www.youtube.com/embed/CMa68VOlYwM"}}
+        </div>
+      </div>
+    </div>
+    <div class="gallery-section__nav">
+      {{>components/slider-nav nav-mode="center" class="js-slider-gallery--video"}}
+    </div>
+  </div>
+</section>

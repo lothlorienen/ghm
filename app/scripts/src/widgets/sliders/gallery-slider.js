@@ -2,8 +2,11 @@ class GallerySlider extends Widget {
   constructor(node) {
     super(node, 'js-slider-gallery');
 
-    GallerySlider_Gallery.init(this.$node);
-    GallerySlider_Slider.init(this.$node);
+    this.$slider = this.queryElement('.slider');
+    this.$gallery = this.queryElement('.gallery');
+
+    this.$gallery ? GallerySlider_Gallery.init(this.$node) : null;
+    this.$slider ? GallerySlider_Slider.init(this.$node) : null;
   }
 
   static init(el) {
