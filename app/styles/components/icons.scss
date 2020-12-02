@@ -1,90 +1,23 @@
+.arrow {
+  .icon {
+    width: 22px;
+    height: 16px;
+  }
+}
+
 .arrow-right {
   cursor: pointer;
-  position: relative;
   display: inline-flex;
   align-items: center;
-
-  span {
-    display: inline-flex;
-    align-items: center;
-    width: 25px;
-    height: 25px;
-
-    &::after,
-    &::before {
-      content: '';
-      position: absolute;
-      width: 10px;
-    }
-
-    &::before {
-      top: 50%;
-      width: 100%;
-      display: block;
-      border-bottom: 2px solid;
-      transform: translateY(-50%);
-    }
-
-    &::after {
-      top: 50%;
-      right: 0;
-      width: 8px;
-      height: 8px;
-      border-right: 2px solid;
-      border-bottom: 2px solid;
-      transform: translateY(-50%) rotate(-45deg);
-    }
-  }
-
-  &--thin {
-    span {
-      width: 32px;
-      transform: scale(0.75);
-    }
-  }
 }
 
 .arrow-left {
   cursor: pointer;
-  position: relative;
-  width: 23px;
-  height: 10px;
+  display: inline-flex;
+  align-items: center;
 
-  span {
-    position: relative;
-    top: 50%;
-    right: 0;
-    width: 23px;
-    display: block;
-    border-bottom: 2px solid;
-    transform: translateY(-50%);
-
-    &::after,
-    &::before {
-      content: '';
-      position: absolute;
-      width: 10px;
-      border-bottom: 2px solid;
-    }
-
-    &::before {
-      top: 3px;
-      left: -2px;
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      top: -3px;
-      left: -2px;
-      transform: rotate(-45deg);
-    }
-  }
-
-  &--thin {
-    span {
-      width: 32px;
-      transform: scale(0.75);
-    }
+  .icon {
+    transform: rotate(180deg) translateY(2%);
   }
 }
 
