@@ -24,6 +24,7 @@ import './src/widgets/sliders/gallery-slider--video';
 import './src/widgets/sliders/hero-slider';
 import './src/widgets/sliders/sliders';
 import './src/widgets/select2';
+import './src/widgets/datepicker';
 
 import './src/app';
 

@@ -50,6 +50,7 @@
     "yargs": "^14.0.0"
   },
   "dependencies": {
+    "date-fns": "^2.16.1",
     "gulp-cli": "^2.2.0",
     "gulp-debug": "^4.0.0",
     "intersection-observer": "^0.7.0",

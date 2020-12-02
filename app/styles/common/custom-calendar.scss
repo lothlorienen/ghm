@@ -1,0 +1,47 @@
+.custom-calendar {
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      content: '';
+      @include sprite('archive');
+      margin-right: 9px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__input {
+    flex: 0 1 auto;
+    display: inline-block;
+    padding: 11px 20px 11px 49px;
+    width: 100%;
+    max-width: 170px;
+    max-height: 38px;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &::placeholder {
+      color: $color-dark;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 15px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+  }
+}
