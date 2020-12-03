@@ -7,8 +7,8 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    column-gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 60px;
     width: calc(100vw - 40px);
     max-width: 1280px;
   }
@@ -46,24 +46,25 @@
   }
 
   &__menu {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
+    z-index: -1;
     padding-top: 30px;
-    background: #202033;
-    opacity: 0.95;
+    background-color: $color-light;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-
-    .header-submenu__list {
-      row-gap: 16px;
-      //height: 165px;
-      //grid-template-rows: repeat(4, auto);
-    }
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    @include transition;
 
     .header-submenu__item {
-      //margin-bottom: 16px;
+      margin-top: 16px;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
 
     .header-submenu__link {
@@ -71,6 +72,16 @@
       font-size: 14px;
       line-height: 16px;
       text-transform: uppercase;
+    }
+
+    .header-submenu__item--active & {
+      opacity: 0.95;
+      visibility: visible;
+      pointer-events: all;
+    }
+
+    .header--main & {
+      background-color: #202033;
     }
   }
 }

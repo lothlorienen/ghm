@@ -3,7 +3,8 @@ class HeaderDropdown extends Widget {
     super(node, 'js-header');
 
     this.$items = this.queryElements('.item');
-    this.$headerSearchCloseButton = document.querySelector('.js-header-search__close');
+    this.$submenuItems = this.queryElements('.submenu-item');
+    this.$submenuLinks = this.queryElements('.submenu-link');
 
     this.timerId = null;
     this.resetTimerId = null;
@@ -13,6 +14,7 @@ class HeaderDropdown extends Widget {
 
     this.onMouseOverEvents = [];
     this.onItemMouseOut = this.onItemMouseOut.bind(this);
+    // this.submenuOnClick = this.submenuOnClick.bind(this);
 
     this.events();
     this.update();
@@ -37,6 +39,8 @@ class HeaderDropdown extends Widget {
 
       item.addEventListener('mouseout', this.onItemMouseOut);
     });
+
+    this.submenuEvents();
   }
 
   unbindEvents() {
@@ -72,6 +76,7 @@ class HeaderDropdown extends Widget {
       this.setActive(null);
       this.hovered = null;
       this.$node.classList.remove('header--filled');
+      this.$submenuItems.forEach(_subitem => _subitem.classList.contains('header-submenu__item--active') ? _subitem.classList.remove('header-submenu__item--active') : null);
     }, 50);
   }
 
@@ -89,6 +94,19 @@ class HeaderDropdown extends Widget {
         this.$node.classList.add('header--filled');
       }, 200);
     };
+  }
+
+  submenuEvents() {
+    this.$submenuLinks.forEach(_sublink => _sublink.addEventListener('click', this.submenuOnClick()));
+  }
+
+  submenuOnClick() {
+    return e => {
+      let target = e.target;
+
+      target.closest('.js-header__submenu-item').classList.toggle('header-submenu__item--active');
+
+    }
   }
 
   static init(el) {
