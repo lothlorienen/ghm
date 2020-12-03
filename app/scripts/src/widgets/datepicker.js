@@ -45,8 +45,11 @@ class Datepicker extends Widget {
         const instanceRect = instance.el.getBoundingClientRect();
         const top = instanceRect.top + getScrollPos() + this.$node.offsetHeight;
         const left = instanceRect.x < 200 ? instanceRect.left : instanceRect.left + instanceRect.width - 250;
+
         instance.calendarContainer.style.top = top + 'px';
-        instance.calendarContainer.style.left = left + 'px';
+        !Layout.isMobileLayout()
+          ? instance.calendarContainer.style.left = left + 'px'
+          : instance.calendarContainer.style.right = '0px';
 
         if (!this.movedToBody) {
           document.body.appendChild(instance.calendarContainer);
@@ -74,7 +77,7 @@ class Datepicker extends Widget {
   }
 
   update() {
-    this.$node.setAttribute('type', Layout.isDesktopLayout() ? 'text' : 'date');
+    this.$node.setAttribute('type', 'text');
   }
 
   static init(el) {

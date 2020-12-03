@@ -23,7 +23,6 @@ window.PhotoSwipe = PhotoSwipe;
 window.PhotoSwipeUI = PhotoSwipeUI;
 window.datepicker = datepicker;
 window.select2 = select2;
-
 window.datepicker = datepicker;
 window.dateHelper = {
   format: dateFormat,

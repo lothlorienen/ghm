@@ -8,7 +8,7 @@
       'image header header'
       'image text text'
       'image actions actions';
-    grid-template-rows: 18px;
+    grid-template-rows: 18px auto 1fr;
     grid-gap: 16px 70px;
     grid-template-columns: minmax(190px, 220px) auto auto;
   }
