@@ -39,14 +39,12 @@ class HeroSlider extends Widget {
         delay: 5500,
       },
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 0,
+      speed: 500,
+      effect: "slide",
       pagination: {
         el: this.pagination,
         clickable: true,
-      },
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
       },
     });
   }

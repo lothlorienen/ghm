@@ -29,6 +29,7 @@
       padding: 19px 15px;
     }
 
+    .hover &,
     &:hover {
       color: $color-primary;
     }
@@ -56,7 +57,7 @@
     left: 0;
     right: 0;
     background-color: $color-white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
     visibility: hidden;
     opacity: 0;
     @include transition;

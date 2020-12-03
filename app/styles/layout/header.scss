@@ -27,7 +27,11 @@
     @include media(tabletSmall, up) {
       grid-area: actions;
       padding: 20px 0;
-      border-bottom: 1px solid rgba(#F9F6F3, 0.7);
+      border-bottom: 1px solid #D5D5D8;
+
+      &.header--main {
+        border-bottom: 1px solid rgba(#F9F6F3, 0.7);
+      }
     }
   }
 
@@ -56,7 +60,7 @@
   &--filled {
     &.header--main {
       background-color: $color-dark;
-      color: $color-light;
+      //color: $color-light;
     }
   }
 }
