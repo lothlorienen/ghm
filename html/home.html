@@ -13,7 +13,7 @@
   <title>Главная</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
-  <link href="../css/main.css?v=1699" rel="stylesheet">
+  <link href="../css/main.css?v=4949" rel="stylesheet">
 </head>
 
 <body class="page">
@@ -76,14 +76,22 @@
         </svg>
         </a></div>
           <div class="header-actions__item _tabletSmall-visible">
-            <button class="mobile-menu" type="button">
+            <button class="mobile-menu js-header__burger" type="button">
               <span class="mobile-menu__icon"></span>
             </button>
           </div>
         </div>
       </div>
-      <div class="header__menu">
+      <div class="header__menu js-header__menu">
         <nav class="header-menu">
+          <div class="header-menu__mobile js-header__sub">
+            <button class="header-menu__mobile-back js-header__sub_back">
+              <svg class="icon icon--arrow">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#arrow"/>
+              </svg>
+            </button>
+            <span class="header-menu__mobile-title js-header__sub_title"></span>
+          </div>
         
           <ul class="header-menu__list">
               <li class="header-menu__item js-header__item">
@@ -106,7 +114,7 @@
               </li>
               <li class="header-menu__item js-header__item">
                 <span class="header-menu__link js-header__link">Посетителям</span>
-                <div class="header-menu__submenu">
+                <div class="header-menu__submenu js-header__submenu">
                   <div class="header-submenu">
                     <div class="header-submenu__container">
                       <div class="header-submenu__grid">
@@ -841,7 +849,7 @@
 
 </div>
 
-<script src="../scripts/vendors.js?v=1699" defer></script>
-  <script src="../scripts/main.js?v=1699" defer></script>
+<script src="../scripts/vendors.js?v=4949" defer></script>
+  <script src="../scripts/main.js?v=4949" defer></script>
 </body>
 </html>
