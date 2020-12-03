@@ -1,4 +1,33 @@
 .header-menu {
+  &__mobile {
+    display: none;
+    position: absolute;
+    top: 29px;
+    left: 20px;
+    right: 20px;
+
+    &.visible {
+      display: flex;
+    }
+
+    &-title {
+      margin-left: 46px;
+      font-size: 18px;
+      line-height: 120%;
+      letter-spacing: -0.04em;
+      font-weight: bold;
+    }
+
+    &-back {
+      display: flex;
+      align-items: center;
+      width: 25px;
+      height: 25px;
+      color: inherit;
+      transform: rotate(180deg);
+    }
+  }
+
   &__list {
     display: flex;
     align-items: center;
@@ -6,16 +35,20 @@
 
   &__item {
     &:first-child .header-menu__link {
-      padding-left: 0;
+      @include media(tabletSmall, up) {
+        padding-left: 0;
+      }
     }
 
     &:last-child .header-menu__link {
-      padding-right: 0;
+      @include media(tabletSmall, up) {
+        padding-right: 0;
+      }
     }
   }
 
   &__link {
-    display: block;
+    display: inline-block;
     padding: 19px 20px;
     font-weight: normal;
     font-size: 14px;
@@ -56,19 +89,74 @@
     top: 100%;
     left: 0;
     right: 0;
-    background-color: $color-white;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
     visibility: hidden;
     opacity: 0;
-    @include transition;
+
+    @include media(tabletSmall, up) {
+      @include transition;
+      background-color: var(--header-bg);
+    }
 
     .hover & {
       visibility: visible;
       opacity: 1;
     }
+  }
+}
 
-    .header--main & {
-      background-color: rgba(#2B2B3E, 0.95);
+.mobile-opened {
+  .header-menu {
+    width: 100%;
+    height: 100%;
+    padding: 90px 20px 30px;
+
+    &__list {
+      display: grid;
+      align-items: flex-start;
     }
+
+    &__mobile.visible {
+      + * .header-menu__item > .header-menu__link {
+        color: transparent;
+        transition: none;
+      }
+    }
+
+    &__submenu.visible {
+      top: 90px;
+      bottom: 0;
+      z-index: z(default) + 2;
+      visibility: visible;
+      opacity: 1;
+      transition: none;
+    }
+  }
+
+  .header-submenu {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+
+      @include media(mobile) {
+        grid-template-columns: 1fr;
+
+
+      }
+    }
+
+    &__menu.visible {
+      position: fixed;
+      top: 90px;
+      bottom: 0;
+      z-index: z(default) + 3;
+      visibility: visible;
+      opacity: 1;
+      transition: none;
+    }
+  }
+
+  .mobile-menu {
+    position: relative;
+    z-index: z(default) + 3;
   }
 }

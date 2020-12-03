@@ -1,12 +1,18 @@
 .header {
+  --header-bg: #FFFFFF;
+  --header-color: rgba(43, 43, 62, 0.95);
+
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: z(header);
-  color: $color-dark;
-  background-color: $color-white;
+  color: var(--header-color);
   @include transition;
+
+  @include media(tabletSmall, up) {
+    background-color: var(--header-bg);
+  }
 
   &__grid {
     display: grid;
@@ -48,20 +54,31 @@
     }
 
     @include media(tabletSmall) {
-      display: none;
+      position: absolute;
+      top: 100%;
+      left: 100%;
     }
   }
 
   &--main {
-    color: $color-light;
-    background-color: transparent;
-  }
+    --header-color: #FFFFFF;
+    --header-bg: rgba(43, 43, 62, 0.95);
 
-  &--filled {
-    &.header--main {
-      background-color: $color-dark;
-      //color: $color-light;
+    &:not(.header--filled) {
+      color: $color-light;
+      background-color: transparent;
     }
   }
 }
 
+.mobile-opened {
+  .header__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: z(default) + 2;
+    background-color: var(--header-bg);
+  }
+}

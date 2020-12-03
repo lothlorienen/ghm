@@ -1,8 +1,17 @@
 .header-submenu {
   &__container {
     @extend .container;
-    padding-top: 20px;
-    padding-bottom: 30px;
+
+    @include media(tabletSmall, up) {
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+
+    @include media(tabletSmall) {
+      max-height: calc(100 * var(--vh) - 90px);
+      overflow: auto;
+      @include hide-scrollbar;
+    }
   }
 
   &__grid {
@@ -11,6 +20,10 @@
     column-gap: 60px;
     width: calc(100vw - 40px);
     max-width: 1280px;
+
+    @include media(tabletSmall) {
+      padding-bottom: 40px;
+    }
   }
 
   &__link {
@@ -56,12 +69,16 @@
     right: 0;
     z-index: -1;
     padding-top: 30px;
-    background-color: rgba(#F9F6F3, 0.95);
+    background-color: var(--header-bg);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     pointer-events: none;
     visibility: hidden;
     opacity: 0;
     @include transition;
+
+    @include media(tabletSmall, up) {
+      background-color: rgba(#F9F6F3, 0.95);
+    }
 
     .header-submenu__item {
       margin-top: 16px;
@@ -85,7 +102,11 @@
     }
 
     .header--main & {
-      background-color: rgba(#202033, 0.95);
+      background-color: var(--header-bg);
+
+      @include media(tabletSmall, up) {
+        background-color: rgba(#202033, 0.95);
+      }
     }
   }
 }

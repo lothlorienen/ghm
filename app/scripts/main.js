@@ -17,6 +17,7 @@ import './src/widgets/popups';
 
 import './src/widgets/header/header-search';
 import './src/widgets/header/header-dropdown';
+import './src/widgets/header/header-mobile';
 import './src/widgets/header/header';
 
 

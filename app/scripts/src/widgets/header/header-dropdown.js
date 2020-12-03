@@ -21,7 +21,7 @@ class HeaderDropdown extends Widget {
   }
 
   update() {
-    if (Layout.isDesktopLayout()) {
+    if (!Layout.isTabletLayout()) {
       this.bindEvents();
     } else {
       this.unbindEvents();
@@ -105,7 +105,6 @@ class HeaderDropdown extends Widget {
       let target = e.target;
 
       target.closest('.js-header__submenu-item').classList.toggle('header-submenu__item--active');
-
     }
   }
 

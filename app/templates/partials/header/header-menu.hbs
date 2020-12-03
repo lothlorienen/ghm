@@ -1,4 +1,10 @@
 <nav class="header-menu">
+  <div class="header-menu__mobile js-header__sub">
+    <button class="header-menu__mobile-back js-header__sub_back">
+      {{>ui/svg name="arrow"}}
+    </button>
+    <span class="header-menu__mobile-title js-header__sub_title"></span>
+  </div>
 
   <ul class="header-menu__list">
     {{#ifCond menu 'main'}}

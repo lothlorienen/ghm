@@ -3,7 +3,7 @@ class Header extends Widget {
     super(node, 'js-header');
 
     HeaderDropdown.init(this.$node);
-    // HeaderMobile.init(this.$node);
+    HeaderMobile.init(this.$node);
     //HeaderFixedDesktop.init(this.$node);
     // HeaderFixedMobile.init(this.$node);
   }
