@@ -16,6 +16,8 @@ import './src/utils/mobile-height-fix';
 import './src/widgets/popups';
 
 import './src/widgets/header/header-search';
+import './src/widgets/header/header-dropdown';
+import './src/widgets/header/header';
 
 
 import './src/widgets/sliders/partners-slider';

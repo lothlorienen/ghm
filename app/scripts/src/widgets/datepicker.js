@@ -47,9 +47,12 @@ class Datepicker extends Widget {
         const left = instanceRect.x < 200 ? instanceRect.left : instanceRect.left + instanceRect.width - 250;
 
         instance.calendarContainer.style.top = top + 'px';
-        !Layout.isMobileLayout()
-          ? instance.calendarContainer.style.left = left + 'px'
-          : instance.calendarContainer.style.right = '0px';
+        if (!Layout.isMobileLayout()) {
+          instance.calendarContainer.style.left = left + 'px';
+        } else {
+          instance.calendarContainer.style.right = 'auto';
+          instance.calendarContainer.style.left = 'auto';
+        }
 
         if (!this.movedToBody) {
           document.body.appendChild(instance.calendarContainer);

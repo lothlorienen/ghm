@@ -181,6 +181,12 @@
       font-size: 16px;
       line-height: 1;
     }
+
+    a {
+      &:hover {
+        color: $color-red-dark;
+      }
+    }
   }
 
   &__text {

@@ -1,35 +1,43 @@
 <div class="header-submenu">
   <div class="header-submenu__container">
-    <ul class="header-submenu__list">
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Режим работы</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Схема расположения</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Услуги и цены</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Правила посещения</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Льготные категории</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Афиша мероприятий</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Виртуальная экскурсия</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Заказать услугу</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Купить билет</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Подписка на e-mail-рассылку</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Книга отзывов</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Обратная связь</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Телефоны доверия</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Правовая информация</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Музей в соцсетях</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Сувенирная продукция</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Часто задаваемые вопросы</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Музей на bus.gov.ru</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Артефакт</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Аудиогид IZI Travel</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Анкета посетителя</a></li>
-      <li class="header-submenu__item">
-        <span class="header-submenu__link">Музей – детям</span>
-        <div class="header-submenu__menu">
-          {{>header/submenu/visitors--example}}
-        </div>
-      </li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Музей. Доступная среда</a></li>
-      <li class="header-submenu__item"><a class="header-submenu__link" href="#">Мастер-классы</a></li>
-    </ul>
+    <div class="header-submenu__grid">
+      <ul class="header-submenu__list">
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Режим работы</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Схема расположения</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Услуги и цены</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Правила посещения</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Льготные категории</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Афиша мероприятий</a></li>
+      </ul>
+      <ul class="header-submenu__list">
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Виртуальная экскурсия</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Заказать услугу</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Купить билет</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Подписка на e-mail-рассылку</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Книга отзывов</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Обратная связь</a></li>
+      </ul>
+      <ul class="header-submenu__list">
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Телефоны доверия</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Правовая информация</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Музей в соцсетях</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Сувенирная продукция</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Часто задаваемые вопросы</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Музей на bus.gov.ru</a></li>
+      </ul>
+      <ul class="header-submenu__list">
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Артефакт</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Аудиогид IZI Travel</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Анкета посетителя</a></li>
+        <li class="header-submenu__item">
+          <span class="header-submenu__link js-header__submenu-link">Музей – детям</span>
+          <div class="header-submenu__menu">
+            {{>header/submenu/visitors--example}}
+          </div>
+        </li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Музей. Доступная среда</a></li>
+        <li class="header-submenu__item"><a class="header-submenu__link" href="#">Мастер-классы</a></li>
+      </ul>
+    </div>
   </div>
 </div>

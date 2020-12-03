@@ -6,6 +6,7 @@
   z-index: z(header);
   color: $color-dark;
   background-color: $color-white;
+  @include transition;
 
   &__grid {
     display: grid;
@@ -13,13 +14,12 @@
 
     @include media(tabletSmall, up) {
       grid-template-areas: 'actions actions' 'brand menu';
-      padding-bottom: 10px;
     }
 
     @include media(tabletSmall) {
       grid-template-columns: repeat(2, auto);
       align-items: center;
-      padding: 20px 0;
+      padding: 20px 0 0;
     }
   }
 
@@ -51,6 +51,13 @@
   &--main {
     color: $color-light;
     background-color: transparent;
+  }
+
+  &--filled {
+    &.header--main {
+      background-color: $color-dark;
+      color: $color-light;
+    }
   }
 }
 
