@@ -197,6 +197,30 @@
     font-weight: normal;
     font-size: 13px;
     line-height: 20px;
+
+    p {
+      display: block;
+      margin: 20px 0 0;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 23px;
+    }
+
+    > *:first-child {
+      margin-top: 0!important;
+    }
+
+    &--single {
+      p {
+        display: block;
+        margin: 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
   }
 
   &__actions {

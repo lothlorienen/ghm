@@ -1,0 +1,17 @@
+.single-event {
+  @include media(mobile, up) {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
+  @include media(mobile) {
+    padding-top: 10px;
+    padding-bottom: 55px;
+  }
+}
+
+.event-gallery {
+  @include media(mobile) {
+    padding-bottom: 55px;
+  }
+}

@@ -1,0 +1,342 @@
+.event-page {
+  display: grid;
+
+  @include media(mobile, up) {
+    grid-template-areas: 'image header' 'image content' 'info content';
+    grid-template-rows: auto auto 1fr;
+    grid-gap: 30px 70px;
+    grid-template-columns: minmax(290px, 370px) auto;
+    padding: 0 70px;
+    overflow: hidden;
+  }
+
+  @include media(tabletSmall, only) {
+    grid-template-areas: 'image header' 'image info' 'content content';
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(200px, 285px) auto;
+    grid-gap: 20px 30px;
+    padding: 0 65px;
+  }
+
+  @include media(mobile) {
+    grid-template-areas: 'header' 'image' 'info' 'content';
+    grid-template-columns: 1fr;
+    grid-template-rows: initial;
+    grid-gap: 30px;
+  }
+
+  &__header {
+    position: relative;
+    grid-area: header;
+    display: grid;
+    grid-template-areas: 'date category' 'title title';
+    grid-template-columns: 1fr min-content;
+    gap: 50px;
+    padding: 40px 0;
+
+    @include media(tablet) {
+      grid-template-columns: 1fr;
+      grid-template-areas: 'date' 'category' 'title';
+      gap: 20px;
+    }
+
+    @include media(tabletSmall) {
+      padding: 30px 0;
+    }
+
+    @include media(mobile) {
+      padding-bottom: 165px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: z(backdrop);
+      background-color: $color-light;
+
+      @include media(mobile, up) {
+        right: -70px;
+        left: -100vw;
+      }
+
+      @include media(mobile) {
+        right: -10px;
+        left: -10px;
+      }
+    }
+
+    &--day {
+      grid-template-areas: 'date category' 'date time' 'title title';
+      grid-auto-rows: auto auto 1fr;
+      gap: 10px;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    display: block;
+    margin: 0;
+    font-family: 'Book Antiqua', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+
+    @include media(tablet) {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    @include media(tabletSmall) {
+      font-size: 22px;
+    }
+
+    .event-page__header--day & {
+      align-self: end;
+
+      @include media(mobile) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__category {
+    grid-area: category;
+    display: block;
+    margin: 0;
+    color: $color-red-dark;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    @include media(tablet) {
+      text-align: left;
+    }
+  }
+
+  &__date {
+    grid-area: date;
+
+    &--period {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.02em;
+
+      span {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+
+    &--day {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__day {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: $color-primary;
+    text-transform: uppercase;
+
+    @include media(mobile) {
+      font-size: 11px;
+      line-height: 13px;
+    }
+  }
+
+  &__number {
+    margin-top: 3px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    @include media(mobile) {
+      font-size: 24px;
+      line-height: 27px;
+    }
+  }
+
+  &__month {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+  }
+
+  &__time {
+    grid-area: time;
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: bold;
+
+    @include media(mobile, up) {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    @include media(tabletSmall, only) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @include media(mobile) {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    &::before {
+      content: '';
+      @include sprite('clocks');
+      margin-right: 7px;
+    }
+  }
+
+  &__image {
+    grid-area: image;
+    position: relative;
+
+    @include media(mobile, up) {
+      margin-top: 40px;
+    }
+
+    @include media(tabletSmall, only) {
+      margin-top: 30px;
+    }
+
+    @include media(mobile) {
+      margin-top: -175px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      padding-top: 141%;
+
+      @include media(mobile) {
+        padding-top: 138%;
+      }
+    }
+
+    img {
+      @include fill;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    grid-area: content;
+
+    @include media(mobile, up) {
+      margin-top: 10px;
+    }
+
+    @include media(tabletSmall, only) {
+      margin-top: 20px;
+    }
+
+    > *:first-child {
+      margin-top: 0 !important;
+    }
+
+    p {
+      display: block;
+      margin: 23px 0 0;
+      font-size: 15px;
+      line-height: 23px;
+    }
+  }
+
+  &__info {
+    grid-area: info;
+    display: grid;
+    height: auto;
+    align-items: flex-start;
+    grid-template-areas: 'location location' 'price ticket' 'tip tip';
+    grid-auto-rows: auto auto 1fr;
+    gap: 30px;
+
+    @include media(tabletSmall) {
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+    }
+  }
+
+  &__location {
+    grid-area: location;
+    display: flex;
+    align-items: flex-start;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    color: #828282;
+
+    .icon {
+      width: 19px;
+      height: 24px;
+      margin-right: 13px;
+    }
+  }
+
+  &__price {
+    grid-area: price;
+    align-self: center;
+    display: block;
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__ticket {
+    grid-area: ticket;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__tip {
+    grid-area: tip;
+    display: flex;
+    align-items: flex-start;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    color: #828282;
+
+    &::before {
+      flex: 0 0 auto;
+      content: '';
+      @include sprite('info');
+      margin-right: 11px;
+    }
+  }
+}

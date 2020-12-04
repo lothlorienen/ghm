@@ -1,0 +1,28 @@
+<div class="event-page">
+  <div class="event-page__header{{#if period}} event-page__header--period{{/if}}{{#if day}} event-page__header--day{{/if}}">
+    <h3 class="event-page__title">{{title}}</h3>
+    <span class="event-page__category">{{category}}</span>
+    {{#if period}}<span class="event-page__date event-page__date--period">{{{period}}}</span>{{/if}}
+    {{#if day}}
+      <p class="event-page__date event-page__date--day">
+        <span class="event-page__day">{{day}}</span>
+        <span class="event-page__number">{{date}}</span>
+        <span class="event-page__month">{{month}}</span>
+      </p>
+    {{/if}}
+    {{#if time}}<span class="event-page__time">{{time}}</span>{{/if}}
+  </div>
+  <div class="event-page__image">{{>components/image img=(concat 'events/ex-' card-img) ext="jpg"}}</div>
+  <div class="event-page__info">
+    {{#if location}}<p class="event-page__location">{{>ui/svg name="location-b"}} {{{location}}}</p>{{/if}}
+    {{#if price}}<p class="event-page__price">{{price}}</p>{{/if}}
+    {{#if buy-ticket}}
+      <div class="event-page__ticket">{{>ui/btn-ticket label="Купить билет"}}</div>{{/if}}
+    {{#if info}}
+      <div class="event-page__tip"><p>Блок дополнительной информации <br> Абонементы в продаже онлайн и в кассах музея.
+      </p></div>{{/if}}
+  </div>
+  <div class="event-page__content">
+    {{>@partial-block}}
+  </div>
+</div>

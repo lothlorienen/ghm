@@ -71,6 +71,10 @@
     @include media(mobile) {
       margin-top: 40px;
     }
+
+    &--no-mt {
+      margin-top: 0;
+    }
   }
 
   &__pagination {

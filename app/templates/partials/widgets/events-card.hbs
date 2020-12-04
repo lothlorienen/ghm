@@ -1,16 +1,23 @@
-<li class="events-group__item">
-  <div class="events-card">
+{{#if page}}{{else}}<li class="events-group__item">{{/if}}
+  <div class="events-card{{#if page}} events-card--page{{else}}{{/if}}">
     <div class="events-card__image">{{>components/image img=(concat 'events/ex-' card-img) ext="jpg"}}</div>
     {{#if time}}<span class="events-card__time">{{time}}</span>{{/if}}
     {{#if entrance}}<span class="events-card__entrance">{{entrance}}</span>{{/if}}
     <div class="events-card__header">
       <span class="events-card__category">{{category}}</span>
-      <h3 class="events-card__title"><a href="#">{{title}}</a></h3>
+      <h3 class="events-card__title">{{#if page}}{{title}}{{else}}<a href="#">{{title}}</a>{{/if}}</h3>
     </div>
-    <p class="events-card__text">{{text}}</p>
+    <div class="events-card__text{{#if single-text}} events-card__text--single{{/if}}">
+      {{#if single-text}}<p>{{single-text}}</p>
+      {{else}}
+        {{>@partial-block}}
+      {{/if}}
+    </div>
+    {{#if location}}<p class="events-card__location">{{>ui/svg name="location-b"}} {{{location}}}</p>{{/if}}
     <div class="events-card__actions">
       {{>ui/btn-arrow btn-mode="inline"}}
       {{#if buy-ticket}}{{>ui/btn-ticket label="Купить билет"}}{{/if}}
     </div>
+    {{#if info}}<div class="events-card__tips"><p>Блок дополнительной информации <br> Абонементы в продаже онлайн и в кассах музея.</p></div>{{/if}}
   </div>
-</li>
+{{#if page}}{{else}}</li>{{/if}}
