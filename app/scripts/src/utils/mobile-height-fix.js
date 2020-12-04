@@ -3,6 +3,7 @@ class MobileHeightFix extends Widget {
     super(node, '.js-mobile-height-fix');
 
     this.value = (Number(this.$node.dataset.vhValue) / 100) || 1;
+    this.mobileCounter = false;
 
     this.events();
     onResize(this.events.bind(this));
@@ -13,7 +14,9 @@ class MobileHeightFix extends Widget {
   }
 
   setHeight() {
-    this.$node.style.height = `${window.innerHeight * this.value}px`;
+    !this.mobileCounter ? this.$node.style.height = `${window.innerHeight * this.value}px` : null;
+
+    Layout.isMobileLayout() ? this.mobileCounter = true : this.mobileCounter = false;
   }
 
   removeHeight() {

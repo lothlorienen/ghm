@@ -4,6 +4,7 @@
   align-items: flex-end;
   min-height: 650px;
   padding-bottom: 140px;
+  height: 100%;
 
   @include media(tabletSmall, only) {
     padding-bottom: 140px + 65px;
