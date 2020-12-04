@@ -1,0 +1,26 @@
+.collections-page {
+  &__grid {
+    > * + * {
+      @include media(tabletSmall, up) {
+        margin-top: 100px;
+      }
+
+      @include media(tabletSmall) {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 10px;
+
+    @include media(tablet, up) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media(tablet) {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  }
+}

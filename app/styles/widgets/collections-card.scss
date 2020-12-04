@@ -1,0 +1,139 @@
+.collections-card {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 95%;
+
+    @include media(mobile) {
+      padding-top: 67%;
+    }
+  }
+
+  &__link {
+    @include fill;
+    z-index: z(default) + 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    //transition: background-color 350ms ease;
+
+    &::after {
+      @include fill;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      opacity: initial;
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+      transition: opacity 350ms ease;
+    }
+
+    &::before {
+      @include fill;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.15) 100%);
+      transition: opacity 350ms ease;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0;
+      }
+
+      &::before {
+        opacity: initial;
+      }
+    }
+  }
+
+  &__image {
+    @include fill;
+    z-index: z(backdrop);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: z(default) + 1;
+    display: block;
+    padding: 30px 25px;
+    margin: 0;
+    font-family: 'Book Antiqua', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    color: $color-light;
+    pointer-events: none;
+
+    @include media(tabletSmall, only) {
+      padding: 20px 25px;
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    @include media(mobile) {
+      padding: 17px 15px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &--main {
+    .collections-card__link {
+      background-color: $color-light;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      &:hover {
+        ~ .collections-card__title {
+          opacity: 1;
+        }
+      }
+    }
+
+    .collections-card__title {
+      top: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 36px;
+      line-height: 41px;
+      text-transform: uppercase;
+      color: $color-primary;
+      opacity: 0.5;
+      transition: opacity 350ms ease;
+
+      @include media(tablet, only) {
+        font-size: 30px;
+        line-height: 1.3;
+      }
+
+      @include media(mobile) {
+        font-size: 22px;
+        line-height: 1.3;
+      }
+    }
+  }
+}
