@@ -80,15 +80,14 @@
 
   &__title {
     display: block;
-    margin: 2px 0 0;
-    padding-bottom: 30px;
+    margin: 2px 0 30px;
     font-size: 15px;
     line-height: 23px;
 
     // Text overflow
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     overflow: hidden;
     text-overflow: ellipsis;
   }

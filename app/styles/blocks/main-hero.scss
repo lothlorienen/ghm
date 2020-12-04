@@ -122,6 +122,10 @@
 
     @include media(mobile) {
       right: 10px;
+      width: 100px;
+      height: 100px;
+      font-size: 10px;
+      line-height: 14px;
     }
 
     &:hover span {
