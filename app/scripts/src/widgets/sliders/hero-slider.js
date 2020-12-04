@@ -35,13 +35,12 @@ class HeroSlider extends Widget {
   initSwiper() {
     this.swiper = new Swiper(this.slider, {
       loop: true,
-      // autoplay: {
-      //   delay: 5500,
-      // },
+      autoplay: {
+        delay: 7500,
+      },
       slidesPerView: 1,
       spaceBetween: 0,
       speed: 500,
-      // effect: "slide",
       pagination: {
         el: this.pagination,
         clickable: true,

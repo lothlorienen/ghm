@@ -23,12 +23,14 @@
 
   &__container {
     @extend .container;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     height: 100%;
     color: $color-light;
 
     @include media(tabletSmall, only) {
-      display: flex;
-      flex-direction: column;
+      justify-content: initial;
       height: 600px;
     }
 
