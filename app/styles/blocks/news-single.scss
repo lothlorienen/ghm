@@ -1,3 +1,23 @@
 .news-single {
   padding-bottom: 50px;
+
+  @include media(tabletSmall, up) {
+    padding-top: 15px !important;
+  }
+
+  @include media(tabletSmall, only) {
+    padding-top: 25px !important;
+  }
+
+  .section__content {
+    @include media(tabletSmall, up) {
+      margin-top: 30px;
+    }
+    @include media(tabletSmall, only) {
+      margin-top: 20px;
+    }
+    @include media(mobile) {
+      margin-top: 15px;
+    }
+  }
 }

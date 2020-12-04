@@ -9,14 +9,30 @@
 
   &__header {
     &--with-label {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      > * + * {
+        @include media(tabletSmall, up) {
+          margin-top: 15px!important;
+        }
+
+        @include media(tabletSmall) {
+          margin-top: 5px!important;
+        }
+      }
     }
   }
 
   &__header-label {
+    display: block;
+    margin: 0;
     color: $color-primary;
+    text-align: right;
+
+    @include media(mobile, up) {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+    }
 
     @include media(mobile) {
       font-size: 12px;
@@ -30,12 +46,9 @@
     font-family: 'Book Antiqua', sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 36px;
-    line-height: 43px;
 
     @include media(tabletSmall, up) {
       font-size: 36px;
-      line-height: 43px;
     }
 
     @include media(tabletSmall) {

@@ -236,23 +236,9 @@
   }
 
   .static-table {
-    overflow: auto;
-    @include hide-scrollbar;
-
-    @include media(mobile, up) {
-      margin: 50px -10px;
-    }
-
-    @include media(mobile) {
-      margin: 35px -10px;
-    }
-
     table {
-      padding: 0 10px;
       width: 100%;
-      min-width: 700px;
       border-collapse: collapse;
-      table-layout: fixed;
 
       @include media(mobile, up) {
         font-size: 15px;
@@ -268,15 +254,17 @@
     tr {
       > *:first-child {
         border-left: unset;
+        padding-left: 0;
       }
 
       > *:last-child {
         border-right: unset;
+        padding-right: 0;
       }
     }
 
     td, th {
-      width: 210px;
+      width: 215px;
       padding: 15px 18px;
       font-style: normal;
       font-weight: normal;
@@ -285,6 +273,14 @@
       text-align: left;
       border-left: 2px solid $color-gray;
       border-right: 2px solid $color-gray;
+
+      @include media(tabletSmall) {
+        width: 25%;
+
+        &[colspan="3"] {
+          width: calc(3 * 25%);
+        }
+      }
     }
 
     th {
@@ -294,6 +290,49 @@
     + .static-table {
       @include media(mobile) {
         margin-top: 40px;
+      }
+    }
+
+    &--columns-2 {
+      table {
+        table-layout: auto;
+      }
+
+      td:last-child {
+        text-align: right;
+      }
+    }
+
+    &--columns-4 {
+      overflow: auto;
+      @include hide-scrollbar;
+
+      @include media(mobile) {
+        margin: 35px -10px;
+      }
+
+      table {
+        table-layout: fixed;
+
+        @include media(mobile) {
+          table-layout: fixed;
+          min-width: 620px;
+          padding: 0 10px;
+        }
+      }
+
+      tr {
+        > *:first-child {
+          @include media(mobile) {
+            padding-left: 10px;
+          }
+        }
+
+        > *:last-child {
+          @include media(mobile) {
+            padding-right: 10px;
+          }
+        }
       }
     }
   }

@@ -1,8 +1,8 @@
 <section class="section{{#if section-mode}} section--{{section-mode}}{{/if}}{{#if section-class}} {{section-class}}{{/if}}">
   <div class="container{{#if container-md}} container--md{{/if}}">
     <div class="section__header{{#if header-label}} section__header--with-label{{/if}}">
-      <h2 class="section__title">{{title}}</h2>
       {{#if header-label}}<span class="section__header-label">{{header-label}}</span>{{/if}}
+      <h2 class="section__title">{{title}}</h2>
     </div>
     {{>@partial-block}}
     {{#if pagination}}

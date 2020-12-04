@@ -1,5 +1,6 @@
 {{>blocks/common/page-breadcrumbs label-1="Музей -детям" label-2="Музейно-образовательные программы"}}
-{{#>blocks/common/section section-class="news-single" title="Заголовок" container-md=1 header-label="23. 02. 2020"}}
+
+{{#>blocks/common/section section-class="news-single" title="Большой заголовок в несколько строк большой заголовок" container-md=1 header-label="23. 02. 2020"}}
   <div class="section__content">
     <div class="static">
       <p>В Галерее-мастерской Г.С. Райшева открылась выставка из цикла «Из мастерской художника». В экспозиции
@@ -74,9 +75,10 @@
 
       <div class="buttons-grid">
         {{>ui/btn-file btn-name="pdf" label="Геннадий Степанович Райшев.pdf"}}
-        {{>ui/btn-file btn-name="word" label="Геннадий Степанович Райшев.word"}}
-        {{>ui/btn-file btn-name="exel" label="Название файла более длинное в несколько&nbsp;строчек.exel"}}
-        {{>ui/btn-file btn-name="ppt" label="Название файла.ppt"}}
+        {{>ui/btn-file btn-name="doc" label="Геннадий Степанович Райшев.docx"}}
+        {{>ui/btn-file btn-name="xls" label="Название файла более длинное в несколько&nbsp;строчек.exel"}}
+        {{>ui/btn-file btn-name="ppt" label="Файл презентации.ppt"}}
+        {{>ui/btn-file btn-name="txt" label="Текстовый документ, пример файла.ppt"}}
       </div>
 
       <p>Нумерованный список</p>
@@ -124,17 +126,12 @@
 
       <p>Таблица</p>
 
-      <div class="static-table">
+      <div class="static-table static-table--columns-2">
         <table>
           <tbody>
-          <tr class="visually-hidden">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
           <tr>
-            <td colspan="3">Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and
+            <td colspan="3">Apparently we had reached a great height in the atmosphere, for the sky was a dead black,
+              and
               the stars
               had ceased to twinkle.
             </td>
@@ -148,15 +145,9 @@
         </table>
       </div>
 
-      <div class="static-table">
+      <div class="static-table static-table--columns-4">
         <table>
           <thead>
-          <tr class="visually-hidden">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
           <tr>
             <th>Заголовок</th>
             <th>1000</th>
