@@ -1,54 +1,49 @@
 <section class="main-hero js-slider-hero">
-  <div class="container">
-    <div class="main-hero__content js-mobile-height-fix">
-      <div class="main-hero__slider swiper-container js-slider-hero__slider">
-        <div class="main-hero__wrapper swiper-wrapper">
-          <div class="main-hero__item swiper-slide">
-            {{>widgets/hero-slide
-                img="hero/01"
-                ext="jpg"
-                date="<span>23</span> сентября — <span>08</span> ноября"
-                title="Основной баннер"
-                text="содержащий графический материал с информацией о проводимых мероприятиях"
-                location="Государственный <br> художественный музей"
-            }}
-          </div>
-          <div class="main-hero__item swiper-slide">
-            {{>widgets/hero-slide
-                img="hero/02"
-                ext="jpg"
-                date="<span>23</span> ноября — <span>08</span> декабря"
-                title="Основной баннер филиала"
-                text="содержащий графический материал с информацией о проводимых мероприятиях"
-                location="Галерея-мастерская <br> художника Г. С. Райшева"
-            }}
-          </div>
-          <div class="main-hero__item swiper-slide">
-            {{>widgets/hero-slide
-                img="hero/01"
-                ext="jpg"
-                date="<span>27</span> декабря — <span>13</span> января"
-                title="Заголовок баннера"
-                text="Текстовый контент с информацией о проводимых мероприятиях"
-                location="Государственный <br> художественный музей"
-            }}
-          </div>
-          <div class="main-hero__item swiper-slide">
-            {{>widgets/hero-slide
-                img="hero/02"
-                ext="jpg"
-                date="<span>23</span> января — <span>03</span> февраля"
-                title="Основной заголовок"
-                text="Здесь содержится материал с информацией о проводимых мероприятиях"
-                location="Галерея-мастерская <br> художника Г. С. Райшева"
-            }}
-          </div>
-        </div>
-        <div class="main-hero__nav">{{>components/slider-nav class="js-slider-hero"}}</div>
+  <div class="main-hero__slider swiper-container js-slider-hero__slider">
+    <div class="main-hero__wrapper swiper-wrapper">
+      <div class="main-hero__item swiper-slide js-mobile-height-fix">
+        {{>widgets/hero-slide
+            img="hero/01"
+            ext="jpg"
+            date="<span>23</span> сентября — <span>08</span> ноября"
+            title="Основной баннер"
+            text="содержащий графический материал с информацией о проводимых мероприятиях"
+            location="Государственный <br> художественный музей"
+        }}
       </div>
-      <div class="main-hero__pag js-slider-hero__pagination"></div>
-      {{#if isStreamNow}}<a class="main-hero__stream" href="#"><span class="main-hero__stream-inner">online трансляция</span></a>{{/if}}
+      <div class="main-hero__item swiper-slide js-mobile-height-fix">
+        {{>widgets/hero-slide
+            img="hero/02"
+            ext="jpg"
+            date="<span>23</span> ноября — <span>08</span> декабря"
+            title="Основной баннер филиала"
+            text="содержащий графический материал с информацией о проводимых мероприятиях"
+            location="Галерея-мастерская <br> художника Г. С. Райшева"
+        }}
+      </div>
+      <div class="main-hero__item swiper-slide js-mobile-height-fix">
+        {{>widgets/hero-slide
+            img="hero/01"
+            ext="jpg"
+            date="<span>27</span> декабря — <span>13</span> января"
+            title="Заголовок баннера"
+            text="Текстовый контент с информацией о проводимых мероприятиях"
+            location="Государственный <br> художественный музей"
+        }}
+      </div>
+      <div class="main-hero__item swiper-slide js-mobile-height-fix">
+        {{>widgets/hero-slide
+            img="hero/02"
+            ext="jpg"
+            date="<span>23</span> января — <span>03</span> февраля"
+            title="Основной заголовок"
+            text="Здесь содержится материал с информацией о проводимых мероприятиях"
+            location="Галерея-мастерская <br> художника Г. С. Райшева"
+        }}
+      </div>
     </div>
-    <div class="js-slider-hero__bgs"></div>
+    <div class="main-hero__nav">{{>components/slider-nav class="js-slider-hero"}}</div>
   </div>
+  <div class="main-hero__pag js-slider-hero__pagination"></div>
+  {{#if isStreamNow}}<a class="main-hero__stream" href="#"><span class="main-hero__stream-inner">online трансляция</span></a>{{/if}}
 </section>

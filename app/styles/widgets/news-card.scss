@@ -84,6 +84,13 @@
     padding-bottom: 30px;
     font-size: 15px;
     line-height: 23px;
+
+    // Text overflow
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__action {

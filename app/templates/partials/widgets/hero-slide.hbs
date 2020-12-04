@@ -1,8 +1,10 @@
 <div class="hero-slide">
-  <div class="hero-slide__bg">{{>components/image img=img ext=ext}}</div>
-  <p class="hero-slide__date">{{{date}}}</p>
-  <h2 class="hero-slide__title">{{{title}}}</h2>
-  <p class="hero-slide__text">{{text}}</p>
-  <div class="hero-slide__action">{{>ui/btn-arrow btn-mode="primary"}}</div>
-  <p class="hero-slide__location">{{>ui/svg name="location-b"}} {{{location}}}</p>
+  <div class="hero-slide__container">
+    <div class="hero-slide__bg">{{>components/image img=img ext=ext}}</div>
+    <p class="hero-slide__date">{{{date}}}</p>
+    <h2 class="hero-slide__title">{{{title}}}</h2>
+    <p class="hero-slide__text">{{text}}</p>
+    <div class="hero-slide__action">{{>ui/btn-arrow btn-mode="primary"}}</div>
+    <p class="hero-slide__location">{{>ui/svg name="location-b"}} {{{location}}}</p>
+  </div>
 </div>

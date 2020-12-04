@@ -6,7 +6,7 @@ class HeroSlider extends Widget {
     this.pagination = this.queryElement('.pagination');
     this.navPrev = this.queryElement('.prev');
     this.navNext = this.queryElement('.next');
-    this.sectionBgWrapper = this.queryElement('.bgs');
+    // this.sectionBgWrapper = this.queryElement('.bgs');
 
     this.images = null;
     this.swiper = null;
@@ -15,11 +15,11 @@ class HeroSlider extends Widget {
   }
 
   events() {
-    this.setupSectionBg();
+    // this.setupSectionBg();
     this.initSwiper();
     this.onClick();
-    this.changeSectionBg();
-    this.onSlideChange();
+    // this.changeSectionBg();
+    // this.onSlideChange();
   }
 
   onClick() {
@@ -35,13 +35,13 @@ class HeroSlider extends Widget {
   initSwiper() {
     this.swiper = new Swiper(this.slider, {
       loop: true,
-      autoplay: {
-        delay: 5500,
-      },
+      // autoplay: {
+      //   delay: 5500,
+      // },
       slidesPerView: 1,
       spaceBetween: 0,
       speed: 500,
-      effect: "slide",
+      // effect: "slide",
       pagination: {
         el: this.pagination,
         clickable: true,

@@ -1,22 +1,22 @@
 class MobileHeightFix extends Widget {
   constructor(node) {
-    super(node, '.js-mobile-height-fix', 'tablet-mobile');
+    super(node, '.js-mobile-height-fix');
 
-    this.setHeight = this.setHeight.bind(this);
     this.value = (Number(this.$node.dataset.vhValue) / 100) || 1;
 
-    this.init();
+    this.events();
+    onResize(this.events.bind(this));
+  }
+
+  events() {
+    Layout.isTabletLayout() ? this.setHeight() : this.removeHeight();
   }
 
   setHeight() {
     this.$node.style.height = `${window.innerHeight * this.value}px`;
   }
 
-  build() {
-    this.setHeight();
-  }
-
-  destroy() {
+  removeHeight() {
     this.$node.style.height = ``;
   }
 
