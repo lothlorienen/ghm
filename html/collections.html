@@ -10,7 +10,7 @@
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Выставки</title>
+  <title>Все коллекции</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="../css/main.css?v=2497" rel="stylesheet">
@@ -100,10 +100,10 @@
                 <a class="header-menu__link js-header__link" href="./news.html">Новости</a>
               </li>
               <li class="header-menu__item js-header__item">
-                <a class="header-menu__link js-header__link" href="./collections.html">Коллекции</a>
+                <a class="header-menu__link js-header__link header-menu__link--current" href="./collections.html">Коллекции</a>
               </li>
               <li class="header-menu__item js-header__item">
-                <a class="header-menu__link js-header__link header-menu__link--current" href="./expositions.html">Выставки</a>
+                <a class="header-menu__link js-header__link" href="./expositions.html">Выставки</a>
               </li>
               <li class="header-menu__item js-header__item">
                 <a class="header-menu__link js-header__link" href="#">О музее</a>
@@ -201,200 +201,196 @@
 
 <main class="page__content">
 
-<section class="section">
+<section class="section collections-page">
   <div class="container">
       <div class="section__header">
         
-        <h2 class="section__title">Выставки</h2>
+        <h2 class="section__title">Коллекции</h2>
       </div>
-      <div class="section__nav">
-        <div class="section-nav">
-          <ul class="section-nav__list">
-            <li class="section-nav__item">
-              <select class="js-select" data-placeholder="не выбрано" name="expos" id="some-id-1">
-                <option value="все события" selected>все выставки</option>
-                <option value="выставки">постоянная экспозиция</option>
-                <option value="Лекции">временные выставки</option>
-                <option value="Мастер-классы">онлайн-выставки</option>
-                <option value="Экскурсии">передвижные выставки</option>
-              </select>
-            </li>
-            <li class="section-nav__item">
-              <select class="js-select js-select--archive" data-placeholder="архив" name="archive" id="some-id-2">
-                <option value="все годы">все годы</option>
-                <option value="2020">2020</option>
-                <option value="2019">2019</option>
-                <option value="2018">2018</option>
-                <option value="2017">2017</option>
-                <option value="2016">2016</option>
-                <option value="2015">2015</option>
-              </select>
-            </li>
-          </ul>
-        </div>  </div>
       <div class="section__content">
-        <div class="events-grid">
-          <ul class="events-grid__list">
-            <li class="events-grid__item">
-    <div class="events-group">
-      <div class="events-group__date">
-          <p class="events-group__period">
-            <span class="events-group__period-date"><span class="events-group__period-day">23</span> сентября — </span>
-            <span class="events-group__period-date"><span class="events-group__period-day">08</span> ноября</span>
-          </p>
-      </div>
-      <div class="events-group__content">
-        <ul class="events-group__list">
-                      <li class="events-group__item">
-                        <div class="events-card">
-                          <div class="events-card__image">
-                        <picture>
-                          
-                          
-                          <source data-srcset="../assets/images/events/ex-01.jpg, ../assets/images/events/ex-01@2x.jpg 2x" type="image/jpeg">
-                          <img class="lazy" data-sizes="auto" data-original="../assets/images/events/ex-01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
-                        </picture>
-                      </div>
-                          
-                          <span class="events-card__entrance">Вход: 100 руб</span>
-                          <div class="events-card__header">
-                            <span class="events-card__category">постоянная экспозиция</span>
-                            <h3 class="events-card__title"><a href="#">Название события в две строчки уместится, даже если оно очень длинное</a></h3>
-                          </div>
-                          <div class="events-card__text events-card__text--single">
-                            <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
-                          </div>
-                          
-                          <div class="events-card__actions">
-                            <a class="btn-arrow btn-arrow--inline" href="#">подробнее <span class="arrow arrow-right"><svg class="icon icon--arrow">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#arrow"/>
-                            </svg>
-                            </span>
-                            </a>      <a class="btn-ticket" href="#" aria-label="Описание кнопки.">
-                        <span>Купить билет</span>
-                      </a>
-                      
-                          </div>
-                          
-                        </div>
-                      </li>
-        </ul>
-      </div>
-    </div>        </li>
-            <li class="events-grid__item">
-    <div class="events-group">
-      <div class="events-group__date">
-          <p class="events-group__period">
-            <span class="events-group__period-date"><span class="events-group__period-day">23</span> сентября — </span>
-            <span class="events-group__period-date"><span class="events-group__period-day">08</span> ноября</span>
-          </p>
-      </div>
-      <div class="events-group__content">
-        <ul class="events-group__list">
-                      <li class="events-group__item">
-                        <div class="events-card">
-                          <div class="events-card__image">
-                        <picture>
-                          
-                          
-                          <source data-srcset="../assets/images/events/ex-03.jpg, ../assets/images/events/ex-03@2x.jpg 2x" type="image/jpeg">
-                          <img class="lazy" data-sizes="auto" data-original="../assets/images/events/ex-03.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
-                        </picture>
-                      </div>
-                          
-                          
-                          <div class="events-card__header">
-                            <span class="events-card__category">временные выставки</span>
-                            <h3 class="events-card__title"><a href="#">Название события</a></h3>
-                          </div>
-                          <div class="events-card__text events-card__text--single">
-                            <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. </p>
-                          </div>
-                          
-                          <div class="events-card__actions">
-                            <a class="btn-arrow btn-arrow--inline" href="#">подробнее <span class="arrow arrow-right"><svg class="icon icon--arrow">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#arrow"/>
-                            </svg>
-                            </span>
-                            </a>      <a class="btn-ticket" href="#" aria-label="Описание кнопки.">
-                        <span>Купить билет</span>
-                      </a>
-                      
-                          </div>
-                          
-                        </div>
-                      </li>
-        </ul>
-      </div>
-    </div>        </li>
-            <li class="events-grid__item">
-    <div class="events-group">
-      <div class="events-group__date">
-          <p class="events-group__period">
-            <span class="events-group__period-date"><span class="events-group__period-day">23</span> сентября — </span>
-            <span class="events-group__period-date"><span class="events-group__period-day">08</span> ноября 2019</span>
-          </p>
-      </div>
-      <div class="events-group__content">
-        <ul class="events-group__list">
-                      <li class="events-group__item">
-                        <div class="events-card">
-                          <div class="events-card__image">
-                        <picture>
-                          
-                          
-                          <source data-srcset="../assets/images/events/ex-03.jpg, ../assets/images/events/ex-03@2x.jpg 2x" type="image/jpeg">
-                          <img class="lazy" data-sizes="auto" data-original="../assets/images/events/ex-03.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
-                        </picture>
-                      </div>
-                          
-                          <span class="events-card__entrance">Вход: 100 руб</span>
-                          <div class="events-card__header">
-                            <span class="events-card__category">постоянная экспозиция</span>
-                            <h3 class="events-card__title"><a href="#">Название события в две строчки</a></h3>
-                          </div>
-                          <div class="events-card__text events-card__text--single">
-                            <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
-                          </div>
-                          
-                          <div class="events-card__actions">
-                            <a class="btn-arrow btn-arrow--inline" href="#">подробнее <span class="arrow arrow-right"><svg class="icon icon--arrow">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#arrow"/>
-                            </svg>
-                            </span>
-                            </a>      <a class="btn-ticket" href="#" aria-label="Описание кнопки.">
-                        <span>Купить билет</span>
-                      </a>
-                      
-                          </div>
-                          
-                        </div>
-                      </li>
-        </ul>
-      </div>
-    </div>        </li>
+        <div class="collections-page__grid">
+          <ul class="collections-page__list">
+            <li>
+              <div class="collections-card collections-card--main">
+                <a class="collections-card__link" href="#" aria-label="Описание ссылки"></a>
+                
+                <h2 class="collections-card__title">Государственный художественный музей</h2>
+              </div>        </li>
+            <li>
+              <div class="collections-card">
+                <a class="collections-card__link" href="#" aria-label="Описание ссылки"></a>
+                <div class="collections-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/collections/01.jpg, ../assets/images/collections/01@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <h2 class="collections-card__title">Иконопись <br> XV-XIX вв</h2>
+              </div>        </li>
+            <li>
+              <div class="collections-card">
+                <a class="collections-card__link" href="#" aria-label="Описание ссылки"></a>
+                <div class="collections-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/collections/02.jpg, ../assets/images/collections/02@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/02.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <h2 class="collections-card__title">Живопись <br> XVIII-XX вв</h2>
+              </div>        </li>
+            <li>
+              <div class="collections-card">
+                <a class="collections-card__link" href="#" aria-label="Описание ссылки"></a>
+                <div class="collections-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/collections/03.jpg, ../assets/images/collections/03@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/03.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <h2 class="collections-card__title">Графика <br> XVII-XX вв</h2>
+              </div>        </li>
+            <li>
+              <div class="collections-card">
+                <a class="collections-card__link" href="#" aria-label="Описание ссылки"></a>
+                <div class="collections-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/collections/04.jpg, ../assets/images/collections/04@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/04.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <h2 class="collections-card__title">Декоративно-прикладное искусство XVIII-XXI вв</h2>
+              </div>        </li>
+            <li>
+              <div class="collections-card">
+                <a class="collections-card__link" href="#" aria-label="Описание ссылки"></a>
+                <div class="collections-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/collections/05.jpg, ../assets/images/collections/05@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/05.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <h2 class="collections-card__title">Скульптура <br> XVIII-XXI вв</h2>
+              </div>        </li>
+            <li>
+              <div class="collections-card">
+                <a class="collections-card__link" href="#" aria-label="Описание ссылки"></a>
+                <div class="collections-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/collections/06.jpg, ../assets/images/collections/06@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/06.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <h2 class="collections-card__title">Современное искусство</h2>
+              </div>        </li>
+            <li>
+              <div class="collections-card">
+                <a class="collections-card__link" href="#" aria-label="Описание ссылки"></a>
+                <div class="collections-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/collections/07.jpg, ../assets/images/collections/07@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/07.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <h2 class="collections-card__title">Югра пленэрная</h2>
+              </div>        </li>
+          </ul>
+          <ul class="collections-page__list">
+            <li>
+              <div class="collections-card collections-card--main">
+                <a class="collections-card__link" href="#" aria-label="Описание ссылки"></a>
+                
+                <h2 class="collections-card__title">Дом-музей народного художника СССР <br> В. А. Игошева</h2>
+              </div>        </li>
+            <li>
+              <div class="collections-card">
+                <a class="collections-card__link" href="#" aria-label="Описание ссылки"></a>
+                <div class="collections-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/collections/08.jpg, ../assets/images/collections/08@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/08.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <h2 class="collections-card__title">Коллекция живописи <br> В. А. Игошева</h2>
+              </div>        </li>
+            <li>
+              <div class="collections-card">
+                <a class="collections-card__link" href="#" aria-label="Описание ссылки"></a>
+                <div class="collections-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/collections/09.jpg, ../assets/images/collections/09@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/09.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <h2 class="collections-card__title">Коллекция графики советских художников</h2>
+              </div>        </li>
+            <li>
+              <div class="collections-card">
+                <a class="collections-card__link" href="#" aria-label="Описание ссылки"></a>
+                <div class="collections-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/collections/10.jpg, ../assets/images/collections/10@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/10.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <h2 class="collections-card__title">Коллекция предметов быта и декоративно-прикладного искусства</h2>
+              </div>        </li>
+          </ul>
+          <ul class="collections-page__list">
+            <li>
+              <div class="collections-card collections-card--main">
+                <a class="collections-card__link" href="#" aria-label="Описание ссылки"></a>
+                
+                <h2 class="collections-card__title">Галерея-<br> мастерская <br> художника <br> Г. С. Райшева</h2>
+              </div>        </li>
+            <li>
+              <div class="collections-card">
+                <a class="collections-card__link" href="#" aria-label="Описание ссылки"></a>
+                <div class="collections-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/collections/11.jpg, ../assets/images/collections/11@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/11.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <h2 class="collections-card__title">Живопись</h2>
+              </div>        </li>
+            <li>
+              <div class="collections-card">
+                <a class="collections-card__link" href="#" aria-label="Описание ссылки"></a>
+                <div class="collections-card__image">
+                <picture>
+                  
+                  
+                  <source data-srcset="../assets/images/collections/12.jpg, ../assets/images/collections/12@2x.jpg 2x" type="image/jpeg">
+                  <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/12.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                </picture>
+              </div>
+                <h2 class="collections-card__title">Графика</h2>
+              </div>        </li>
           </ul>
         </div>
       </div>
-      <div class="section__pagination">
-        <div class="page-pagination">
-          <ul class="page-pagination__list">
-            <li><a class="page-pagination__item page-pagination__item--arrow" href="#"><span class="arrow arrow-left"><svg class="icon icon--arrow">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#arrow"/>
-        </svg>
-        </span>
-        </a></li>
-            <li><a class="page-pagination__item page-pagination__item--current" href="#">1</a></li>
-            <li><a class="page-pagination__item" href="#">2</a></li>
-            <li><a class="page-pagination__item" href="#">3</a></li>
-            <li><a class="page-pagination__item" href="#">4</a></li>
-            <li><a class="page-pagination__item page-pagination__item--arrow" href="#"><span class="arrow arrow-right"><svg class="icon icon--arrow">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#arrow"/>
-        </svg>
-        </span>
-        </a></li>
-          </ul>
-        </div>      </div>
   </div>
 </section>
 
