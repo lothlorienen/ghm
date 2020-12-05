@@ -2,8 +2,20 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(10px, auto);
+    grid-auto-rows: 11px;
     gap: 30px 40px;
+
+    @include media(tabletSmall, up) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media(tabletSmall, only) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(mobile) {
+      grid-template-columns: 1fr;
+    }
   }
 
 }

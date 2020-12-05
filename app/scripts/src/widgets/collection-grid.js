@@ -1,6 +1,6 @@
-class CollectionGrid extends Widget{
+class CollectionGrid extends Widget {
   constructor(node) {
-    super(node, '.js-collection-group');
+    super(node, '.js-collection-grid');
     this.items = this.queryElements('.item');
     this.images = this.queryElements('.item img');
 
@@ -8,39 +8,46 @@ class CollectionGrid extends Widget{
   }
 
   events() {
-    this.checkImageHeight();
+    this.resizeAllGridItems();
+
+
+    this.images.forEach((img, idx) => {
+      img.addEventListener("load", () => {
+        this.resizeGridItem(this.items[idx]);
+        this.items[idx].classList.add('loaded');
+      });
+    });
   }
 
   checkImageHeight() {
-    function getMeta(url) {
-      return new Promise((resolve, reject) => {
-        const img = new Image();
-        img.onload = () => resolve(img);
-        img.onerror = reject;
-        img.src = url;
-      });
-    }
+  }
 
-    async function run(incoming_url, index, element) {
-      const img = await getMeta(incoming_url);
-      const w = img.width;
-      const h = img.height;
-      const aspectR = h / w;
-      const resultRows = Math.floor(aspectR * 400 / 10);
-      element.style.gridRowEnd = `span ${resultRows}`;
-    }
+  resizeGridItem(item) {
+    const rowHeight = parseInt(window.getComputedStyle(this.$node).getPropertyValue('grid-auto-rows'));
+    const rowGap = parseInt(window.getComputedStyle(this.$node).getPropertyValue('grid-row-gap'));
+    console.log('item: ' + (item.getBoundingClientRect().height + rowGap) / (rowHeight + rowGap))
+    const rowSpan = Math.round((item.getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+    console.log(item.getBoundingClientRect().height)
 
-    this.images.forEach((item, index) => {
-      run(item.dataset.original, index, this.items[index])
-    });
+    item.parentNode.style.gridRowEnd = `span ${rowSpan}`;
+  }
+
+  resizeAllGridItems() {
+    for (let item of this.items) {
+      this.resizeGridItem(item);
+    }
+  }
+
+  resizeEvents() {
+    onResize(this.resizeAllGridItems.bind(this))
   }
 
 
   static init(el) {
-   el && new CollectionGrid(el);
+    el && new CollectionGrid(el);
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.js-collection-group').forEach(item => CollectionGrid.init(item));
+  document.querySelectorAll('.js-collection-grid').forEach(item => CollectionGrid.init(item));
 })

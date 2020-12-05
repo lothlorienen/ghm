@@ -1,5 +1,6 @@
 .collection-single {
   position: relative;
+  height: 100%;
 
   &__link {
     @include fill;
@@ -42,15 +43,6 @@
       ~ .collection-single__content {
         opacity: initial;
       }
-    }
-  }
-
-  &__image {
-
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
     }
   }
 
@@ -99,5 +91,16 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    .loaded & {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
