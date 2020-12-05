@@ -10,7 +10,7 @@
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Выставки</title>
+  <title>Страница коллекции</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="../css/main.css?v=492" rel="stylesheet">
@@ -100,10 +100,10 @@
                 <a class="header-menu__link js-header__link" href="./news.html">Новости</a>
               </li>
               <li class="header-menu__item js-header__item">
-                <a class="header-menu__link js-header__link" href="./collections.html">Коллекции</a>
+                <a class="header-menu__link js-header__link header-menu__link--current" href="./collections.html">Коллекции</a>
               </li>
               <li class="header-menu__item js-header__item">
-                <a class="header-menu__link js-header__link header-menu__link--current" href="./expositions.html">Выставки</a>
+                <a class="header-menu__link js-header__link" href="./expositions.html">Выставки</a>
               </li>
               <li class="header-menu__item js-header__item">
                 <a class="header-menu__link js-header__link" href="#">О музее</a>
@@ -201,200 +201,246 @@
 
 <main class="page__content">
 
-<section class="section">
+<section class="section collection-page">
   <div class="container">
       <div class="section__header">
         
-        <h2 class="section__title">Выставки</h2>
+        <h2 class="section__title">Иконопись XV-XIX вв</h2>
       </div>
       <div class="section__nav">
         <div class="section-nav">
           <ul class="section-nav__list">
             <li class="section-nav__item">
-              <select class="js-select" data-placeholder="не выбрано" name="expos" id="some-id-1">
-                <option value="все события" selected>все выставки</option>
-                <option value="выставки">постоянная экспозиция</option>
-                <option value="Лекции">временные выставки</option>
-                <option value="Мастер-классы">онлайн-выставки</option>
-                <option value="Экскурсии">передвижные выставки</option>
+              <select class="js-select" data-placeholder="авторы" name="author" id="some-id-1">
+                <option value="все события">все авторы</option>
+                <option value="выставки">авторы 1</option>
+                <option value="Лекции">авторы 2</option>
+                <option value="Мастер-классы">авторы 3</option>
+                <option value="Экскурсии">авторы 4</option>
               </select>
             </li>
             <li class="section-nav__item">
-              <select class="js-select js-select--archive" data-placeholder="архив" name="archive" id="some-id-2">
-                <option value="все годы">все годы</option>
-                <option value="2020">2020</option>
-                <option value="2019">2019</option>
-                <option value="2018">2018</option>
-                <option value="2017">2017</option>
-                <option value="2016">2016</option>
-                <option value="2015">2015</option>
+              <select class="js-select" data-placeholder="периоды" name="periods" id="some-id-2">
+                <option value="все события">все периоды</option>
+                <option value="выставки">периоды 1</option>
+                <option value="Лекции">периоды с очень длинным названием в несколько строк что ли</option>
+                <option value="Мастер-классы">обычный период с названием</option>
+                <option value="Экскурсии">периоды 4</option>
+                <option value="Экскурсии">периоды</option>
+                <option value="Экскурсии">периоды</option>
+                <option value="Экскурсии">периоды</option>
+              </select>
+            </li>
+            <li class="section-nav__item">
+              <select class="js-select" data-placeholder="жанры" name="genres" id="some-id-3">
+                <option value="все события">все жанры</option>
+                <option value="выставки">жанры 1</option>
+                <option value="Лекции">жанры 2</option>
+                <option value="Мастер-классы">жанры 3</option>
+                <option value="Экскурсии">жанры 4</option>
               </select>
             </li>
           </ul>
-        </div>  </div>
+        </div>
+      </div>
       <div class="section__content">
-        <div class="events-grid">
-          <ul class="events-grid__list">
-            <li class="events-grid__item">
-    <div class="events-group">
-      <div class="events-group__date">
-          <p class="events-group__period">
-            <span class="events-group__period-date"><span class="events-group__period-day">23</span> сентября — </span>
-            <span class="events-group__period-date"><span class="events-group__period-day">08</span> ноября</span>
-          </p>
-      </div>
-      <div class="events-group__content">
-        <ul class="events-group__list">
-                      <li class="events-group__item">
-                        <div class="events-card">
-                          <div class="events-card__image">
-                        <picture>
-                          
-                          
-                          <source data-srcset="../assets/images/events/ex-01.jpg, ../assets/images/events/ex-01@2x.jpg 2x" type="image/jpeg">
-                          <img class="lazy" data-sizes="auto" data-original="../assets/images/events/ex-01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
-                        </picture>
-                      </div>
-                          
-                          <span class="events-card__entrance">Вход: 100 руб</span>
-                          <div class="events-card__header">
-                            <span class="events-card__category">постоянная экспозиция</span>
-                            <h3 class="events-card__title"><a href="#">Название события в две строчки уместится, даже если оно очень длинное</a></h3>
-                          </div>
-                          <div class="events-card__text events-card__text--single">
-                            <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
-                          </div>
-                          
-                          <div class="events-card__actions">
-                            <a class="btn-arrow btn-arrow--inline" href="#">подробнее <span class="arrow arrow-right"><svg class="icon icon--arrow">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#arrow"/>
-                            </svg>
-                            </span>
-                            </a>      <a class="btn-ticket" href="#" aria-label="Описание кнопки.">
-                        <span>Купить билет</span>
-                      </a>
-                      
-                          </div>
-                          
-                        </div>
-                      </li>
-        </ul>
-      </div>
-    </div>        </li>
-            <li class="events-grid__item">
-    <div class="events-group">
-      <div class="events-group__date">
-          <p class="events-group__period">
-            <span class="events-group__period-date"><span class="events-group__period-day">23</span> сентября — </span>
-            <span class="events-group__period-date"><span class="events-group__period-day">08</span> ноября</span>
-          </p>
-      </div>
-      <div class="events-group__content">
-        <ul class="events-group__list">
-                      <li class="events-group__item">
-                        <div class="events-card">
-                          <div class="events-card__image">
-                        <picture>
-                          
-                          
-                          <source data-srcset="../assets/images/events/ex-03.jpg, ../assets/images/events/ex-03@2x.jpg 2x" type="image/jpeg">
-                          <img class="lazy" data-sizes="auto" data-original="../assets/images/events/ex-03.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
-                        </picture>
-                      </div>
-                          
-                          
-                          <div class="events-card__header">
-                            <span class="events-card__category">временные выставки</span>
-                            <h3 class="events-card__title"><a href="#">Название события</a></h3>
-                          </div>
-                          <div class="events-card__text events-card__text--single">
-                            <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. </p>
-                          </div>
-                          
-                          <div class="events-card__actions">
-                            <a class="btn-arrow btn-arrow--inline" href="#">подробнее <span class="arrow arrow-right"><svg class="icon icon--arrow">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#arrow"/>
-                            </svg>
-                            </span>
-                            </a>      <a class="btn-ticket" href="#" aria-label="Описание кнопки.">
-                        <span>Купить билет</span>
-                      </a>
-                      
-                          </div>
-                          
-                        </div>
-                      </li>
-        </ul>
-      </div>
-    </div>        </li>
-            <li class="events-grid__item">
-    <div class="events-group">
-      <div class="events-group__date">
-          <p class="events-group__period">
-            <span class="events-group__period-date"><span class="events-group__period-day">23</span> сентября — </span>
-            <span class="events-group__period-date"><span class="events-group__period-day">08</span> ноября 2019</span>
-          </p>
-      </div>
-      <div class="events-group__content">
-        <ul class="events-group__list">
-                      <li class="events-group__item">
-                        <div class="events-card">
-                          <div class="events-card__image">
-                        <picture>
-                          
-                          
-                          <source data-srcset="../assets/images/events/ex-03.jpg, ../assets/images/events/ex-03@2x.jpg 2x" type="image/jpeg">
-                          <img class="lazy" data-sizes="auto" data-original="../assets/images/events/ex-03.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
-                        </picture>
-                      </div>
-                          
-                          <span class="events-card__entrance">Вход: 100 руб</span>
-                          <div class="events-card__header">
-                            <span class="events-card__category">постоянная экспозиция</span>
-                            <h3 class="events-card__title"><a href="#">Название события в две строчки</a></h3>
-                          </div>
-                          <div class="events-card__text events-card__text--single">
-                            <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
-                          </div>
-                          
-                          <div class="events-card__actions">
-                            <a class="btn-arrow btn-arrow--inline" href="#">подробнее <span class="arrow arrow-right"><svg class="icon icon--arrow">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#arrow"/>
-                            </svg>
-                            </span>
-                            </a>      <a class="btn-ticket" href="#" aria-label="Описание кнопки.">
-                        <span>Купить билет</span>
-                      </a>
-                      
-                          </div>
-                          
-                        </div>
-                      </li>
-        </ul>
-      </div>
-    </div>        </li>
+        <div class="collection-page__grid">
+          <ul class="collection-page__list js-collection-group">
+            <li>
+              <div class="collection-single js-collection-group__item">
+                <a class="collection-single__link" href="#" aria-label="Описание ссылки"></a>
+                
+                  <picture>
+                    
+                    
+                    <source data-srcset="../assets/images/collections/group/01.jpg, ../assets/images/collections/group/01@2x.jpg 2x" type="image/jpeg">
+                    <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/group/01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                  </picture>
+                <div class="collection-single__content">
+                  <span class="collection-single__author">Имя Фамилия Автора</span>
+                  <h2 class="collection-single__name">Название произведения</h2>
+                  <span class="collection-single__years">1990-1992</span>
+                </div>
+              </div>        </li>
+            <li>
+              <div class="collection-single js-collection-group__item">
+                <a class="collection-single__link" href="#" aria-label="Описание ссылки"></a>
+                
+                  <picture>
+                    
+                    
+                    <source data-srcset="../assets/images/collections/group/02.jpg, ../assets/images/collections/group/02@2x.jpg 2x" type="image/jpeg">
+                    <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/group/02.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                  </picture>
+                <div class="collection-single__content">
+                  <span class="collection-single__author">Имя Фамилия Автора</span>
+                  <h2 class="collection-single__name">Название произведения</h2>
+                  <span class="collection-single__years">1990-1992</span>
+                </div>
+              </div>        </li>
+            <li>
+              <div class="collection-single js-collection-group__item">
+                <a class="collection-single__link" href="#" aria-label="Описание ссылки"></a>
+                
+                  <picture>
+                    
+                    
+                    <source data-srcset="../assets/images/collections/group/03.jpg, ../assets/images/collections/group/03@2x.jpg 2x" type="image/jpeg">
+                    <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/group/03.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                  </picture>
+                <div class="collection-single__content">
+                  <span class="collection-single__author">Имя Фамилия Автора</span>
+                  <h2 class="collection-single__name">Название произведения</h2>
+                  <span class="collection-single__years">1990-1992</span>
+                </div>
+              </div>        </li>
+            <li>
+              <div class="collection-single js-collection-group__item">
+                <a class="collection-single__link" href="#" aria-label="Описание ссылки"></a>
+                
+                  <picture>
+                    
+                    
+                    <source data-srcset="../assets/images/collections/group/04.jpg, ../assets/images/collections/group/04@2x.jpg 2x" type="image/jpeg">
+                    <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/group/04.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                  </picture>
+                <div class="collection-single__content">
+                  <span class="collection-single__author">Имя Фамилия Автора</span>
+                  <h2 class="collection-single__name">Название произведения</h2>
+                  <span class="collection-single__years">1990-1992</span>
+                </div>
+              </div>        </li>
+            <li>
+              <div class="collection-single js-collection-group__item">
+                <a class="collection-single__link" href="#" aria-label="Описание ссылки"></a>
+                
+                  <picture>
+                    
+                    
+                    <source data-srcset="../assets/images/collections/group/05.jpg, ../assets/images/collections/group/05@2x.jpg 2x" type="image/jpeg">
+                    <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/group/05.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                  </picture>
+                <div class="collection-single__content">
+                  <span class="collection-single__author">Имя Фамилия Автора</span>
+                  <h2 class="collection-single__name">Название произведения</h2>
+                  <span class="collection-single__years">1990-1992</span>
+                </div>
+              </div>        </li>
+            <li>
+              <div class="collection-single js-collection-group__item">
+                <a class="collection-single__link" href="#" aria-label="Описание ссылки"></a>
+                
+                  <picture>
+                    
+                    
+                    <source data-srcset="../assets/images/collections/group/06.jpg, ../assets/images/collections/group/06@2x.jpg 2x" type="image/jpeg">
+                    <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/group/06.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                  </picture>
+                <div class="collection-single__content">
+                  <span class="collection-single__author">Имя Фамилия Автора</span>
+                  <h2 class="collection-single__name">Название произведения</h2>
+                  <span class="collection-single__years">1990-1992</span>
+                </div>
+              </div>        </li>
+            <li>
+              <div class="collection-single js-collection-group__item">
+                <a class="collection-single__link" href="#" aria-label="Описание ссылки"></a>
+                
+                  <picture>
+                    
+                    
+                    <source data-srcset="../assets/images/collections/group/01.jpg, ../assets/images/collections/group/01@2x.jpg 2x" type="image/jpeg">
+                    <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/group/01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                  </picture>
+                <div class="collection-single__content">
+                  <span class="collection-single__author">Имя Фамилия Автора</span>
+                  <h2 class="collection-single__name">Название произведения</h2>
+                  <span class="collection-single__years">1990-1992</span>
+                </div>
+              </div>        </li>
+            <li>
+              <div class="collection-single js-collection-group__item">
+                <a class="collection-single__link" href="#" aria-label="Описание ссылки"></a>
+                
+                  <picture>
+                    
+                    
+                    <source data-srcset="../assets/images/collections/group/02.jpg, ../assets/images/collections/group/02@2x.jpg 2x" type="image/jpeg">
+                    <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/group/02.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                  </picture>
+                <div class="collection-single__content">
+                  <span class="collection-single__author">Имя Фамилия Автора</span>
+                  <h2 class="collection-single__name">Название произведения</h2>
+                  <span class="collection-single__years">1990-1992</span>
+                </div>
+              </div>        </li>
+            <li>
+              <div class="collection-single js-collection-group__item">
+                <a class="collection-single__link" href="#" aria-label="Описание ссылки"></a>
+                
+                  <picture>
+                    
+                    
+                    <source data-srcset="../assets/images/collections/group/03.jpg, ../assets/images/collections/group/03@2x.jpg 2x" type="image/jpeg">
+                    <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/group/03.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                  </picture>
+                <div class="collection-single__content">
+                  <span class="collection-single__author">Имя Фамилия Автора</span>
+                  <h2 class="collection-single__name">Название произведения</h2>
+                  <span class="collection-single__years">1990-1992</span>
+                </div>
+              </div>        </li>
+            <li>
+              <div class="collection-single js-collection-group__item">
+                <a class="collection-single__link" href="#" aria-label="Описание ссылки"></a>
+                
+                  <picture>
+                    
+                    
+                    <source data-srcset="../assets/images/collections/group/04.jpg, ../assets/images/collections/group/04@2x.jpg 2x" type="image/jpeg">
+                    <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/group/04.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                  </picture>
+                <div class="collection-single__content">
+                  <span class="collection-single__author">Имя Фамилия Автора</span>
+                  <h2 class="collection-single__name">Название произведения</h2>
+                  <span class="collection-single__years">1990-1992</span>
+                </div>
+              </div>        </li>
+            <li>
+              <div class="collection-single js-collection-group__item">
+                <a class="collection-single__link" href="#" aria-label="Описание ссылки"></a>
+                
+                  <picture>
+                    
+                    
+                    <source data-srcset="../assets/images/collections/group/05.jpg, ../assets/images/collections/group/05@2x.jpg 2x" type="image/jpeg">
+                    <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/group/05.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                  </picture>
+                <div class="collection-single__content">
+                  <span class="collection-single__author">Имя Фамилия Автора</span>
+                  <h2 class="collection-single__name">Название произведения</h2>
+                  <span class="collection-single__years">1990-1992</span>
+                </div>
+              </div>        </li>
+            <li>
+              <div class="collection-single js-collection-group__item">
+                <a class="collection-single__link" href="#" aria-label="Описание ссылки"></a>
+                
+                  <picture>
+                    
+                    
+                    <source data-srcset="../assets/images/collections/group/06.jpg, ../assets/images/collections/group/06@2x.jpg 2x" type="image/jpeg">
+                    <img class="lazy" data-sizes="auto" data-original="../assets/images/collections/group/06.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                  </picture>
+                <div class="collection-single__content">
+                  <span class="collection-single__author">Имя Фамилия Автора</span>
+                  <h2 class="collection-single__name">Название произведения</h2>
+                  <span class="collection-single__years">1990-1992</span>
+                </div>
+              </div>        </li>
           </ul>
         </div>
       </div>
-      <div class="section__pagination">
-        <div class="page-pagination">
-          <ul class="page-pagination__list">
-            <li><a class="page-pagination__item page-pagination__item--arrow" href="#"><span class="arrow arrow-left"><svg class="icon icon--arrow">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#arrow"/>
-        </svg>
-        </span>
-        </a></li>
-            <li><a class="page-pagination__item page-pagination__item--current" href="#">1</a></li>
-            <li><a class="page-pagination__item" href="#">2</a></li>
-            <li><a class="page-pagination__item" href="#">3</a></li>
-            <li><a class="page-pagination__item" href="#">4</a></li>
-            <li><a class="page-pagination__item page-pagination__item--arrow" href="#"><span class="arrow arrow-right"><svg class="icon icon--arrow">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#arrow"/>
-        </svg>
-        </span>
-        </a></li>
-          </ul>
-        </div>      </div>
   </div>
 </section>
 
