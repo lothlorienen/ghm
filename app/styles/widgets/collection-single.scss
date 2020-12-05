@@ -1,0 +1,103 @@
+.collection-single {
+  position: relative;
+
+  &__link {
+    @include fill;
+    z-index: z(default);
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+      @include fill;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      opacity: initial;
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.3) 100%);
+      transition: opacity 350ms ease;
+    }
+
+    &::before {
+      @include fill;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+      transition: opacity 350ms ease;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0;
+      }
+
+      &::before {
+        opacity: initial;
+      }
+
+      ~ .collection-single__content {
+        opacity: initial;
+      }
+    }
+  }
+
+  &__image {
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: z(default);
+    padding: 22px;
+    color: $color-light;
+    pointer-events: none;
+    opacity: 0;
+    @include transition;
+  }
+
+  &__author {
+    display: block;
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__name {
+    display: block;
+    margin: 8px 0 0;
+    font-family: 'Book Antiqua', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    // Text overflow
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__years {
+    display: block;
+    margin: 8px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
