@@ -1,6 +1,6 @@
 .collection-single {
   position: relative;
-  height: 100%;
+  height: auto;
 
   &__link {
     @include fill;
@@ -97,8 +97,10 @@
     display: block;
     width: 100%;
     height: auto;
+  }
 
-    .loaded & {
+  &.loaded {
+    img {
       height: 100%;
       object-fit: cover;
     }

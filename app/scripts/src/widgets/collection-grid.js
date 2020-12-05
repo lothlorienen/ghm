@@ -10,38 +10,25 @@ class CollectionGrid extends Widget {
   events() {
     this.resizeAllGridItems();
 
-
     this.images.forEach((img, idx) => {
       img.addEventListener("load", () => {
-        this.resizeGridItem(this.items[idx]);
+        this.resizeGridItem(this.items[idx], img);
         this.items[idx].classList.add('loaded');
       });
     });
   }
 
-  checkImageHeight() {
-  }
-
-  resizeGridItem(item) {
+  resizeGridItem(item, image) {
     const rowHeight = parseInt(window.getComputedStyle(this.$node).getPropertyValue('grid-auto-rows'));
     const rowGap = parseInt(window.getComputedStyle(this.$node).getPropertyValue('grid-row-gap'));
-    console.log('item: ' + (item.getBoundingClientRect().height + rowGap) / (rowHeight + rowGap))
-    const rowSpan = Math.round((item.getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
-    console.log(item.getBoundingClientRect().height)
+    const rowSpan = Math.round((image.naturalHeight + rowGap) / (rowHeight + rowGap));
 
-    item.parentNode.style.gridRowEnd = `span ${rowSpan}`;
+    item.style.gridRowEnd = `span ${rowSpan}`;
   }
 
   resizeAllGridItems() {
-    for (let item of this.items) {
-      this.resizeGridItem(item);
-    }
+    this.items.forEach((item, i) => this.resizeGridItem(item, this.images[i]))
   }
-
-  resizeEvents() {
-    onResize(this.resizeAllGridItems.bind(this))
-  }
-
 
   static init(el) {
     el && new CollectionGrid(el);
