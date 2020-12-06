@@ -16,39 +16,6 @@ html, body {
   -webkit-tap-highlight-color: transparent;
 }
 
-input, textarea {
-  -webkit-appearance: none;
-  border-radius: 0;
-
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  &[type=number] {
-    -moz-appearance:textfield;
-  }
-
-  &::-ms-clear {
-    display: none !important;
-  }
-
-  &::-ms-reveal {
-    display: none !important;
-  }
-
-  &::-webkit-input-placeholder {
-    line-height:normal!important;
-  }
-}
-
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
-  -webkit-appearance: none;
-}
-
 figure {
   margin: 0;
 }
@@ -71,8 +38,6 @@ nav {
   margin: 0;
   list-style-type: none;
 }
-
-
 
 a {
   color: inherit;
