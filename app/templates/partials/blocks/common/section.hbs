@@ -3,7 +3,7 @@
     {{#if title}}
       <div class="section__header{{#if header-label}} section__header--with-label{{/if}}">
         {{#if header-label}}<span class="section__header-label">{{header-label}}</span>{{/if}}
-        <h2 class="section__title">{{title}}</h2>
+        <h2 class="section__title{{#if title-center}} section__title--center{{/if}}">{{title}}</h2>
       </div>
     {{/if}}
     {{>@partial-block}}
