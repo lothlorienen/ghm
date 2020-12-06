@@ -1,0 +1,19 @@
+.media-source {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+
+  @include media(mobile) {
+    margin-top: 60px;
+  }
+
+  &__link {
+    display: block;
+    margin: 0 70px;
+
+    @include media(mobile) {
+      margin: 0 35px;
+    }
+  }
+}

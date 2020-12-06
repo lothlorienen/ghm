@@ -1,0 +1,40 @@
+.collections-group {
+  &__list {
+    display: grid;
+    grid-auto-rows: 11px;
+    gap: 30px 40px;
+    grid-auto-flow: dense;
+
+    @include media(tabletSmall, up) {
+      grid-template-columns: repeat(3, 1fr);
+
+      > *:nth-child(3n + 1) {
+        grid-column: 1 / 2;
+      }
+
+      > *:nth-child(3n + 2) {
+        grid-column: 2 / 3;
+      }
+
+      > *:nth-child(3n + 3) {
+        grid-column: 3 / 4;
+      }
+    }
+
+    @include media(tabletSmall, only) {
+      grid-template-columns: repeat(2, 1fr);
+
+      > *:nth-child(odd) {
+        grid-column: 1 / 2;
+      }
+
+      > *:nth-child(even) {
+        grid-column: 2 / 3;
+      }
+    }
+
+    @include media(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

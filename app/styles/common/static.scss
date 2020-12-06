@@ -92,6 +92,88 @@
     border-bottom: 2px solid $color-primary;
   }
 
+  ol, ul {
+    font-style: normal;
+    font-weight: normal;
+    counter-reset: item;
+
+    @include media(mobile, up) {
+      margin: 50px 0;
+      font-size: 15px;
+      line-height: 23px;
+    }
+
+    @include media(mobile) {
+      margin: 30px 0;
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
+
+  li {
+    position: relative;
+    margin-top: 23px;
+    padding-left: 40px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: 'Book Antiqua', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      color: $color-primary;
+      content: counter(item, decimal-leading-zero) " ";
+      counter-increment: item;
+
+      @include media(mobile, up) {
+        font-size: 15px;
+        line-height: 23px;
+      }
+
+      @include media(mobile) {
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  blockquote {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: $color-primary;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+
+    @include media(mobile, up) {
+      margin: 50px 0;
+      padding: 30px 0;
+      font-size: 15px;
+      line-height: 23px;
+    }
+
+    @include media(mobile) {
+      margin: 30px 0;
+      padding: 20px 0;
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    &::before {
+      flex: 0 0 auto;
+      content: '';
+      @include sprite('pointer');
+      margin-right: 40px;
+    }
+  }
+
   .two-columns {
     display: grid;
     align-items: flex-start;
@@ -182,56 +264,6 @@
     @include media(mobile) {
       font-size: 13px;
       line-height: 20px;
-    }
-  }
-
-  ol, ul {
-    font-style: normal;
-    font-weight: normal;
-    counter-reset: item;
-
-    @include media(mobile, up) {
-      margin: 50px 0;
-      font-size: 15px;
-      line-height: 23px;
-    }
-
-    @include media(mobile) {
-      margin: 30px 0;
-      font-size: 13px;
-      line-height: 20px;
-    }
-  }
-
-  li {
-    position: relative;
-    margin-top: 23px;
-    padding-left: 40px;
-
-    &:first-child {
-      margin-top: 0;
-    }
-
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      font-family: 'Book Antiqua', sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      color: $color-primary;
-      content: counter(item, decimal-leading-zero) " ";
-      counter-increment: item;
-
-      @include media(mobile, up) {
-        font-size: 15px;
-        line-height: 23px;
-      }
-
-      @include media(mobile) {
-        font-size: 13px;
-        line-height: 20px;
-      }
     }
   }
 
@@ -334,38 +366,6 @@
           }
         }
       }
-    }
-  }
-
-  blockquote {
-    display: flex;
-    align-items: center;
-    font-style: italic;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    color: $color-primary;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-
-    @include media(mobile, up) {
-      margin: 50px 0;
-      padding: 30px 0;
-      font-size: 15px;
-      line-height: 23px;
-    }
-
-    @include media(mobile) {
-      margin: 30px 0;
-      padding: 20px 0;
-      font-size: 13px;
-      line-height: 20px;
-    }
-
-    &::before {
-      flex: 0 0 auto;
-      content: '';
-      @include sprite('pointer');
-      margin-right: 40px;
     }
   }
 }
