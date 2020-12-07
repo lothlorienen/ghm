@@ -2,10 +2,10 @@
   --header-bg: #FFFFFF;
   --header-color: rgba(43, 43, 62, 0.95);
 
-  position: absolute;
+  position: relative;
   top: 0;
-  left: 0;
-  right: 0;
+  //left: 0;
+  //right: 0;
   z-index: z(header);
   color: var(--header-color);
   @include transition;
@@ -68,6 +68,18 @@
     &:not(.header--filled) {
       color: $color-light;
       background-color: transparent;
+    }
+
+    @include media(tabletSmall, up) {
+      margin-bottom: -134px;
+    }
+
+    @include media(tabletSmall, only) {
+      margin-bottom: -64px;
+    }
+
+    @include media(mobile) {
+      margin-bottom: -58px;
     }
   }
 }

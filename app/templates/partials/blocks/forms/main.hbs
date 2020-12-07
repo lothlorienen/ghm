@@ -5,8 +5,8 @@
         <div class="form__container form__container--15">
           {{>form/input placeholder="Ваше имя"}}
           <div class="form__group">
-            {{>form/input placeholder="E-mail"}}
-            {{>form/input placeholder="+7 ___ ___ __ __"}}
+            {{>form/input placeholder="E-mail" type="email" inputmode="email"}}
+            {{>form/input placeholder="+7 ___ ___ __ __" type="tel" inputmode="tel"}}
           </div>
           {{>form/textarea placeholder="ВашЕ сообщение"}}
           <p class="form__row-title">куда удобнее получить ответ</p>
@@ -15,7 +15,7 @@
             {{>form/checkbox label="Телефон"}}
           </div>
           <div class="form__submit">
-            {{>ui/btn-arrow label="Отправить" btn-mode='inline'}}
+            {{>ui/btn-arrow button=1 type="submit" label="Отправить" btn-mode='inline'}}
           </div>
         </div>
       </div>
@@ -28,9 +28,9 @@
       <div class="form">
         <div class="form__container">
           {{>form/input placeholder="Ваше имя"}}
-          {{>form/input placeholder="E-mail"}}
+          {{>form/input placeholder="E-mail" type="email" inputmode="email"}}
           <div class="form__submit">
-            {{>ui/btn-arrow label="Отправить" btn-mode='inline'}}
+            {{>ui/btn-arrow button=1 type="submit" label="Отправить" btn-mode='inline'}}
           </div>
         </div>
       </div>
@@ -55,16 +55,16 @@
           {{>form/input placeholder="Названия мероприятия"}}
           {{>form/input placeholder="Фамилия Имя Отчество"}}
           <div class="form__group">
-            {{>form/input placeholder="E-mail"}}
-            {{>form/input placeholder="+7 ___ ___ __ __"}}
+            {{>form/input placeholder="E-mail" type="email" inputmode="email"}}
+            {{>form/input placeholder="+7 ___ ___ __ __" inputmode="tel"}}
           </div>
           <div class="form__group">
             {{>form/input placeholder="Дата посещения"}}
-            {{>form/input placeholder="Количество человек"}}
+            {{>form/input placeholder="Количество человек" type="number" inputmode="numeric"}}
           </div>
           {{>form/textarea placeholder="дополнительные сведения / комментарий"}}
           <div class="form__submit">
-            {{>ui/btn-arrow label="Отправить" btn-mode='inline'}}
+            {{>ui/btn-arrow button=1 type="submit" label="Отправить" btn-mode='inline'}}
           </div>
         </div>
       </div>

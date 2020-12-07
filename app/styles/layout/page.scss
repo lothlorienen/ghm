@@ -1,6 +1,7 @@
 .page {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 
   &__inner {
     display: flex;
@@ -17,32 +18,6 @@
     flex: 1 0 auto;
     min-height: 1px;
 
-    @include media(tabletSmall, up) {
-      margin-top: 134px;
-    }
-
-    @include media(tabletSmall, only) {
-      margin-top: 84px;
-    }
-
-    @include media(mobile) {
-      margin-top: 78px;
-    }
-
-    &--no-offset {
-      @include media(tabletSmall, up) {
-        margin-top: 0;
-      }
-
-      @include media(tabletSmall, only) {
-        margin-top: 0;
-      }
-
-      @include media(mobile) {
-        margin-top: 0;
-      }
-    }
-
     > *:last-child {
       padding-bottom: 100px!important;
     }
@@ -51,4 +26,8 @@
   &__footer {
     flex-shrink: 0;
   }
+}
+
+#panel {
+  flex: 1 1 100%;
 }
