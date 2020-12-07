@@ -66,13 +66,13 @@
   }
 
   &:hover {
-    color: $color-primary;
-    border-color: $color-primary;
+    opacity: 0.5;
   }
 
   &:active {
-    color: $color-primary-hover;
-    border-color: $color-primary-hover;
+    opacity: 1;
+    color: $color-primary;
+    border-color: $color-primary;
   }
 
   &--current {
@@ -89,11 +89,11 @@
     }
 
     &:hover::after {
-      border-color: $color-primary;
+      //border-color: $color-primary;
     }
 
     &:active::after {
-      border-color: $color-primary-hover;
+      border-color: $color-primary;
     }
   }
 }

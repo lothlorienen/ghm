@@ -4,6 +4,15 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    transition: opacity 350ms ease;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:focus-within {
+      opacity: 1;
+    }
 
     &::before {
       position: absolute;
