@@ -18,9 +18,14 @@
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    @include transition;
 
     @include media(mobile) {
       margin: 0 35px;
+    }
+
+    &:hover {
+      opacity: 0.75;
     }
 
     img {
