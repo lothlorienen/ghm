@@ -15,11 +15,11 @@
     display: grid;
     gap: 10px;
 
-    @include media(tablet, up) {
+    @include media(tabletSmall, up) {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @include media(tablet) {
+    @include media(tabletSmall) {
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
   }

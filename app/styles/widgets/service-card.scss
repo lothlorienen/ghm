@@ -38,38 +38,44 @@
   &__title {
     position: relative;
     display: block;
+    width: 100%;
     margin: 0;
     padding: 20px;
     color: $color-light;
     font-family: 'Book Antiqua', sans-serif;
     font-weight: bold;
 
-    @include media(tabletSmall, up) {
+    @include media(tablet, up) {
       font-size: 36px;
       line-height: 43px;
     }
 
-    @include media(tabletSmall) {
-      padding: 15px;
-      font-size: 22px;
-      line-height: 27px;
+    @include media(tablet) {
+      padding: 20px 15px;
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    @include media(tabletSmall, only) {
+      padding: 20px 11px;
     }
 
     @include media(mobile) {
-      padding: 13px;
+      padding: 20px 11px;
     }
 
     &--big {
-      @include media(tabletSmall, up) {
+      @include media(tablet, up) {
         font-size: 48px;
         line-height: 58px;
       }
 
       @include media(mobile, up) {
-        padding: 20px 30px;
+        padding: 15px 30px;
       }
 
-      @include media(tabletSmall, only) {
+      @include media(tablet, only) {
+        padding: 15px 23px;
         font-size: 36px;
         line-height: 43px;
       }
@@ -81,9 +87,14 @@
     }
 
     &--medium {
-      @include media(tabletSmall, up) {
+      @include media(tablet, up) {
         font-size: 30px;
         line-height: 30px;
+      }
+
+      @include media(tabletSmall, only) {
+        font-size: 22px;
+        line-height: 26px;
       }
     }
   }
