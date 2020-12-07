@@ -86,7 +86,7 @@ class Validation {
 
   static isNotEmpty(input) {
     if (!input.value) {
-      return 'Please, enter your ' + input.getAttribute('name');
+      return 'Пожалуйста, введите корректные данные';
     }
   }
 
@@ -94,7 +94,7 @@ class Validation {
     let regex = RegExp(
       /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
     if (!regex.test(input.value)) {
-      return 'Please, enter a valid email';
+      return 'Пожалуйста, введите корректный e-mail.';
     }
   }
 
