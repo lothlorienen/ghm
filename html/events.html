@@ -12,8 +12,8 @@
 
   <title>Афиша</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
-  <link href="../css/main.css?v=3717" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="../css/main.css?v=1096" rel="stylesheet">
 </head>
 
 <body class="page">
@@ -224,7 +224,8 @@
             <li class="section-nav__item">
               <div class="custom-calendar">
                 <label class="custom-calendar__label">
-                  <input class="custom-calendar__input js-datepicker" placeholder="выбрать дату" type="text">
+                  <input class="custom-calendar__input js-datepicker" placeholder="выбрать дату" type="text" onchange="this.setAttribute('data-value', this.value ? this.value : '');">
+                  <span class="custom-calendar__label-text">выбрать дату</span>
                 </label>
               </div>
             </li>
@@ -260,7 +261,7 @@
                             <span class="events-card__category">Категория</span>
                             <h3 class="events-card__title"><a href="#">Название события в две строчки уместится, даже если оно очень длинное</a></h3>
                           </div>
-                          <div class="events-card__text events-card__text--single">
+                          <div class="events-card__text">
                             <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
                           </div>
                           
@@ -294,7 +295,7 @@
                             <span class="events-card__category">Категория</span>
                             <h3 class="events-card__title"><a href="#">Название события</a></h3>
                           </div>
-                          <div class="events-card__text events-card__text--single">
+                          <div class="events-card__text">
                             <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
                           </div>
                           
@@ -338,7 +339,7 @@
                             <span class="events-card__category">Категория</span>
                             <h3 class="events-card__title"><a href="#">Название события в две строчки уместится, даже если оно очень длинное</a></h3>
                           </div>
-                          <div class="events-card__text events-card__text--single">
+                          <div class="events-card__text">
                             <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
                           </div>
                           
@@ -385,7 +386,7 @@
                             <span class="events-card__category">Категория</span>
                             <h3 class="events-card__title"><a href="#">Название события в две строчки уместится, даже если оно очень длинное</a></h3>
                           </div>
-                          <div class="events-card__text events-card__text--single">
+                          <div class="events-card__text">
                             <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
                           </div>
                           
@@ -419,7 +420,7 @@
                             <span class="events-card__category">Категория</span>
                             <h3 class="events-card__title"><a href="#">Название события</a></h3>
                           </div>
-                          <div class="events-card__text events-card__text--single">
+                          <div class="events-card__text">
                             <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
                           </div>
                           
@@ -450,7 +451,7 @@
                             <span class="events-card__category">Категория</span>
                             <h3 class="events-card__title"><a href="#">Название события в две строчки уместится, даже если оно очень длинное</a></h3>
                           </div>
-                          <div class="events-card__text events-card__text--single">
+                          <div class="events-card__text">
                             <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
                           </div>
                           
@@ -484,7 +485,7 @@
                             <span class="events-card__category">Категория</span>
                             <h3 class="events-card__title"><a href="#">Название события</a></h3>
                           </div>
-                          <div class="events-card__text events-card__text--single">
+                          <div class="events-card__text">
                             <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
                           </div>
                           
@@ -515,7 +516,7 @@
                             <span class="events-card__category">Категория</span>
                             <h3 class="events-card__title"><a href="#">Название события в две строчки уместится, даже если оно очень длинное</a></h3>
                           </div>
-                          <div class="events-card__text events-card__text--single">
+                          <div class="events-card__text">
                             <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
                           </div>
                           
@@ -549,7 +550,7 @@
                             <span class="events-card__category">Категория</span>
                             <h3 class="events-card__title"><a href="#">Название события</a></h3>
                           </div>
-                          <div class="events-card__text events-card__text--single">
+                          <div class="events-card__text">
                             <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
                           </div>
                           
@@ -653,7 +654,7 @@
 
 </div>
 
-<script src="../scripts/vendors.js?v=3717" defer></script>
-  <script src="../scripts/main.js?v=3717" defer></script>
+<script src="../scripts/vendors.js?v=1096" defer></script>
+  <script src="../scripts/main.js?v=1096" defer></script>
 </body>
 </html>
