@@ -290,6 +290,8 @@
 
   &__input {
     width: var(--checkbox-value);
+    background-color: transparent;
+    border: unset;
 
     &:checked {
       ~ .form-checkbox__icon::before {

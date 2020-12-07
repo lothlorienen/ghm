@@ -12,6 +12,7 @@ import './src/utils/mobile-debug';
 import './src/utils/scroll-to';
 import './src/utils/scroll-to-link';
 import './src/utils/mobile-height-fix';
+import './src/utils/validation';
 
 import './src/widgets/popups';
 
@@ -29,6 +30,8 @@ import './src/widgets/sliders/sliders';
 import './src/widgets/select2';
 import './src/widgets/datepicker';
 import './src/widgets/collection-grid';
+import './src/widgets/masked-input';
+import './src/widgets/form';
 
 import './src/app';
 

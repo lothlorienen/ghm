@@ -15,6 +15,7 @@ import PhotoSwipeUI from 'photoswipe/dist/photoswipe-ui-default';
 import datepicker from "js-datepicker/dist/datepicker.min";
 import select2 from "select2/dist/js/select2.full"
 import { format as dateFormat } from 'date-fns';
+import imask from 'imask';
 
 window.$ = window.jQuery = jquery;
 window.svg4everybody = svgPolyfill;
@@ -27,6 +28,8 @@ window.datepicker = datepicker;
 window.dateHelper = {
   format: dateFormat,
 };
+window.IMask = imask;
+
 lazySizes.cfg.lazyClass = 'lazy';
 lazySizes.cfg.srcAttr = 'data-original';
 lazySizes.cfg.loadMode = 1;

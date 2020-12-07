@@ -1,18 +1,25 @@
 {{#>blocks/common/section title="Обратная связь" title-center=1}}
   <div class="section__content">
-    <form>
+    <form class="js-form" data-api-url="location.href">
       <div class="form">
         <div class="form__container form__container--15">
-          {{>form/input placeholder="Ваше имя"}}
+          {{>form/input placeholder="Ваше имя" validation="isNotEmpty"}}
           <div class="form__group">
-            {{>form/input placeholder="E-mail" type="email" inputmode="email"}}
-            {{>form/input placeholder="+7 ___ ___ __ __" type="tel" inputmode="tel"}}
+            {{>form/input placeholder="E-mail" type="email" inputmode="email" validation="isNotEmpty,isValidEmail"}}
+            {{>form/input
+                data-mask="00 (000) 000-00-00"
+                placeholder="+7 ___ ___ __ __"
+                type="tel"
+                inputmode="tel"
+                input-class="js-masked-input"
+                validation="isNotEmpty"
+            }}
           </div>
           {{>form/textarea placeholder="ВашЕ сообщение"}}
           <p class="form__row-title">куда удобнее получить ответ</p>
           <div class="form__group">
-            {{>form/checkbox label="E-mail"}}
-            {{>form/checkbox label="Телефон"}}
+            {{>form/checkbox label="E-mail" validation="isNotEmpty,isValidEmail"}}
+            {{>form/checkbox label="Телефон" validation="isNotEmpty"}}
           </div>
           <div class="form__submit">
             {{>ui/btn-arrow button=1 type="submit" label="Отправить" btn-mode='inline'}}
@@ -24,11 +31,11 @@
 {{/blocks/common/section}}
 {{#>blocks/common/section title="Подписка на рассылку" title-center=1}}
   <div class="section__content">
-    <form>
+    <form class="js-form" data-api-url="location.href">
       <div class="form">
         <div class="form__container">
-          {{>form/input placeholder="Ваше имя"}}
-          {{>form/input placeholder="E-mail" type="email" inputmode="email"}}
+          {{>form/input placeholder="Ваше имя" validation="isNotEmpty"}}
+          {{>form/input placeholder="E-mail" type="email" inputmode="email" validation="isNotEmpty,isValidEmail"}}
           <div class="form__submit">
             {{>ui/btn-arrow button=1 type="submit" label="Отправить" btn-mode='inline'}}
           </div>
@@ -40,7 +47,7 @@
 {{#>blocks/common/section}}
   <h2 style="text-align: center">Подписка на рассылку / успешная отправка</h2>
   <div class="section__content">
-    <form>
+    <form class="js-form" data-api-url="location.href">
       <div class="form form--success">
         <p>Данные успешно отправлены!</p>
       </div>
@@ -49,18 +56,25 @@
 {{/blocks/common/section}}
 {{#>blocks/common/section title="Заказать услугу" title-center=1}}
   <div class="section__content">
-    <form>
+    <form class="js-form" data-api-url="location.href">
       <div class="form">
         <div class="form__container">
-          {{>form/input placeholder="Названия мероприятия"}}
-          {{>form/input placeholder="Фамилия Имя Отчество"}}
+          {{>form/input placeholder="Названия мероприятия" validation="isNotEmpty"}}
+          {{>form/input placeholder="Фамилия Имя Отчество" validation="isNotEmpty"}}
           <div class="form__group">
-            {{>form/input placeholder="E-mail" type="email" inputmode="email"}}
-            {{>form/input placeholder="+7 ___ ___ __ __" inputmode="tel"}}
+            {{>form/input placeholder="E-mail" type="email" inputmode="email" validation="isNotEmpty,isValidEmail"}}
+            {{>form/input
+                data-mask="00 (000) 000-00-00"
+                placeholder="+7 ___ ___ __ __"
+                type="numeric"
+                inputmode="tel"
+                input-class="js-masked-input"
+                validation="isNotEmpty"
+            }}
           </div>
           <div class="form__group">
-            {{>form/input placeholder="Дата посещения"}}
-            {{>form/input placeholder="Количество человек" type="number" inputmode="numeric"}}
+            {{>form/input placeholder="Дата посещения" validation="isNotEmpty"}}
+            {{>form/input placeholder="Количество человек" type="number" inputmode="numeric" validation="isNotEmpty"}}
           </div>
           {{>form/textarea placeholder="дополнительные сведения / комментарий"}}
           <div class="form__submit">
