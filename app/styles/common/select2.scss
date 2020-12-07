@@ -1,4 +1,8 @@
 .select2 {
+  &-selection {
+    height: 38px!important;
+  }
+
   &-selection__rendered {
     padding: 11px 42px 11px 20px !important;
     font-style: normal;

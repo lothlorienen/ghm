@@ -75,6 +75,20 @@
         margin-top: 40px;
       }
     }
+
+    &-side {
+      margin-left: auto;
+
+      @include media(mobile) {
+        margin: 20px auto 0;
+      }
+    }
+
+    &--flex {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
   }
 
   &__content {

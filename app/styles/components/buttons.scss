@@ -1,27 +1,33 @@
 .btn {
   display: inline-block;
-  padding: 13px 16px;
-  color: $color-primary;
-  @include text-button-s;
-  vertical-align: middle;
+  padding: 5.5px 25px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
   text-align: center;
-  border-radius: 100px;
-  border: 1px solid $color-primary;
+  text-transform: uppercase;
+  vertical-align: middle;
+  border-radius: unset;
+  border: 1px solid;
   cursor: pointer;
   @include transition;
 
-  &:hover,
-  &--hover {
-    color: $color-white;
-    background-color: $color-primary-hover;
-    border-color: $color-primary-hover;
+  &:hover {
+    color: $color-primary;
+    border-color: $color-primary;
   }
 
-  &--focus {
-    outline: 1px solid $color-primary-hover;
+  &:active {
+    color: $color-dark;
+    border-color: $color-primary;
   }
 
-  &:disabled,
+  //&--focus {
+    //outline: 1px solid $color-primary-hover;
+  //}
+
+  &[disabled],
   &--disabled {
     cursor: default;
     opacity: 0.3;
