@@ -13,7 +13,7 @@
   }
 
   &__date {
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 
     @include media(mobile, up) {
@@ -21,6 +21,10 @@
       margin-top: 39px + 80px;
       padding: 20px 15px;
       min-height: 126px;
+    }
+
+    @include media(tabletSmall, only) {
+      margin-top: 34px + 80px;
     }
 
     @include media(mobile) {
@@ -75,7 +79,7 @@
     display: block;
     margin: 0;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 700;
 
     @include media(tabletSmall, up) {
       font-size: 18px;

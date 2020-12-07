@@ -21,6 +21,10 @@
         @include media(mobile, up) {
           margin-top: 39px;
         }
+
+        @include media(tabletSmall, only) {
+          margin-top: 34px;
+        }
       }
     }
 

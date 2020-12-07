@@ -26,7 +26,7 @@ class Datepicker extends Widget {
     const valueParts = this.$node.value ? this.$node.value.split('.') : null;
 
     datepicker(this.$node, {
-      disableMobile: false,
+      disableMobile: true,
       customDays: locale.days,
       customMonths: locale.months,
       disableYearOverlay: true,
@@ -80,7 +80,7 @@ class Datepicker extends Widget {
   }
 
   update() {
-    this.$node.setAttribute('type', 'text');
+    this.$node.setAttribute('type', Layout.isMobileLayout() ? 'date' : 'text');
   }
 
   static init(el) {

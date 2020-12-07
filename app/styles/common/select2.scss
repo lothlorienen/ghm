@@ -7,7 +7,7 @@
   &-selection__rendered {
     padding: 11px 42px 11px 20px !important;
     font-style: normal;
-    font-weight: normal !important;
+    font-weight: 500 !important;
     font-size: 13px !important;
     line-height: 15px !important;
     letter-spacing: 0.02em !important;
@@ -19,7 +19,6 @@
   }
 
   &-container {
-    width: 100%;
     transition: opacity 350ms ease;
 
     &:not(.select2-container--open):hover {
@@ -43,6 +42,7 @@
     padding: 10px 0;
     width: 100%;
     max-width: 230px;
+    @include hide-scrollbar;
   }
 
   &-results__option {
@@ -66,7 +66,7 @@
 
 .select2-container--default .select2-results__option {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 13px;
   line-height: 15px;
   letter-spacing: 0.02em;

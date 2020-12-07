@@ -6,6 +6,10 @@
     display: block;
     padding-top: 95%;
 
+    @include media(tabletSmall) {
+      padding-top: 84%;
+    }
+
     @include media(mobile) {
       padding-top: 67%;
     }

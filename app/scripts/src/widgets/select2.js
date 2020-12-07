@@ -11,6 +11,7 @@ class Select extends Widget {
       placeholder: 'не выбрано',
       width: '100%',
       minimumResultsForSearch: -1,
+      dropdownAutoWidth : true,
     });
 
     const value = $(this.$node).find('option[selected]');

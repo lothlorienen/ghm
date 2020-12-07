@@ -7,7 +7,7 @@
       <span class="events-card__category">{{category}}</span>
       <h3 class="events-card__title">{{#if page}}{{title}}{{else}}<a href="#">{{title}}</a>{{/if}}</h3>
     </div>
-    <div class="events-card__text{{#if single-text}} events-card__text--single{{/if}}">
+    <div class="events-card__text">
       {{#if single-text}}<p>{{single-text}}</p>
       {{else}}
         {{>@partial-block}}

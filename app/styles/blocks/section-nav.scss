@@ -33,6 +33,19 @@
         }
       }
     }
+
+    &--column-mobile {
+      @include media(mobile) {
+        display: block;
+        overflow: initial;
+        margin: 0;
+        padding-left: 0;
+
+        .section-nav__item:last-child {
+          padding: 0;
+        }
+      }
+    }
   }
 
   &__item {

@@ -12,7 +12,8 @@
     <li class="section-nav__item">
       <div class="custom-calendar">
         <label class="custom-calendar__label">
-          <input class="custom-calendar__input js-datepicker" placeholder="выбрать дату" type="text">
+          <input class="custom-calendar__input js-datepicker" placeholder="выбрать дату" type="text" onchange="this.setAttribute('data-value', this.value ? this.value : '');">
+          <span class="custom-calendar__label-text">выбрать дату</span>
         </label>
       </div>
     </li>
