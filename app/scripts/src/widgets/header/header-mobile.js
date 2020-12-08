@@ -1,8 +1,9 @@
 class HeaderMobile extends Widget {
   constructor(node) {
-    super(node, 'js-header');
+    super(node, 'js-header',);
 
     this.opened = false;
+    this.mobileInit = false;
     this.$burgerButton = this.queryElement('.burger');
     this.$headerMenu = this.queryElement('.menu');
     this.$headerLinks = this.queryElements('.link');
@@ -15,14 +16,53 @@ class HeaderMobile extends Widget {
     this.$subTitle = this.queryElement('.sub_title');
     this.prevTitle = '';
 
+    this.onClickLinksEvents = [];
+    this.onClickSublinksEvents = [];
+
+    this.onSubBackClick = this.onSubBackClick.bind(this);
+    this.toggle = this.toggle.bind(this);
+    this.resizeEvents = this.resizeEvents.bind(this);
+
     this.events();
   }
 
   events() {
-    this.$burgerButton.addEventListener('click', () => this.toggle());
-    this.$headerLinks.forEach(headerLink => headerLink.addEventListener('click', this.onHeaderLinkClick(headerLink)));
-    this.$headerSubLinks.forEach(subLink => subLink.addEventListener('click', this.onHeaderSubLinkClick(subLink)));
-    this.$subBack.addEventListener('click', this.onSubBackClick.bind(this));
+    this.resizeEvents();
+    onResize(this.resizeEvents);
+  }
+
+  resizeEvents() {
+    if (!Layout.isTabletLayout() && !this.mobileInit) return null;
+    if (!Layout.isTabletLayout() && this.mobileInit) {
+      this.removeAll();
+      this.toggle();
+      return null;
+    }
+
+    this.setup();
+  }
+
+  setup() {
+    this.$burgerButton.addEventListener('click', this.toggle);
+    this.$headerLinks.forEach(link => {
+      const event = this.onHeaderLinkClick(link);
+      link.addEventListener('click', event);
+      this.onClickLinksEvents.push(event);
+    });
+    this.$headerSubLinks.forEach(subLink => {
+      const event = this.onHeaderSubLinkClick(subLink);
+      subLink.addEventListener('click', event);
+      this.onClickSublinksEvents.push(event);
+    });
+    this.$subBack.addEventListener('click', this.onSubBackClick);
+    this.mobileInit = true;
+  }
+
+  removeAll() {
+    this.$burgerButton.removeEventListener('click', this.toggle);
+    this.$headerLinks.forEach((item, index) => item.removeEventListener('click', this.onClickLinksEvents[index]));
+    this.$headerSubLinks.forEach((item, index) => item.removeEventListener('click', this.onClickSublinksEvents[index]));
+    this.$subBack.removeEventListener('click', this.onSubBackClick);
   }
 
   hideDropdowns() {
