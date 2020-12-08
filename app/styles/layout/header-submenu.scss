@@ -129,6 +129,14 @@
         background-color: rgba(#202033, 0.95);
       }
     }
+
+    .fixed.header--main & {
+      background-color: var(--header-bg);
+
+      @include media(tabletSmall, up) {
+        background-color: rgba(#F9F6F3, 0.95);
+      }
+    }
   }
 }
 

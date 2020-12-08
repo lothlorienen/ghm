@@ -12,6 +12,9 @@ class Sliders {
     document.querySelector('.js-slider-hero')
       ? document.querySelectorAll('.js-slider-hero').forEach(item => HeroSlider.init(item))
       : null;
+    document.querySelector('.js-slider-thumbs')
+      ? document.querySelectorAll('.js-slider-thumbs').forEach(item => SliderThumbs.init(item))
+      : null;
   }
 
   static init() {
