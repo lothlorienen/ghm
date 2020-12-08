@@ -35,7 +35,7 @@ class HeaderMobile extends Widget {
     if (!Layout.isTabletLayout() && !this.mobileInit) return null;
     if (!Layout.isTabletLayout() && this.mobileInit) {
       this.removeAll();
-      this.toggle();
+      this.close();
       return null;
     }
 
