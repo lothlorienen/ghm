@@ -45,7 +45,6 @@ class HeaderScroll extends Widget {
   update() {
     const scrollTop = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0);
 
-    console.log(scrollTop > (Layout.isTabletLayout() ? window.innerHeight : 650))
     if (scrollTop > (Layout.isTabletLayout() ? window.innerHeight : 650)) {
       this.setHeaderAsFixed();
     } else {
@@ -60,7 +59,6 @@ class HeaderScroll extends Widget {
     if (scrollTop <= this.baseBeight) {
       this.$node.classList.remove('fixed-prepare');
       !this.$node.classList.contains('header--main') ? document.body.classList.remove('header-fixed') : null;
-
     }
   }
 

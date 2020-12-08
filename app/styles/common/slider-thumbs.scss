@@ -36,6 +36,7 @@
     .swiper-slide {
       height: 100%;
       max-width: 90px;
+      cursor: pointer;
 
       &::before {
         @include fill;
@@ -62,29 +63,47 @@
   }
 
   &__nav {
-    --swiper-navigation-size: 20px;
-    --swiper-navigation-color: #{$color-white};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
 
-    width: 50px;
-    height: 50px;
+    > * + * {
+      margin-left: 40px;
+    }
+  }
+
+  &__nav-item {
+    --swiper-navigation-size: 20px;
+    --swiper-navigation-color: var(--color-primary);
+
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
     font-weight: bold;
-    background-color: transparentize($color-black, 0.5);
-    border-radius: 50%;
+    background-color: unset;
+    border-radius: unset;
     @include transition;
 
     @include media(mobile) {
       --swiper-navigation-size: 12px;
-
-      width: 30px;
-      height: 30px;
     }
 
     &:hover {
-      background-color: transparentize($color-black, 0.1);
+      color: var(--color-primary-hover);
     }
 
     &::after {
-      position: relative;
+      display: none;
+    }
+
+    .arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

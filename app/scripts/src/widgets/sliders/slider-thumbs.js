@@ -11,8 +11,8 @@ class SliderThumbs extends Widget {
     this.swiperMaster = null;
     this.swiperThumbs = null;
 
-    this.initDesktop = false;
-    this.initMobile = false;
+    this.prevSlide = null;
+    this.nextSlide = null;
 
     this.init();
   }
@@ -34,9 +34,7 @@ class SliderThumbs extends Widget {
       const img = document.createElement('img');
 
       wrapper.classList.add('swiper-slide');
-      item.dataset.original
-        ? img.src = item.dataset.original
-        : img.src = item.src;
+      item.dataset.original ? img.src = item.dataset.original : img.src = item.src;
       img.alt = item.alt;
       wrapper.insertAdjacentElement('beforeend', img);
 
@@ -63,54 +61,62 @@ class SliderThumbs extends Widget {
     this.sliderThumbs.classList.add('swiper-container');
     this.sliderThumbs.classList.add('js-slider-thumbs__thumbs');
 
-    this.sliderMaster.insertAdjacentHTML('beforeend',
-      `
+    this.sliderMaster.insertAdjacentHTML('beforeend', `
       <div class="swiper-wrapper">
         ${slides}
       </div>
-      <div class="slider-thumbs__nav swiper-button-next"></div>
-      <div class="slider-thumbs__nav swiper-button-prev"></div>
-      `);
+     `);
 
-    this.sliderThumbs.insertAdjacentHTML('beforeend',
-      `
+    this.sliderThumbs.insertAdjacentHTML('beforeend', `
       <div class="swiper-wrapper">
         ${slides}
       </div>
-      `);
+     `);
 
     this.$node.insertAdjacentElement('beforeend', this.sliderMaster);
     this.$node.insertAdjacentElement('beforeend', this.sliderThumbs);
+    this.$node.insertAdjacentHTML('beforeend', `
+      <div class="slider-thumbs__nav">
+        <button class="slider-thumbs__nav-item swiper-button-prev js-slider-thumbs__prev" type="button">
+          <span class="arrow arrow-left">
+            <svg class="icon icon-arrow">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=${this.$node.dataset.spriteUrl}#arrow></use>
+            </svg>
+          </span>
+        </button>
+        <button class="slider-thumbs__nav-item swiper-button-next js-slider-thumbs__next" type="button">
+          <span class="arrow arrow-right">
+            <svg class="icon icon-arrow">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=${this.$node.dataset.spriteUrl}#arrow></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+     `);
   }
 
   events() {
-    this.desktopMasterEvents();
-    // this.updateCache();
-    // onResize(this.updateCache.bind(this));
+    this.initSwipers();
+    this.onButtonClick();
   }
 
-  updateCache() {
-    // Layout.isMobileLayout() ? this.mobileEvents() : this.desktopEvents();
-  }
+  initSwipers() {
+    this.prevSlide = this.queryElement('.prev');
+    this.nextSlide = this.queryElement('.next');
 
-  desktopMasterEvents() {
     this.swiperThumbs = new Swiper(this.sliderThumbs, {
       spaceBetween: 10,
       slidesPerView: 'auto',
-      // loop: true,
       freeMode: true,
-      // loopedSlides: this.slidesArray.length, //looped slides should be the same
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
     });
 
     this.swiperMaster = new Swiper(this.sliderMaster, {
       spaceBetween: 10,
-      // loop: true,
-      // loopedSlides: this.slidesArray.length, //looped slides should be the same
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: this.nextSlide,
+        prevEl: this.prevSlide,
       },
       thumbs: {
         swiper: this.swiperThumbs,
@@ -118,74 +124,13 @@ class SliderThumbs extends Widget {
     });
   }
 
-  desktopEvents() {
-    // this.initMobile ? this.initMobile = false : null;
-    //
-    // if (!this.initDesktop) {
-    //   if (this.swiper) this.destroySwiper();
-    //   this.initSwiper(this.desktopOptions);
-    //   setTimeout(() => this.swiper.update(), 100);
-    // }
-    //
-    // this.initDesktop = true;
-  }
-
-  mobileEvents() {
-    // this.initDesktop ? this.initDesktop = false : null;
-    //
-    // if (!this.initMobile) {
-    //   if (this.swiper) this.destroySwiper();
-    //   this.initSwiper(this.mobileOptions);
-    //   setTimeout(() => this.swiper.update(), 100);
-    // }
-    //
-    // this.initMobile = true;
-  }
-
-  initSwiper(options) {
-    this.swiper = new Swiper(this.slider, options);
-  }
-
-  destroySwiper() {
-    this.swiper.destroy(true, true);
-  }
-
-  get desktopOptions() {
-    return {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      navigation: {
-        nextEl: this.navNext,
-        prevEl: this.navPrev,
-        disabledClass: 'disabled'
-      },
-      breakpoints: {
-        1200: {
-          spaceBetween: 40,
-        },
-      },
-      loop: true,
-      autoplay: {
-        delay: 7000
-      }
-    }
-  }
-
-  get mobileOptions() {
-    return {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      // pagination: {
-      //   el: this.pagination,
-      //   type: 'bullets',
-      //   clickable: true,
-      //   dynamicBullets: true,
-      // },
-      loop: true,
-      autoplay: {
-        delay: 7000
-      }
-    }
+  onButtonClick() {
+    this.prevSlide.addEventListener('click', () => {
+      this.swiperMaster.slidePrev()
+    });
+    this.nextSlide.addEventListener('click', () => {
+      this.swiperMaster.slideNext()
+    });
   }
 
   static init(el) {
