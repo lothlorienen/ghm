@@ -82,6 +82,11 @@
         color: $color-dark;
       }
     }
+
+    &.hidden {
+      color: transparent;
+      pointer-events: none;
+    }
   }
 
   &__submenu {

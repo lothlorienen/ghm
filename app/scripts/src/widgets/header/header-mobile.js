@@ -8,10 +8,12 @@ class HeaderMobile extends Widget {
     this.$headerLinks = this.queryElements('.link');
     this.$headerSubLinks = this.queryElements('.submenu-link');
     this.$headerSubmenu = this.queryElements('.submenu');
+    this.$headerSubmenu2 = this.queryElements('.submenu_2');
 
     this.$sub = this.queryElement('.sub');
     this.$subBack = this.queryElement('.sub_back');
     this.$subTitle = this.queryElement('.sub_title');
+    this.prevTitle = '';
 
     this.events();
   }
@@ -24,16 +26,20 @@ class HeaderMobile extends Widget {
   }
 
   hideDropdowns() {
-    if (this.$sub.classList.contains('_level-2-opened')) {
-      this.$headerSubmenu.forEach(item => item.classList.contains('visible') ? item.classList.remove('visible') : null);
-      this.$node.classList.remove('dropdown-opened');
-      this.$headerLinks.forEach(item => item.style.color = '');
-    }
-    else {
+    if (this.$sub.classList.contains('_submenu_2-opened')) {
+      this.$headerSubmenu2.forEach(item => item.classList.contains('visible') ? item.classList.remove('visible') : null);
+      this.$headerSubLinks.forEach(item => {
+        if (item.classList.contains('hidden')) {
+          item.classList.remove('hidden');
+          this.$subTitle.innerText = this.prevTitle;
+        }
+      });
+      this.$sub.classList.remove('_submenu_2-opened');
+    } else {
       this.$sub.classList.remove('visible');
       this.$headerSubmenu.forEach(item => item.classList.contains('visible') ? item.classList.remove('visible') : null);
+      this.$headerLinks.forEach(link => link.classList.contains('hidden') ? link.classList.remove('hidden') : null);
       this.$node.classList.remove('dropdown-opened');
-      this.$headerLinks.forEach(item => item.style.color = '');
     }
   }
 
@@ -54,9 +60,11 @@ class HeaderMobile extends Widget {
       $dropdown.classList.add('visible');
 
       this.$sub.classList.add('visible');
+      this.prevTitle = this.$subTitle.innerText;
       this.$subTitle.innerText = link.innerText;
 
       this.$node.classList.add('dropdown-opened');
+      this.$headerLinks.forEach(item => item.classList.add('hidden'));
 
       $dropdown.scrollTop = 0;
     };
@@ -64,18 +72,22 @@ class HeaderMobile extends Widget {
 
   onHeaderSubLinkClick(link) {
     return e => {
-      e.preventDefault();
-
       if (!this.opened) return true;
 
       const $dropdown = link.nextElementSibling;
       if (!$dropdown) return;
 
+      e.preventDefault();
+
       $dropdown.classList.add('visible');
+
+      this.$sub.classList.add('_submenu_2-opened');
+      this.prevTitle = this.$subTitle.innerText;
       this.$subTitle.innerText = link.innerText;
+
+      this.$headerSubLinks.forEach(item => item.classList.add('hidden'));
+
       $dropdown.scrollTop = 0;
-      this.$sub.classList.add('_level-2-opened');
-      this.$headerLinks.forEach(item => item.style.color = 'transparent');
     };
   }
 
@@ -93,7 +105,18 @@ class HeaderMobile extends Widget {
     this.$burgerButton.classList.remove('opened');
     this.$node.classList.remove('mobile-opened');
     this.$node.classList.remove('header--filled');
+    this.$node.classList.remove('dropdown-opened');
+
     this.$headerMenu.classList.remove('mobile-opened');
+    this.$headerLinks.forEach(link => link.classList.contains('hidden') ? link.classList.remove('hidden') : null);
+    this.$headerSubmenu.forEach(item => item.classList.contains('visible') ? item.classList.remove('visible') : null);
+    this.$headerSubLinks.forEach(item => item.classList.contains('hidden') ? item.classList.remove('hidden') : null);
+    this.$headerSubmenu2.forEach(item => item.classList.contains('visible') ? item.classList.remove('visible') : null);
+
+    this.$sub.classList.remove('_submenu_2-opened');
+    this.$sub.classList.remove('visible');
+    this.$subTitle.innerText = '';
+
     this.opened = false;
     showScrollbar();
 

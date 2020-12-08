@@ -53,6 +53,11 @@
       }
     }
 
+    &.hidden {
+      color: transparent;
+      pointer-events: none;
+    }
+
     .header--main & {
       color: $color-light;
 
@@ -74,10 +79,16 @@
     pointer-events: none;
     visibility: hidden;
     opacity: 0;
-    @include transition;
 
     @include media(tabletSmall, up) {
       background-color: rgba(#F9F6F3, 0.95);
+      @include transition;
+    }
+
+    &.visible {
+      pointer-events: auto;
+      visibility: visible;
+      opacity: initial;
     }
 
     .header-submenu__item {

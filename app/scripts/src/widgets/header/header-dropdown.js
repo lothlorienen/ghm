@@ -14,7 +14,7 @@ class HeaderDropdown extends Widget {
 
     this.onMouseOverEvents = [];
     this.onItemMouseOut = this.onItemMouseOut.bind(this);
-    // this.submenuOnClick = this.submenuOnClick.bind(this);
+    this.submenuOnClick = this.submenuOnClick.bind(this);
 
     this.events();
     this.update();
@@ -30,8 +30,6 @@ class HeaderDropdown extends Widget {
   }
 
   bindEvents() {
-    this.onMouseOverEvents = [];
-
     this.$items.forEach(item => {
       const event = this.onItemMouseOver(item);
       item.addEventListener('mouseover', event);
@@ -40,7 +38,7 @@ class HeaderDropdown extends Widget {
       item.addEventListener('mouseout', this.onItemMouseOut);
     });
 
-    this.submenuEvents();
+    this.$submenuLinks.forEach(_sublink => _sublink.addEventListener('click', this.submenuOnClick));
   }
 
   unbindEvents() {
@@ -48,6 +46,7 @@ class HeaderDropdown extends Widget {
       item.removeEventListener('mouseover', this.onMouseOverEvents[index]);
       item.removeEventListener('mouseout', this.onItemMouseOut);
     });
+    this.$submenuLinks.forEach(_sublink => _sublink.removeEventListener('click', this.submenuOnClick));
   }
 
   events() {
@@ -96,16 +95,10 @@ class HeaderDropdown extends Widget {
     };
   }
 
-  submenuEvents() {
-    this.$submenuLinks.forEach(_sublink => _sublink.addEventListener('click', this.submenuOnClick()));
-  }
+  submenuOnClick(e) {
+    let target = e.target;
 
-  submenuOnClick() {
-    return e => {
-      let target = e.target;
-
-      target.closest('.js-header__submenu-item').classList.toggle('header-submenu__item--active');
-    }
+    target.closest('.js-header__submenu-item').classList.toggle('header-submenu__item--active');
   }
 
   static init(el) {
