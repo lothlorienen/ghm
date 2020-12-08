@@ -6,6 +6,11 @@
     <span class="header-menu__mobile-title js-header__sub_title"></span>
   </div>
 
+  <div class="header-menu__mobile-actions _mobile-visible">
+    {{>ui/btn-ticket label="Купить билет"}}
+    <a class="action-link action-link--tel" href="tel:+73467330868"><span>+7 (3467)</span><b>33-08-68</b></a>
+  </div>
+
   <ul class="header-menu__list">
     {{#ifCond menu 'main'}}
       {{>header/menu/main}}

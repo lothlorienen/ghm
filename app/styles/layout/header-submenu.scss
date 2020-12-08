@@ -12,6 +12,10 @@
       overflow: auto;
       @include hide-scrollbar;
     }
+
+    @include media(mobile) {
+      max-height: calc(100 * var(--vh) - 140px);
+    }
   }
 
   &__grid {
@@ -25,6 +29,12 @@
       padding-bottom: 40px;
     }
   }
+
+  //&__list {
+  //  &:last-child {
+  //    padding-bottom: 40px;
+  //  }
+  //}
 
   &__link {
     display: inline-block;
@@ -83,6 +93,11 @@
     @include media(tabletSmall, up) {
       background-color: rgba(#F9F6F3, 0.95);
       @include transition;
+    }
+
+    @include media(mobile) {
+      padding-top: 10px;
+      transition: none;
     }
 
     &.visible {
