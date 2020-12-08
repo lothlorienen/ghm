@@ -4,7 +4,7 @@ class Header extends Widget {
 
     HeaderDropdown.init(this.$node);
     HeaderMobile.init(this.$node);
-    //HeaderFixedDesktop.init(this.$node);
+    HeaderScroll.init(this.$node);
     // HeaderFixedMobile.init(this.$node);
   }
 

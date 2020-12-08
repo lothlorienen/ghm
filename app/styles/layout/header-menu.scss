@@ -109,6 +109,7 @@
     &.hidden {
       color: transparent;
       pointer-events: none;
+      transition: none;
     }
   }
 
@@ -153,6 +154,10 @@
         color: transparent;
         transition: none;
       }
+    }
+
+    &__submenu {
+      transition: none;
     }
 
     &__submenu.visible {

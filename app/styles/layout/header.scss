@@ -4,11 +4,9 @@
 
   position: relative;
   top: 0;
-  //left: 0;
-  //right: 0;
   z-index: z(header);
   color: var(--header-color);
-  @include transition;
+  transition: background-color 350ms ease;
 
   @include media(tabletSmall, up) {
     background-color: var(--header-bg);
@@ -66,8 +64,8 @@
     --header-bg: rgba(43, 43, 62, 0.95);
 
     &:not(.header--filled) {
-      color: $color-light;
-      background-color: transparent;
+      --header-color: var(--color-light);
+      --header-bg: transparent;
     }
 
     @include media(tabletSmall, up) {

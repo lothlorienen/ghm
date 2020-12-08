@@ -30,12 +30,6 @@
     }
   }
 
-  //&__list {
-  //  &:last-child {
-  //    padding-bottom: 40px;
-  //  }
-  //}
-
   &__link {
     display: inline-block;
     margin: 0;
@@ -66,10 +60,11 @@
     &.hidden {
       color: transparent;
       pointer-events: none;
+      transition: none;
     }
 
     .header--main & {
-      color: $color-light;
+      //color: var(--header-color);
 
       &:hover {
         color: $color-primary;
