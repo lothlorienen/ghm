@@ -13,7 +13,7 @@
   <title>Формы</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link href="../css/main.css?v=3665" rel="stylesheet">
+  <link href="../css/main.css?v=2798" rel="stylesheet">
 </head>
 
 <body class="page">
@@ -330,10 +330,13 @@
                   
                 </div>          </div>
               <div class="form__group">
+                <div class="custom-calendar custom-calendar--outline">
+                  <label class="custom-calendar__label">
+                    <input class="custom-calendar__input js-datepicker" data-validation="isNotEmpty" placeholder="выбрать дату" type="text" onchange="this.setAttribute('data-value', this.value ? this.value : '');">
+                    <span class="custom-calendar__label-text">Дата посещения</span>
+                  </label>
+                </div>
                 <div class="form-field">
-                  <input type="text" class="form-field__input " name="Дата посещения" placeholder="Дата посещения" data-validation="isNotEmpty">
-                  
-                </div>            <div class="form-field">
                   <input type="number" class="form-field__input " name="Количество человек" placeholder="Количество человек" inputmode="numeric" data-validation="isNotEmpty">
                   
                 </div>          </div>
@@ -414,7 +417,7 @@
 
 </div>
 
-<script src="../scripts/vendors.js?v=3665" defer></script>
-  <script src="../scripts/main.js?v=3665" defer></script>
+<script src="../scripts/vendors.js?v=2798" defer></script>
+  <script src="../scripts/main.js?v=2798" defer></script>
 </body>
 </html>
