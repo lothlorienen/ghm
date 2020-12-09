@@ -1,0 +1,19 @@
+<div class="subscribe-form js-subscribe-form">
+  <div class="container">
+    <div class="subscribe-form__container">
+      <form class="js-form" data-api-url="location.href">
+        <div class="form js-form__container">
+          <div class="form__container">
+            <p class="form__row-text">Подпишитесь на наши уведомления и будьте в курсе интересных мероприятий</p>
+            {{>form/input placeholder="Ваше имя" field-name="Ваше имя" validation="isNotEmpty"}}
+            {{>form/input placeholder="E-mail" field-name="E-mail" type="email" inputmode="email" validation="isNotEmpty,isValidEmail"}}
+            <div class="form__submit">
+              {{>ui/btn-arrow button=1 type="submit" label="Отправить" btn-mode='inline'}}
+            </div>
+          </div>
+        </div>
+      </form>
+      <button class="subscribe-form__close js-subscribe-form__close" type="button"><span class="icon-close"></span></button>
+    </div>
+  </div>
+</div>

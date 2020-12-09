@@ -35,6 +35,7 @@ import './src/widgets/datepicker';
 import './src/widgets/collection-grid';
 import './src/widgets/masked-input';
 import './src/widgets/form';
+import './src/widgets/subscribe-form';
 
 import './src/app';
 

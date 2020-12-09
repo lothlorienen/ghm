@@ -1,0 +1,105 @@
+.subscribe-form {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  z-index: z(modal);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 450ms ease;
+
+  @include media(tablet) {
+    background-color: #FFFFFF;
+    opacity: 0.95;
+    bottom: 0;
+  }
+
+  &__container {
+    position: relative;
+    padding: 8px 70px;
+    min-height: 60px;
+
+    @include media(tablet, up) {
+      background-color: #FFFFFF;
+      opacity: 0.95;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    @include media(tablet) {
+      padding: 13px 0;
+      background-color: unset;
+    }
+
+    @include media(mobile) {
+      padding: 30px 0 20px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media(tablet) {
+      top: 20px;
+    }
+
+    @include media(mobile) {
+      right: -5px;
+    }
+  }
+
+  .form__container {
+    max-width: initial;
+    grid-template-columns: minmax(auto, 370px) 1fr 1fr auto;
+    gap: 33px;
+
+    @include media(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+
+      > * {
+        &:first-child {
+          grid-column: 1 / -1;
+        }
+        &:last-child {
+          min-height: 30px;
+        }
+      }
+    }
+
+    @include media(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .form--success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 46px;
+
+    p {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  .form__submit {
+    margin: auto 0;
+  }
+
+  &.visible {
+    opacity: initial;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
