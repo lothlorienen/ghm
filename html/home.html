@@ -13,7 +13,7 @@
   <title>Главная</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link href="../css/main.css?v=1035" rel="stylesheet">
+  <link href="../css/main.css?v=593" rel="stylesheet">
 </head>
 
 <body class="page">
@@ -872,7 +872,34 @@
 
 </div>
 
-<script src="../scripts/vendors.js?v=1035" defer></script>
-  <script src="../scripts/main.js?v=1035" defer></script>
+<script src="../scripts/vendors.js?v=593" defer></script>
+  <script src="../scripts/main.js?v=593" defer></script>
 </body>
 </html>
+<div class="subscribe-form js-subscribe-form">
+  <div class="container">
+    <div class="subscribe-form__container">
+      <form class="js-form" data-api-url="location.href">
+        <div class="form js-form__container">
+          <div class="form__container">
+            <p class="form__row-text">Подпишитесь на наши уведомления и будьте в курсе интересных мероприятий</p>
+            <div class="form-field">
+              <input type="text" class="form-field__input " name="Ваше имя" placeholder="Ваше имя" data-validation="isNotEmpty">
+              
+            </div>            <div class="form-field">
+              <input type="email" class="form-field__input " name="E-mail" placeholder="E-mail" inputmode="email" data-validation="isNotEmpty,isValidEmail">
+              
+            </div>            <div class="form__submit">
+                <button class="btn-arrow btn-arrow--inline" type="submit">Отправить <span class="arrow arrow-right"><svg class="icon icon--arrow">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#arrow"/>
+              </svg>
+              </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <button class="subscribe-form__close js-subscribe-form__close" type="button"><span class="icon-close"></span></button>
+    </div>
+  </div>
+</div>
