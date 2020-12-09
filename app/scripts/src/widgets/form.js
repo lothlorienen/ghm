@@ -39,16 +39,16 @@ class Form extends Widget {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(data),
-        }).then(res => {
+        })
+          .then(res => {
+            this.busy = false;
+            this.toSuccess();
 
-          this.busy = false;
-          this.toSuccess();
-
-          setTimeout(() => {
-            this.addSuccessState();
-            this.form.reset();
-          }, 2600);
-        });
+            setTimeout(() => {
+              this.addSuccessState();
+              this.form.reset();
+            }, 2600);
+          });
       } else {
         this.busy = false;
       }
@@ -61,19 +61,14 @@ class Form extends Widget {
     startScrollTo(document.documentElement);
 
     if (this.mode === 'submit') {
-      console.log('submit')
-
-      while(this.container.firstChild) {
+      while (this.container.firstChild) {
         this.container.firstChild.remove();
       }
+
       this.container.classList.add('form--success');
       this.container.insertAdjacentHTML('beforeend', `
         <p>Данные успешно отправлены!</p>
       `);
-
-    } else {
-
-      this.mode = 'submit';
     }
   }
 
@@ -85,10 +80,6 @@ class Form extends Widget {
         this.submitButton.disabled = true;
         this.inputs.forEach(item => item.disabled = true);
         this.textarea.disabled = true;
-      } else {
-        this.submitButton.disabled = false;
-        this.inputs.forEach(item => item.disabled = false);
-        this.textarea.disabled = false;
       }
     }, 300);
   }

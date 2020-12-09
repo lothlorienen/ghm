@@ -75,7 +75,12 @@
             }}
           </div>
           <div class="form__group">
-            {{>form/input placeholder="Дата посещения" field-name="Дата посещения" validation="isNotEmpty"}}
+            <div class="custom-calendar custom-calendar--outline">
+              <label class="custom-calendar__label">
+                <input class="custom-calendar__input js-datepicker" data-validation="isNotEmpty" placeholder="выбрать дату" type="text" onchange="this.setAttribute('data-value', this.value ? this.value : '');">
+                <span class="custom-calendar__label-text">Дата посещения</span>
+              </label>
+            </div>
             {{>form/input placeholder="Количество человек" field-name="Количество человек" type="number" inputmode="numeric" validation="isNotEmpty"}}
           </div>
           {{>form/textarea placeholder="дополнительные сведения / комментарий" field-name="дополнительные сведения"}}

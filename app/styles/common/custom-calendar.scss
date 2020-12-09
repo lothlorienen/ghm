@@ -29,6 +29,9 @@
   }
 
   &__label-text {
+    @include fill;
+    display: block;
+    padding: 11px 20px 11px 49px;
     color: $color-dark;
     font-style: normal;
     font-weight: 500;
@@ -40,7 +43,6 @@
   }
 
   &__input {
-    @include fill;
     z-index: z(default) + 1;
     display: inline-block;
     padding: 11px 20px 11px 49px;
@@ -79,11 +81,80 @@
       }
     }
 
-
     &:not([data-value]):not(:focus) {
       + .custom-calendar__label-text {
         @include media(mobile) {
           opacity: 1;
+        }
+      }
+    }
+  }
+
+  &--outline {
+    .custom-calendar {
+      &__label {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        max-width: initial;
+
+        &:hover {
+          opacity: initial;
+        }
+
+        &:focus-within {
+          opacity: initial;
+        }
+
+        &::before {
+          display: none;
+        }
+
+        &.error .custom-calendar__input {
+          border-color: red;
+        }
+      }
+
+      &__label-text {
+        display: inline-block;
+        top: 16px;
+        left: 16px;
+        bottom: unset;
+        right: unset;
+        padding: 0;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #BAB8B5;
+      }
+
+      &__input {
+        max-width: initial;
+        height: auto;
+        padding: 16px 16px 14px;
+        border: 1px solid;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+
+        &:hover {
+          opacity: initial;
+          border-color: $color-primary;
+        }
+
+        &:focus {
+          border-color: $color-primary-hover;
+        }
+
+        &[disabled] {
+          opacity: 0.25;
+          pointer-events: none;
         }
       }
     }

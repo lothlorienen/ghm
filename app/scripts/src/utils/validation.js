@@ -1,26 +1,28 @@
 class Validation {
   static validateForm(form) {
-    let inputs = form.querySelectorAll('[data-validation]');
+    const inputs = form.querySelectorAll('[data-validation]');
     inputs.forEach((input) => {
       Validation.validateInput(input);
     });
   }
 
   static isFormValid(form) {
-    let valid = true;
-    let inputs = form.querySelectorAll('[data-validation]');
+    const arr = [];
+    const inputs = form.querySelectorAll('[data-validation]');
 
     inputs.forEach((input) => {
-      if (!valid) Validation.validateInput(input);
-      valid = Validation.validateInput(input);
+      const valid = Validation.validateInput(input);
+      arr.push(valid);
     });
 
-    return valid;
+    const result = [... new Set(arr)];
+
+    return result.length <= 1 && result[0] === true;
   }
 
   static validateInput(input) {
-    let errors = Validation.getInputErrors(input);
-    let label = input.parentNode;
+    const errors = Validation.getInputErrors(input);
+    const label = input.parentNode;
 
     if (errors.length > 0) {
       if (!label.classList.contains('error')) {
@@ -40,47 +42,48 @@ class Validation {
   }
 
   static addErrorClass(input) {
-    let label = input.parentNode;
+    const label = input.parentNode;
     label.classList.add('error');
   }
 
   static addErrorMessage(input, error) {
-    let label = input.parentNode;
-    let message = document.createElement('span');
+    const label = input.parentNode;
+    const message = document.createElement('span');
     message.className = 'form-message';
     message.innerHTML = error;
     label.append(message);
   }
 
   static updateErrorMessage(input, error) {
-    let label = input.parentNode;
+    const label = input.parentNode;
     label.getElementsByClassName('form-message')[0].innerHTML = error;
   }
 
   static removeErrorMessage(input) {
-    let label = input.parentNode;
+    const label = input.parentNode;
     if (label.classList.contains('error')) {
-      let message = label.getElementsByClassName('form-message')[0];
+      const message = label.getElementsByClassName('form-message')[0];
       label.removeChild(message);
     }
   }
 
   static removeErrorClass(input) {
-    let label = input.parentNode;
+    const label = input.parentNode;
     if (label.classList.contains('error')) {
       label.classList.remove('error');
     }
   }
 
   static getInputErrors(input) {
-    let errors = [];
-    let rules = input.getAttribute('data-validation').split(',');
+    const errors = [];
+    const rules = input.getAttribute('data-validation').split(',');
     rules.forEach((rule) => {
-      let error = Validation[rule](input);
+      const error = Validation[rule](input);
       if (error) {
         errors.push(error);
       }
     });
+
     return errors;
   }
 
@@ -99,7 +102,7 @@ class Validation {
   }
 
   static init() {
-    let inputs = document.querySelectorAll('[data-validation]');
+    const inputs = document.querySelectorAll('[data-validation]');
     inputs.forEach((input) => {
       let label = input.parentNode;
       // input.addEventListener('focusout', () => {
@@ -119,5 +122,6 @@ class Validation {
   }
 }
 
-Validation.init();
+document.addEventListener('DOMContentLoaded', () => Validation.init());
+
 window.Validation = Validation;
