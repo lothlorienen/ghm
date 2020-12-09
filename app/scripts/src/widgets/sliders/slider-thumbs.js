@@ -2,8 +2,9 @@ class SliderThumbs extends Widget {
   constructor(node) {
     super(node, '.js-slider-thumbs');
 
-    this.images = this.$node.querySelectorAll('img');
-    this.slidesArray = [];
+    this.$childs = this.$node.children;
+    this.slidesArray_Master = [];
+    this.slidesArray_Thumbs = [];
 
     this.sliderMaster = null;
     this.sliderThumbs = null;
@@ -19,7 +20,7 @@ class SliderThumbs extends Widget {
 
   build() {
     // Подготавливаем изображения для вставки в слайдер
-    this.prepareImages();
+    this.prepareItems();
     // Очищаем исходную разметку
     this.clearInitialHtml();
     // Вставляем в разметку
@@ -28,19 +29,46 @@ class SliderThumbs extends Widget {
     this.events();
   }
 
-  prepareImages() {
-    this.images.forEach(item => {
-      const wrapper = document.createElement('div');
-      const img = document.createElement('img');
+  prepareItems() {
+    for (let i = 0; i < this.$childs.length; i++) {
+      if (this.$childs[i].tagName.toLowerCase() === 'iframe') {
+        // iframe
+        const iframeWrapper = document.createElement('div');
 
-      wrapper.classList.add('swiper-slide');
-      item.dataset.original ? img.src = item.dataset.original : img.src = item.src;
-      img.alt = item.alt;
-      wrapper.insertAdjacentElement('beforeend', img);
+        iframeWrapper.classList.add('swiper-slide');
+        iframeWrapper.insertAdjacentHTML('beforeend', this.$childs[i].outerHTML);
+        const iframeResult = iframeWrapper.outerHTML;
 
-      const result = wrapper.outerHTML;
-      this.slidesArray.push(result);
-    });
+        // Image
+        const imgWrapper = document.createElement('div');
+        const img = document.createElement('img');
+        const icon = document.createElement('span');
+
+        imgWrapper.classList.add('swiper-slide');
+        icon.classList.add('slider-thumbs__video-icon');
+        this.$childs[i].dataset.posterSrc ? img.src = this.$childs[i].dataset.posterSrc : null;
+        this.$childs[i].dataset.posterAlt ? img.alt = this.$childs[i].dataset.posterAlt : null;
+        imgWrapper.insertAdjacentElement('beforeend', icon);
+        imgWrapper.insertAdjacentElement('beforeend', img);
+        const result = imgWrapper.outerHTML;
+
+        this.slidesArray_Master.push(iframeResult);
+        this.slidesArray_Thumbs.push(result);
+      } else {
+        const wrapper = document.createElement('div');
+        const img = document.createElement('img');
+        const childImg = this.$childs[i].querySelector('img');
+
+        wrapper.classList.add('swiper-slide');
+        childImg.dataset.original ? img.src = childImg.dataset.original : img.src = childImg.src;
+        img.alt = childImg.alt;
+        wrapper.insertAdjacentElement('beforeend', img);
+
+        const result = wrapper.outerHTML;
+        this.slidesArray_Master.push(result);
+        this.slidesArray_Thumbs.push(result);
+      }
+    }
   }
 
   clearInitialHtml() {
@@ -50,7 +78,8 @@ class SliderThumbs extends Widget {
   }
 
   generateSliderHtml() {
-    const slides = `${this.slidesArray.join('')}`;
+    const slidesMaster = `${this.slidesArray_Master.join('')}`;
+    const slidesThumbs = `${this.slidesArray_Thumbs.join('')}`;
     this.sliderMaster = document.createElement('div');
     this.sliderThumbs = document.createElement('div');
 
@@ -63,13 +92,13 @@ class SliderThumbs extends Widget {
 
     this.sliderMaster.insertAdjacentHTML('beforeend', `
       <div class="swiper-wrapper">
-        ${slides}
+        ${slidesMaster}
       </div>
      `);
 
     this.sliderThumbs.insertAdjacentHTML('beforeend', `
       <div class="swiper-wrapper">
-        ${slides}
+        ${slidesThumbs}
       </div>
      `);
 
@@ -97,7 +126,6 @@ class SliderThumbs extends Widget {
 
   events() {
     this.initSwipers();
-    this.onButtonClick();
   }
 
   initSwipers() {
@@ -107,7 +135,7 @@ class SliderThumbs extends Widget {
     this.swiperThumbs = new Swiper(this.sliderThumbs, {
       spaceBetween: 10,
       slidesPerView: 'auto',
-      freeMode: true,
+      // freeMode: true,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
     });
@@ -121,15 +149,6 @@ class SliderThumbs extends Widget {
       thumbs: {
         swiper: this.swiperThumbs,
       },
-    });
-  }
-
-  onButtonClick() {
-    this.prevSlide.addEventListener('click', () => {
-      this.swiperMaster.slidePrev()
-    });
-    this.nextSlide.addEventListener('click', () => {
-      this.swiperMaster.slideNext()
     });
   }
 
