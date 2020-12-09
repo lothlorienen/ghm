@@ -123,7 +123,7 @@
     opacity: 0;
 
     @include media(tabletSmall, up) {
-      @include transition;
+      transition: background-color 350ms ease;
       background-color: var(--header-bg);
     }
 

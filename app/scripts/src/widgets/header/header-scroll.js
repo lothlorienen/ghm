@@ -45,20 +45,35 @@ class HeaderScroll extends Widget {
   update() {
     const scrollTop = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0);
 
-    if (scrollTop > (Layout.isTabletLayout() ? window.innerHeight : 650)) {
-      this.setHeaderAsFixed();
-    } else {
-      this.setHeaderAsNotFixed();
-    }
+    if (this.$node.classList.contains('header--main')) {
+      if (scrollTop > (Layout.isTabletLayout() ? window.innerHeight : 650)) {
+        this.setHeaderAsFixed();
+      } else {
+        this.setHeaderAsNotFixed();
+      }
 
-    if ((!this.isFixed && scrollTop) > (this.baseBeight && !document.body.classList.contains('header-fixed'))) {
-      this.$node.classList.add('fixed-prepare');
-      !this.$node.classList.contains('header--main') ? document.body.classList.add('header-fixed') : null;
-    }
+      if ((!this.isFixed && scrollTop) > (this.baseBeight && !document.body.classList.contains('header-fixed'))) {
+        this.$node.classList.add('fixed-prepare');
+      }
 
-    if (scrollTop <= this.baseBeight) {
-      this.$node.classList.remove('fixed-prepare');
-      !this.$node.classList.contains('header--main') ? document.body.classList.remove('header-fixed') : null;
+      if (scrollTop <= (Layout.isTabletLayout() ? (window.innerHeight * 0.9) : (650 * 0.9))) {
+        this.$node.classList.remove('fixed-prepare');
+        document.body.classList.remove('header-fixed');
+      }
+    }
+    else {
+      if (scrollTop > this.baseBeight + 1) {
+        this.$node.classList.add('fixed-prepare');
+        document.body.classList.add('header-fixed')
+        this.setHeaderAsFixed();
+      } else {
+        this.setHeaderAsNotFixed();
+      }
+
+      if (scrollTop <= this.baseBeight) {
+        this.$node.classList.remove('fixed-prepare');
+        document.body.classList.remove('header-fixed');
+      }
     }
   }
 

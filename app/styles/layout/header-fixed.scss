@@ -56,6 +56,9 @@
   }
 
   &.header--main {
+    --header-bg: #FFFFFF;
+    --header-color: rgba(43, 43, 62, 0.95);
+
     margin-bottom: 0;
   }
 
@@ -75,9 +78,6 @@
     }
 
     &.header--main {
-      --header-bg: #FFFFFF;
-      --header-color: rgba(43, 43, 62, 0.95);
-
       &:not(.header--filled) {
         --header-color: var(--color-dark);
       }

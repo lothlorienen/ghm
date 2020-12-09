@@ -58,10 +58,7 @@ class HeaderDropdown extends Widget {
 
     if (item) {
       item.classList.add('hover');
-      hideScrollbar(scrollBarWidth => {
-        this.$node.style.marginRight = '-' + scrollBarWidth;
-        this.$node.style.marginLeft = "-" + scrollBarWidth;
-      });
+      hideScrollbar();
     } else {
       showScrollbar();
       this.$node.style.marginRight = 0;
