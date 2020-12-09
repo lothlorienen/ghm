@@ -16,6 +16,10 @@
     @include media(md, down, height, landscape) {
       max-height: 650px;
     }
+
+    @include media(tabletSmall, up) {
+      max-height: 650px;
+    }
   }
 
   &__nav {

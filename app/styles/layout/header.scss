@@ -6,7 +6,7 @@
   top: 0;
   z-index: z(header);
   color: var(--header-color);
-  transition: background-color 350ms ease;
+  transition: background-color 350ms ease, top 450ms ease;
 
   @include media(tabletSmall, up) {
     background-color: var(--header-bg);

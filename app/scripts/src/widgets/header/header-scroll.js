@@ -38,7 +38,7 @@ class HeaderScroll extends Widget {
     this.isFixed = false;
 
     !this.$node.classList.contains('header--main') ? document.body.classList.remove('header-fixed') : null;
-    this.$node.classList.remove('fixed-prepare');
+    // this.$node.classList.remove('fixed-prepare');
     this.$node.classList.remove('fixed');
   }
 
@@ -57,7 +57,7 @@ class HeaderScroll extends Widget {
       }
 
       if (scrollTop <= (Layout.isTabletLayout() ? (window.innerHeight * 0.9) : (650 * 0.9))) {
-        this.$node.classList.remove('fixed-prepare');
+        // this.$node.classList.remove('fixed-prepare');
         document.body.classList.remove('header-fixed');
       }
     }
@@ -71,14 +71,14 @@ class HeaderScroll extends Widget {
       }
 
       if (scrollTop <= this.baseBeight) {
-        this.$node.classList.remove('fixed-prepare');
+        // this.$node.classList.remove('fixed-prepare');
         document.body.classList.remove('header-fixed');
       }
     }
   }
 
   updateHeight() {
-    this.baseBeight = this.$node.offsetHeight;
+    this.baseBeight = document.querySelector('.js-header').offsetHeight;
   }
 
   onScroll() {

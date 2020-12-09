@@ -1,25 +1,9 @@
-.header-fixed {
-  @include media(tabletSmall, up) {
-    margin-top: 134px;
-  }
-
-  @include media(tabletSmall, only) {
-    margin-top: 64px;
-  }
-
-  @include media(mobile) {
-    margin-top: 58px;
-  }
-}
-
 .header.fixed-prepare {
   position: fixed;
   left: 0;
   right: 0;
-  transition: none;
   background-color: var(--header-bg);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  @include transition(top, 450ms);
 
   @include media(tabletSmall, up) {
     margin-top: -134px;
