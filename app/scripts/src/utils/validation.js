@@ -26,15 +26,15 @@ class Validation {
 
     if (errors.length > 0) {
       if (!label.classList.contains('error')) {
-        Validation.addErrorMessage(input, errors[0]);
+        // Validation.addErrorMessage(input, errors[0]);
         Validation.addErrorClass(input);
       } else {
-        Validation.updateErrorMessage(input, errors[0]);
+        // Validation.updateErrorMessage(input, errors[0]);
       }
 
       return false;
     } else {
-      Validation.removeErrorMessage(input);
+      // Validation.removeErrorMessage(input);
       Validation.removeErrorClass(input);
 
       return true;
@@ -94,8 +94,7 @@ class Validation {
   }
 
   static isValidEmail(input) {
-    let regex = RegExp(
-      /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
+    let regex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
     if (!regex.test(input.value)) {
       return 'Пожалуйста, введите корректный e-mail.';
     }

@@ -31,19 +31,6 @@
     margin-top: 15px;
   }
 
-  &--success {
-    p {
-      display: block;
-      margin: 0;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 24px;
-      line-height: 28px;
-      letter-spacing: 0.02em;
-      text-align: center;
-    }
-  }
-
   &-field {
     position: relative;
 
@@ -90,18 +77,14 @@
         pointer-events: none;
       }
 
-      .error & {
-        border-color: red;
+      .error &::placeholder {
+        color: #EB5757;
       }
     }
 
     &.error {
-      * {
-        border-color: red;
-
-        &:focus {
-          border-color: red;
-        }
+      *::placeholder {
+        color: #EB5757;
       }
     }
   }
@@ -175,6 +158,10 @@
       letter-spacing: 0.02em;
       text-transform: uppercase;
       color: #BAB8B5;
+    }
+
+    .error &::placeholder {
+      color: #EB5757;
     }
 
     &[disabled] {
@@ -286,6 +273,22 @@
   }
 }
 
+._success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    display: block;
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+}
 
 .form-checkbox {
   $checkbox-value: 18px;

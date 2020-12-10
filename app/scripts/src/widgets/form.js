@@ -65,7 +65,7 @@ class Form extends Widget {
         this.container.firstChild.remove();
       }
 
-      this.container.classList.add('form--success');
+      this.form.classList.add('_success');
       this.container.insertAdjacentHTML('beforeend', `
         <p>Данные успешно отправлены!</p>
       `);
@@ -86,7 +86,8 @@ class Form extends Widget {
 
   toSuccess() {
     setTimeout(() => {
-      // this.section.classList.add('_hide');
+      this.$node.classList.remove('_loading');
+      this.form.style.height = `${this.form.scrollHeight}px`;
     }, 1800);
   }
 

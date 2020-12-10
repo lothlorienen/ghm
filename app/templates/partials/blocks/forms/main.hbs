@@ -7,8 +7,8 @@
           <div class="form__group">
             {{>form/input placeholder="E-mail" field-name="e-mail" type="email" inputmode="email" validation="isNotEmpty,isValidEmail"}}
             {{>form/input
-                data-mask="00 (000) 000-00-00"
-                placeholder="+7 ___ ___ __ __"
+                data-mask="+{7} (000) 000-00-00"
+                placeholder="+7 (___) ___ __ __"
                 type="tel"
                 inputmode="tel"
                 input-class="js-masked-input"
@@ -16,7 +16,7 @@
                 field-name="Ваш номер телефона"
             }}
           </div>
-          {{>form/textarea placeholder="ВашЕ сообщение" field-name="Сообщение"}}
+          {{>form/textarea placeholder="Ваше сообщение" validation="isNotEmpty" field-name="Сообщение"}}
           <p class="form__row-title">куда удобнее получить ответ</p>
           <div class="form__group">
             {{>form/checkbox label="E-mail" field-name="чекбокс E-mail" validation="isNotEmpty,isValidEmail"}}
@@ -48,8 +48,8 @@
 {{#>blocks/common/section}}
   <h2 style="text-align: center">Подписка на рассылку / успешная отправка</h2>
   <div class="section__content">
-    <form class="js-form" data-api-url="location.href">
-      <div class="form form--success js-form__container">
+    <form class="js-form _success" data-api-url="location.href">
+      <div class="form js-form__container">
         <p>Данные успешно отправлены!</p>
       </div>
     </form>
@@ -60,7 +60,7 @@
     <form class="js-form" data-api-url="location.href">
       <div class="form js-form__container">
         <div class="form__container">
-          {{>form/input placeholder="Названия мероприятия" field-name="Названия мероприятия" validation="isNotEmpty"}}
+          {{>form/input placeholder="Название мероприятия" field-name="Названия мероприятия" validation="isNotEmpty"}}
           {{>form/input placeholder="Фамилия Имя Отчество" field-name="Ваше имя" validation="isNotEmpty"}}
           <div class="form__group">
             {{>form/input placeholder="E-mail" field-name="E-mail" type="email" inputmode="email" validation="isNotEmpty,isValidEmail"}}
@@ -83,7 +83,7 @@
             </div>
             {{>form/input placeholder="Количество человек" field-name="Количество человек" type="number" inputmode="numeric" validation="isNotEmpty"}}
           </div>
-          {{>form/textarea placeholder="дополнительные сведения / комментарий" field-name="дополнительные сведения"}}
+          {{>form/textarea placeholder="дополнительные сведения / комментарий" field-name="дополнительные сведения" validation="isNotEmpty"}}
           <div class="form__submit">
             {{>ui/btn-arrow button=1 type="submit" label="Отправить" btn-mode='inline'}}
           </div>

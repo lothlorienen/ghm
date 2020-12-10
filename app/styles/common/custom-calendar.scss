@@ -112,8 +112,9 @@
           display: none;
         }
 
-        &.error .custom-calendar__input {
-          border-color: red;
+        &.error .custom-calendar__input,
+        &.error .custom-calendar__input::placeholder {
+          color: #EB5757;
         }
       }
 
