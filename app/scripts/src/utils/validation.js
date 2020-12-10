@@ -24,6 +24,7 @@ class Validation {
     const errors = Validation.getInputErrors(input);
     const label = input.parentNode;
 
+    console.log(errors);
     if (errors.length > 0) {
       if (!label.classList.contains('error')) {
         // Validation.addErrorMessage(input, errors[0]);
@@ -94,9 +95,16 @@ class Validation {
   }
 
   static isValidEmail(input) {
-    let regex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
+    const regex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
     if (!regex.test(input.value)) {
       return 'Пожалуйста, введите корректный e-mail.';
+    }
+  }
+
+  static isValidPhone(input) {
+    const regex = RegExp(/^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/g);
+    if (!regex.test(input.value)) {
+      return 'Пожалуйста, введите корректный номер телефона.';
     }
   }
 

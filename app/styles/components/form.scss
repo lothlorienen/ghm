@@ -77,12 +77,14 @@
         pointer-events: none;
       }
 
+      .error &,
       .error &::placeholder {
         color: #EB5757;
       }
     }
 
     &.error {
+      *,
       *::placeholder {
         color: #EB5757;
       }
@@ -160,6 +162,7 @@
       color: #BAB8B5;
     }
 
+    .error &,
     .error &::placeholder {
       color: #EB5757;
     }
