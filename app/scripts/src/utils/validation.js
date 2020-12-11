@@ -24,7 +24,6 @@ class Validation {
     const errors = Validation.getInputErrors(input);
     const label = input.parentNode;
 
-    console.log(errors);
     if (errors.length > 0) {
       if (!label.classList.contains('error')) {
         // Validation.addErrorMessage(input, errors[0]);
@@ -90,21 +89,21 @@ class Validation {
 
   static isNotEmpty(input) {
     if (!input.value) {
-      return 'Пожалуйста, введите корректные данные';
+      return `Введите ${input.dataset.placeholder ? input.dataset.placeholder : input.placeholder}`;
     }
   }
 
   static isValidEmail(input) {
-    const regex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
-    if (!regex.test(input.value)) {
-      return 'Пожалуйста, введите корректный e-mail.';
+    const regex = RegExp(/.+@.+\..+/i);
+    if (!regex.test(input.value.toLowerCase())) {
+      return `Введите ${input.dataset.placeholder ? input.dataset.placeholder : input.placeholder}`;
     }
   }
 
   static isValidPhone(input) {
     const regex = RegExp(/^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/g);
     if (!regex.test(input.value)) {
-      return 'Пожалуйста, введите корректный номер телефона.';
+      return `Введите ${input.dataset.placeholder ? input.dataset.placeholder : input.placeholder}`;
     }
   }
 

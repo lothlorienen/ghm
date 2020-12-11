@@ -63,7 +63,8 @@
     cursor: pointer;
 
     @include media(mobile) {
-      //font-size: 13px;
+      font-size: 16px;
+      line-height: 1;
       max-width: initial;
       height: 38px;
     }
@@ -114,6 +115,7 @@
         }
 
         &.error .custom-calendar__input,
+        &.error .custom-calendar__label-text,
         &.error .custom-calendar__input::placeholder {
           color: #EB5757;
         }
@@ -126,32 +128,37 @@
         bottom: unset;
         right: unset;
         padding: 0;
-        font-size: 16px;
+        font-size: 13px;
+        line-height: 15px;
         font-weight: 400;
-        line-height: 1;
         letter-spacing: 0.02em;
         text-transform: uppercase;
         color: #BAB8B5;
+
+        @include media(mobile) {
+          font-size: 16px;
+          line-height: 1;
+        }
       }
 
       &__input {
         max-width: initial;
         height: auto;
-        padding: 16px 16px 14px;
+        padding: 15px 16px 13px;
         border: 1px solid;
-        font-size: 16px;
+        font-size: 13px;
+        line-height: 15px;
         font-weight: 400;
-        line-height: 1;
         letter-spacing: 0.02em;
         text-transform: uppercase;
 
-        &:hover {
-          opacity: initial;
-          border-color: $color-primary;
+        @include media(mobile) {
+          font-size: 16px;
+          line-height: 1;
         }
 
-        &:focus {
-          border-color: $color-primary-hover;
+        &:hover {
+          opacity: initial;
         }
 
         &[disabled] {

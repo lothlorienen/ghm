@@ -79,12 +79,12 @@
     }
   }
 
-  .form--success {
+  ._success {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-    min-height: 46px;
+    min-height: 40px;
 
     p {
       font-size: 16px;

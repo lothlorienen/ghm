@@ -52,31 +52,39 @@
     &__input {
       display: block;
       width: 100%;
-      padding: 16px 16px 14px;
-      font-size: 16px;
-      line-height: 1;
+      padding: 15px 16px 13px;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 15px;
       letter-spacing: 0.02em;
+      text-transform: uppercase;
       border: 1px solid $color-dark;
       border-radius: 3px;
       background-color: transparent;
       @include transition;
 
+      @include media(mobile) {
+        font-size: 16px;
+      }
+
       &:hover {
         cursor: pointer;
-        border-color: $color-primary;
       }
 
       &:focus {
-        border-color: $color-primary-hover;
         background-color: transparent;
       }
 
       &::placeholder {
-        font-size: 16px;
-        line-height: 1;
+        font-size: 13px;
+        line-height: 16px;
         letter-spacing: 0.02em;
         text-transform: uppercase;
         color: #BAB8B5;
+
+        @include media(mobile) {
+          font-size: 16px;
+        }
       }
 
       &[disabled] {
@@ -143,30 +151,39 @@
     display: block;
     width: 100%;
     min-height: 130px;
-    padding: 16px 16px 14px;
-    font-size: 16px;
-    line-height: 1;
+    padding: 15px 16px 13px;
+    font-size: 13px;
+    line-height: 15px;
     letter-spacing: 0.02em;
+    text-transform: uppercase;
     resize: none;
-    border: 1px solid;
+    border: 1px solid $color-dark;
     background-color: transparent;
+
+    @include media(mobile) {
+      font-size: 16px;
+      line-height: 1;
+    }
 
     &:hover {
       cursor: pointer;
-      border-color: $color-primary;
     }
 
     &:focus {
-      border-color: $color-primary-hover;
       background-color: transparent;
     }
 
     &::placeholder {
-      font-size: 16px;
-      line-height: 1;
+      font-size: 13px;
+      line-height: 15px;
       letter-spacing: 0.02em;
       text-transform: uppercase;
       color: #BAB8B5;
+
+      @include media(mobile) {
+        font-size: 16px;
+        line-height: 1;
+      }
     }
 
     .error &,

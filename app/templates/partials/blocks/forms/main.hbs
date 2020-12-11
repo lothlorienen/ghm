@@ -8,6 +8,7 @@
             {{>form/input placeholder="E-mail" field-name="email" type="email" inputmode="email" validation="isNotEmpty,isValidEmail"}}
             {{>form/input
                 data-mask="+{7} (000) 000-00-00"
+                data-placeholder="Номер телефона"
                 placeholder="+7 (___) ___ __ __"
                 type="tel"
                 inputmode="tel"
@@ -65,12 +66,13 @@
           <div class="form__group">
             {{>form/input placeholder="E-mail" field-name="email" type="email" inputmode="email" validation="isNotEmpty,isValidEmail"}}
             {{>form/input
-                data-mask="00 (000) 000-00-00"
-                placeholder="+7 ___ ___ __ __"
-                type="numeric"
+                data-mask="+{7} (000) 000-00-00"
+                data-placeholder="Номер телефона"
+                placeholder="+7 (___) ___ __ __"
+                type="tel"
                 inputmode="tel"
                 input-class="js-masked-input"
-                validation="isNotEmpty"
+                validation="isNotEmpty,isValidPhone"
                 field-name="phone"
             }}
           </div>
