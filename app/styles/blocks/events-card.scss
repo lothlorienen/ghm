@@ -7,6 +7,7 @@
       'image time entrance'
       'image header header'
       'image text text'
+      'image location ..'
       'image actions actions';
     grid-template-rows: 18px auto 1fr;
     grid-gap: 16px 70px;
@@ -24,6 +25,7 @@
       'image header'
       'image entrance'
       'text text'
+      'location location'
       'actions actions';
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 14px min-content 1fr;
@@ -221,6 +223,36 @@
 
     > *:first-child {
       margin-top: 0!important;
+    }
+  }
+
+  &__location {
+    grid-area: location;
+    position: relative;
+    display: block;
+    margin: 0;
+    max-width: 210px;
+    min-height: 25px;
+    padding-left: 27px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    color: #828282;
+
+    @include media(tabletSmall) {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 19px;
+      height: 25px;
+      transform: translateY(-50%);
     }
   }
 
