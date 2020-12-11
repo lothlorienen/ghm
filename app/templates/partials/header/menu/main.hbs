@@ -19,8 +19,10 @@
      href="#">О музее</a>
 </li>
 <li class="header-menu__item js-header__item">
-  <a class="header-menu__link js-header__link{{#ifCond active 'departments'}} header-menu__link--current{{/ifCond}}"
-     href="./department.html">Филиалы</a>
+  <span class="header-menu__link js-header__link{{#ifCond active 'departments'}} header-menu__link--current{{/ifCond}}">Филиалы</span>
+  <div class="header-menu__submenu js-header__submenu">
+    {{>header/submenu/filials}}
+  </div>
 </li>
 <li class="header-menu__item js-header__item">
   <span class="header-menu__link js-header__link{{#ifCond active 'visitors'}} header-menu__link--current{{/ifCond}}">Посетителям</span>

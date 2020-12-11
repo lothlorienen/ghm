@@ -28,6 +28,24 @@
     @include media(tabletSmall) {
       padding-bottom: 40px;
     }
+
+    &--no-columns {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__list {
+    padding: 12px 0;
+  }
+
+  &__item {
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 16px;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   &__link {
@@ -37,7 +55,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    line-height: 40px;
+    line-height: 16px;
     text-transform: uppercase;
     cursor: pointer;
 

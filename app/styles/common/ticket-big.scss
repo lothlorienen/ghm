@@ -1,4 +1,6 @@
 .ticket-big {
+  --ticket-bg: var(--color-dark);
+
   display: inline-grid;
   grid-template-columns: auto 1fr auto;
   width: 100%;
@@ -7,6 +9,21 @@
   color: $color-light;
   font-family: 'Book Antiqua', sans-serif;
   font-weight: bold;
+  transition: opacity 350ms ease;
+
+  &:hover {
+    --ticket-bg: var(--color-primary);
+
+    span {
+      &::before {
+        opacity: 0;
+      }
+
+      &::after {
+        opacity: initial;
+      }
+    }
+  }
 
   &::before,
   &::after {
@@ -16,7 +33,7 @@
     display: inline-flex;
     width: 29px;
     height: 100%;
-    background-color: $color-dark;
+    background-color: var(--ticket-bg);
     @include transition;
 
     @include media(tabletSmall, only) {
@@ -59,7 +76,8 @@
     display: flex;
     align-items: flex-end;
     padding: 20px 20px 20px 0;
-    background-color: $color-dark;
+    background-color: var(--ticket-bg);
+    @include transition;
 
     @include media(tablet, up) {
       font-size: 36px;
@@ -75,7 +93,8 @@
       padding: 10px 10px 10px 0;
     }
 
-    &::before {
+    &::before,
+    &::after {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -84,17 +103,46 @@
       content: '';
       width: 2.5px;
       height: 100%;
-      background: linear-gradient(to bottom, transparent 50%, $color-dark 50%), white;
+      background-color: #fff;
+      @include transition;
+
+      @include media(mobile) {
+        width: 2px;
+      }
+    }
+
+    &::before {
+      background: linear-gradient(to bottom, white 50%, $color-dark 50%);
+      background-size: 2.5px 25px;
+      background-position-y: -25px;
+      opacity: initial;
+
+      @include media(tablet) {
+        background-size: 2.5px 30px;
+      }
+
+      @include media(mobile) {
+        background-size: 2.5px 15px;
+        background-position-y: 2px;
+      }
+
+      @include media(mobileSmall) {
+        background-size: 2px 25px;
+        background-position-y: -5px;
+      }
+    }
+
+    &::after {
+      background: linear-gradient(to bottom, transparent 50%, $color-primary 50%), white;
       background-size: 2.5px 25px, 100% 25px;
       background-position-y: -25px;
-      background-color: #fff;
+      opacity: 0;
 
       @include media(tablet) {
         background-size: 2.5px 30px, 100% 30px;
       }
 
       @include media(mobile) {
-        width: 2px;
         background-size: 2.5px 15px, 100% 15px;
         background-position-y: 2px;
       }
