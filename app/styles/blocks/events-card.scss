@@ -231,7 +231,7 @@
     position: relative;
     display: block;
     margin: 0;
-    max-width: 210px;
+    max-width: 225px;
     min-height: 25px;
     padding-left: 27px;
     font-style: normal;
@@ -242,6 +242,7 @@
     color: #828282;
 
     @include media(tabletSmall) {
+      max-width: 210px;
       font-size: 12px;
       line-height: 14px;
     }
