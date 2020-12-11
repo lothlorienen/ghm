@@ -8,6 +8,7 @@
     height: 38px;
     cursor: pointer;
     transition: opacity 350ms ease;
+    border-bottom: 1px solid;
 
     &:hover {
       opacity: 0.5;
@@ -45,12 +46,11 @@
   &__input {
     z-index: z(default) + 1;
     display: inline-block;
-    padding: 11px 20px 11px 49px;
+    padding: 0;
     width: 100%;
     max-width: 170px;
     height: 38px;
     border: none;
-    border-bottom: 1px solid;
     border-radius: unset;
     outline: none;
     font-style: normal;
@@ -99,6 +99,7 @@
         height: 100%;
         width: 100%;
         max-width: initial;
+        border: unset;
 
         &:hover {
           opacity: initial;
