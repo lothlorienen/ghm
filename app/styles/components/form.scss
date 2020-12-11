@@ -27,6 +27,13 @@
     text-transform: uppercase;
   }
 
+  &__row-text {
+    display: block;
+    margin: 0;
+    font-size: 13px;
+    line-height: 15px;
+  }
+
   &__submit {
     margin-top: 15px;
   }

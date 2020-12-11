@@ -5,8 +5,8 @@
         <div class="form js-form__container">
           <div class="form__container">
             <p class="form__row-text">Подпишитесь на наши уведомления и будьте в курсе интересных мероприятий</p>
-            {{>form/input placeholder="Ваше имя" field-name="Ваше имя" validation="isNotEmpty"}}
-            {{>form/input placeholder="E-mail" field-name="E-mail" type="email" inputmode="email" validation="isNotEmpty,isValidEmail"}}
+            {{>form/input placeholder="Ваше имя" field-name="name" validation="isNotEmpty"}}
+            {{>form/input placeholder="E-mail" field-name="email" type="email" inputmode="email" validation="isNotEmpty,isValidEmail"}}
             <div class="form__submit">
               {{>ui/btn-arrow button=1 type="submit" label="Отправить" btn-mode='inline'}}
             </div>
