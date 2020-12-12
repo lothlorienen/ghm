@@ -58,11 +58,11 @@ class HeaderDropdown extends Widget {
 
     if (item) {
       item.classList.add('hover');
-      this.$node.querySelector('.container').style.width = `${this.$node.getBoundingClientRect().width}px`;
+      this.$node.querySelector('.container').style.margin = `0 0 0 ${(this.$node.getBoundingClientRect().width - 1320) / 2}px`;
       hideScrollbar();
     } else {
       showScrollbar();
-      this.$node.querySelector('.container').style.width = ``;
+      this.$node.querySelector('.container').style.margin = ``;
     }
   }
 
