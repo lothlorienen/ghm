@@ -9,6 +9,7 @@ class HeaderDropdown extends Widget {
     this.timerId = null;
     this.resetTimerId = null;
     this.hovered = null;
+    this.isOnHover = false;
 
     this.rememberScrollY = null;
 
@@ -58,11 +59,13 @@ class HeaderDropdown extends Widget {
 
     if (item) {
       item.classList.add('hover');
-      this.$node.querySelector('.container').style.margin = `0 0 0 ${(this.$node.getBoundingClientRect().width - 1320) / 2}px`;
+      if (!this.isOnHover) this.$node.querySelector('.container').style.margin = `0 0 0 ${(this.$node.getBoundingClientRect().width - 1320) / 2}px`;
       hideScrollbar();
+      this.isOnHover = true;
     } else {
       showScrollbar();
       this.$node.querySelector('.container').style.margin = ``;
+      this.isOnHover = false;
     }
   }
 
