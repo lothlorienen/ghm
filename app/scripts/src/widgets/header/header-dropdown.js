@@ -59,11 +59,38 @@ class HeaderDropdown extends Widget {
 
     if (item) {
       item.classList.add('hover');
-      if (!this.isOnHover) this.$node.querySelector('.container').style.margin = `0 0 0 ${(this.$node.getBoundingClientRect().width - 1320) / 2}px`;
-      hideScrollbar();
+
+      // document.body.style.overflow = 'hidden'
+      // document.body.style.paddingRight = '17px'
+
+      // if (window.innerWidth >= 1320) {
+      //   hideScrollbar(scrollBarWidth => {
+      //     this.$node.style.marginRight = '-' + scrollBarWidth;
+      //     this.$node.style.marginLeft = "-" + scrollBarWidth;
+      //
+      //     if (!this.isOnHover && this.$node.classList.contains('fixed-prepare')) {
+      //       this.$node.querySelector('.container').style.margin = `0 0 0 ${(this.$node.getBoundingClientRect().width - (ScrollControl.scrollbarWidth() * 2) - (1320 - ScrollControl.scrollbarWidth())) / 2}px`;
+      //     }
+      //   });
+      // } else if (window.innerWidth < 1320 && window.innerWidth >= 1024) {
+      //   hideScrollbar(scrollBarWidth => {
+      //     this.$node.style.marginRight = '-' + scrollBarWidth;
+      //     this.$node.style.marginLeft = "-" + scrollBarWidth;
+      //     this.$node.style.paddingRight = scrollBarWidth;
+      //     this.$node.style.paddingLeft = scrollBarWidth;
+      //
+      //     if (!this.isOnHover && this.$node.classList.contains('fixed-prepare')) {
+      //       this.$node.querySelector('.container').style.margin = ``;
+      //     }
+      //   });
+      // }
+
       this.isOnHover = true;
     } else {
-      showScrollbar();
+      // document.body.style.overflow = ''
+      // document.body.style.paddingRight = ''
+
+      // showScrollbar();
       this.$node.querySelector('.container').style.margin = ``;
       this.isOnHover = false;
     }

@@ -14,7 +14,9 @@ class ScrollControl {
   }
 
   showScrollbar() {
-    if (!document.body.classList.contains('fixed-scroll')) return false;
+    if (!document.body.classList.contains('fixed-scroll')) {
+      return false;
+    }
 
     document.body.classList.remove('fixed-scroll');
     document.body.style.paddingRight = ``;
@@ -30,15 +32,22 @@ class ScrollControl {
   }
 
   hideScrollbar(callback) {
-    if (document.body.classList.contains('fixed-scroll')) return false;
-    if (isMobileLayout()) document.body.style.top = `-${this.lastScrollPos}px`;
+    if (document.body.classList.contains('fixed-scroll')) {
+      return false;
+    }
+
+    if (isMobileLayout()) {
+      document.body.style.top = `-${this.lastScrollPos}px`;
+    }
 
     const scrollBarWidth = ScrollControl._calcScrollbarWidth();
 
     document.body.classList.add('fixed-scroll');
     document.body.style.paddingRight = scrollBarWidth;
 
-    if (callback) callback(scrollBarWidth);
+    if (callback) {
+      callback(scrollBarWidth);
+    }
 
     this.isFixedScroll = true;
     return true;
@@ -66,10 +75,25 @@ class ScrollControl {
 
     return scrollbarWidth;
   }
+
+  static scrollbarWidth() {
+    const scrollbarMeasure = document.createElement('div');
+    scrollbarMeasure.className = 'scroll-measure';
+
+    document.body.appendChild(scrollbarMeasure);
+
+    const offsetWidth = scrollbarMeasure.offsetWidth;
+    const clientWidth = scrollbarMeasure.clientWidth;
+
+    document.body.removeChild(scrollbarMeasure);
+
+    return offsetWidth - clientWidth;
+  }
 }
 
-const scrollControl = new ScrollControl();
+const scrollControl = new ScrollControl;
 
+window.ScrollControl = ScrollControl;
 window.showScrollbar = scrollControl.showScrollbar.bind(scrollControl);
 window.hideScrollbar = scrollControl.hideScrollbar.bind(scrollControl);
 window.getScrollPos = scrollControl.getLastScrollPos.bind(scrollControl);
