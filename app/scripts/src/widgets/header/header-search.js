@@ -125,6 +125,8 @@ class HeaderSearch extends Widget {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  HeaderSearch.init(document.querySelector('.js-header-search'));
-});
+window.HeaderSearch = HeaderSearch;
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   HeaderSearch.init(document.querySelector('.js-header-search'));
+// });

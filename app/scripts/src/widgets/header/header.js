@@ -13,6 +13,9 @@ class Header extends Widget {
     HeaderDropdown.init(this.$node);
     HeaderMobile.init(this.$node);
     HeaderScroll.init(this.$node);
+
+    HeaderSearch.init(this.$originNode.querySelector('.js-header-search'));
+    HeaderSearch.init(this.$node.querySelector('.js-header-search'));
   }
 
   static init(el) {
