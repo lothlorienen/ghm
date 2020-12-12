@@ -26,15 +26,15 @@ class Validation {
 
     if (errors.length > 0) {
       if (!label.classList.contains('error')) {
-        // Validation.addErrorMessage(input, errors[0]);
+        Validation.addErrorMessage(input, errors[0]);
         Validation.addErrorClass(input);
       } else {
-        // Validation.updateErrorMessage(input, errors[0]);
+        Validation.updateErrorMessage(input, errors[0]);
       }
 
       return false;
     } else {
-      // Validation.removeErrorMessage(input);
+      Validation.removeErrorMessage(input);
       Validation.removeErrorClass(input);
 
       return true;
@@ -44,6 +44,7 @@ class Validation {
   static addErrorClass(input) {
     const label = input.parentNode;
     label.classList.add('error');
+    if (input.value === '') label.classList.add('error-empty');
   }
 
   static addErrorMessage(input, error) {
@@ -69,9 +70,8 @@ class Validation {
 
   static removeErrorClass(input) {
     const label = input.parentNode;
-    if (label.classList.contains('error')) {
-      label.classList.remove('error');
-    }
+    if (label.classList.contains('error')) label.classList.remove('error');
+    if (input.value !== '') label.classList.remove('error-empty');
   }
 
   static getInputErrors(input) {
@@ -89,21 +89,24 @@ class Validation {
 
   static isNotEmpty(input) {
     if (!input.value) {
-      return `Введите ${input.dataset.placeholder ? input.dataset.placeholder : input.placeholder}`;
+      if (input.value === '') return `Введите ${input.dataset.placeholder ? input.dataset.placeholder : input.placeholder}`;
+      return true;
     }
   }
 
   static isValidEmail(input) {
     const regex = RegExp(/.+@.+\..+/i);
     if (!regex.test(input.value.toLowerCase())) {
-      return `Введите ${input.dataset.placeholder ? input.dataset.placeholder : input.placeholder}`;
+      if (input.value === '') return `Введите e-mail`;
+      return true;
     }
   }
 
   static isValidPhone(input) {
     const regex = RegExp(/^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/g);
     if (!regex.test(input.value)) {
-      return `Введите ${input.dataset.placeholder ? input.dataset.placeholder : input.placeholder}`;
+      if (input.value === '') return `Введите номер телефона`;
+      return true;
     }
   }
 

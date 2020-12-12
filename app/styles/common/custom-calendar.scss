@@ -108,6 +108,16 @@
 
         &:focus-within {
           opacity: initial;
+
+          &.error-empty .form-message {
+            display: none;
+          }
+
+          &.error-empty .custom-calendar__input,
+          &.error-empty .custom-calendar__label-text,
+          &.error-empty .custom-calendar__input::placeholder {
+            color: #BAB8B5;
+          }
         }
 
         &::before {
@@ -118,6 +128,12 @@
         &.error .custom-calendar__label-text,
         &.error .custom-calendar__input::placeholder {
           color: #EB5757;
+        }
+
+        &.error-empty .custom-calendar__input,
+        &.error-empty .custom-calendar__label-text,
+        &.error-empty .custom-calendar__input::placeholder {
+          color: transparent;
         }
       }
 
@@ -145,7 +161,7 @@
         max-width: initial;
         height: auto;
         padding: 15px 16px 13px;
-        border: 1px solid;
+        border: 1px solid $color-dark;
         font-size: 13px;
         line-height: 15px;
         font-weight: 400;

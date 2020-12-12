@@ -41,6 +41,17 @@
   &-field {
     position: relative;
 
+    &:focus-within {
+      .form-message {
+        display: none!important;
+      }
+
+      &.error-empty *,
+      &.error-empty *::placeholder {
+        color: #BAB8B5;
+      }
+    }
+
     &__label {
       display: inline-block;
       vertical-align: top;
@@ -96,12 +107,24 @@
       .error &::placeholder {
         color: #EB5757;
       }
+
+      .error-empty &,
+      .error-empty &::placeholder {
+        color: transparent;
+      }
     }
 
     &.error {
       *,
       *::placeholder {
         color: #EB5757;
+      }
+    }
+
+    &.error-empty {
+      *,
+      *::placeholder {
+        color: transparent;
       }
     }
   }
@@ -191,6 +214,11 @@
       color: #EB5757;
     }
 
+    .error-empty &,
+    .error-empty &::placeholder {
+      color: transparent;
+    }
+
     &[disabled] {
       opacity: 0.25;
       pointer-events: none;
@@ -260,10 +288,29 @@
   }
 
   &-message {
-    display: block;
-    margin-top: 5px;
-    font-size: 12px;
-    color: red;
+    display: none;
+    margin: 0;
+    font-size: 13px;
+    line-height: 15px;
+    color: transparent;
+
+    @include media(mobile) {
+      font-size: 16px;
+    }
+
+    .error-empty & {
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      bottom: 1px;
+      left: 1px;
+      z-index: -1;
+      display: block;
+      padding: 15px 16px 13px;
+      color: #EB5757;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
   }
 
   input, textarea {
@@ -277,7 +324,7 @@
     }
 
     &[type=number] {
-      -moz-appearance:textfield;
+      -moz-appearance: textfield;
     }
 
     &::-ms-clear {
@@ -289,7 +336,7 @@
     }
 
     &::-webkit-input-placeholder {
-      line-height:normal!important;
+      line-height: normal !important;
     }
   }
 
