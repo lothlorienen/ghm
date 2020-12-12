@@ -58,10 +58,11 @@ class HeaderDropdown extends Widget {
 
     if (item) {
       item.classList.add('hover');
-      // hideScrollbar();
+      this.$node.style.width = `${this.$node.getBoundingClientRect().width}px`;
+      hideScrollbar();
     } else {
-      // showScrollbar();
-      this.$node.style.marginRight = 0;
+      showScrollbar();
+      this.$node.style.width = ``;
     }
   }
 
@@ -95,7 +96,10 @@ class HeaderDropdown extends Widget {
   submenuOnClick(e) {
     let target = e.target;
 
-    target.closest('.js-header__submenu-item').classList.toggle('header-submenu__item--active');
+    if (target.closest('.js-header__submenu-item')) {
+      this.$submenuItems.forEach(submenu => submenu !== target.closest('.js-header__submenu-item') ? submenu.classList.remove('header-submenu__item--active') : null);
+      target.closest('.js-header__submenu-item').classList.toggle('header-submenu__item--active');
+    }
   }
 
   static init(el) {
