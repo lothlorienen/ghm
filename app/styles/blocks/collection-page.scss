@@ -1,5 +1,117 @@
 .collection-page {
+  position: relative;
+
   > * + * {
     margin-top: 30px;
+  }
+
+  &__product {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__meta-author {
+    display: block;
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+  }
+
+  &__meta-name {
+    display: block;
+    margin: 10px 0 0;
+    font-family: 'Book Antiqua', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+  }
+
+  &__meta-years {
+    display: block;
+    margin: 10px 0 0;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: $color-primary;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+
+    @include media(mobile) {
+      margin-top: 60px;
+    }
+  }
+
+  &__actions-link {
+    display: block;
+    margin: 0 70px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    @include transition;
+
+    @include media(mobile) {
+      margin: 0 35px;
+    }
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 25px;
+
+      @include media(mobile) {
+        margin-bottom: 18px;
+      }
+    }
+  }
+
+  &__related {
+    position: absolute;
+    top: 230px;
+    left: 0;
+    right: 0;
+    margin: 0 -200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media(tablet) {
+      display: none;
+    }
+
+    > *:last-child {
+      margin-left: auto;
+    }
+  }
+
+  &__related-prev,
+  &__related-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    color: $color-primary;
+
+    &:hover {
+      color: $color-primary-hover;
+    }
   }
 }

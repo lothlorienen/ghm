@@ -17,10 +17,10 @@
                   allowfullscreen loading="lazy" data-poster-src="../assets/images/collections/single/video.jpg" data-poster-alt="Альтернативный текст"></iframe>
         </div>
       </div>
-      <div class="collection-meta">
-        <p class="collection-meta__author">Имя Фамилия Автора</p>
-        <p class="collection-meta__name">Название произведения</p>
-        <p class="collection-meta__years">1990-1992</p>
+      <div class="collection-page__meta">
+        <p class="collection-page__meta-author">Имя Фамилия Автора</p>
+        <p class="collection-page__meta-name">Название произведения</p>
+        <p class="collection-page__meta-years">1990-1992</p>
       </div>
       <div class="static">
         <p>Картина отражает романтическое видение действительности и социальный оптимизм в Советской России 1920-х –
@@ -33,15 +33,19 @@
           увиденного великолепно передает строка из романа И.Ильфа и Е.Петрова "Золотой теленок"(1931): "Настоящая жизнь
           полетела мимо, радостно трубя и сверкая лаковыми крыльями"</p>
       </div>
-      <div class="media-source">
-        <a class="media-source__link" href="#">
+      <div class="collection-page__actions">
+        <a class="collection-page__actions-link" href="#">
           {{>components/image img="logo/izi-travel" ext="svg"}}
           izi.travel
         </a>
-        <a class="media-source__link" href="#">
+        <a class="collection-page__actions-link" href="#">
           {{>components/image img="logo/artefact" ext="svg"}}
           artefact
         </a>
+      </div>
+      <div class="collection-page__related">
+        <a class="collection-page__related-prev" href="#">{{>icons/arrow-left}}</a>
+        <a class="collection-page__related-next" href="#">{{>icons/arrow-right}}</a>
       </div>
     </div>
   </div>
