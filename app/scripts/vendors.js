@@ -12,23 +12,19 @@ import jquery from 'jquery';
 import swiper from 'swiper/bundle';
 import PhotoSwipe from 'photoswipe';
 import PhotoSwipeUI from 'photoswipe/dist/photoswipe-ui-default';
-import datepicker from "js-datepicker/dist/datepicker.min";
 import select2 from "select2/dist/js/select2.full"
-import { format as dateFormat } from 'date-fns';
 import imask from 'imask';
+import flatpickr from "flatpickr";
+
 
 window.$ = window.jQuery = jquery;
 window.svg4everybody = svgPolyfill;
 window.Swiper = swiper;
 window.PhotoSwipe = PhotoSwipe;
 window.PhotoSwipeUI = PhotoSwipeUI;
-window.datepicker = datepicker;
 window.select2 = select2;
-window.datepicker = datepicker;
-window.dateHelper = {
-  format: dateFormat,
-};
 window.IMask = imask;
+window.flatpickr = flatpickr;
 
 lazySizes.cfg.lazyClass = 'lazy';
 lazySizes.cfg.srcAttr = 'data-original';

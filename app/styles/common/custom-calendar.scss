@@ -3,15 +3,14 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding: 11px 20px 11px 49px;
-    max-width: 170px;
+    padding: 0 20px 2px 49px;
     height: 38px;
     cursor: pointer;
     transition: opacity 350ms ease;
     border-bottom: 1px solid;
 
     &:hover {
-      opacity: 0.5;
+      opacity: 0.75;
     }
 
     &:focus-within {
@@ -40,7 +39,11 @@
     line-height: 15px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    opacity: 0;
+    opacity: 1;
+
+    .filled & {
+      opacity: 0;
+    }
   }
 
   &__input {
@@ -74,20 +77,37 @@
       opacity: 0;
     }
 
-    &:placeholder-shown {
-      + .custom-calendar__label-text {
-        @include media(mobile, up) {
-          opacity: 1;
-        }
-      }
+    .flatpickr &:not(.input) {
+      @extend .visually-hidden;
+      width: 130px;
     }
 
-    &:not([data-value]):not(:focus) {
-      + .custom-calendar__label-text {
-        @include media(mobile) {
-          opacity: 1;
-        }
+    &.input {
+      font-weight: 500;
+      color: $color-dark;
+
+      @include media(mobile) {
+        font-size: 13px;
       }
+    }
+  }
+
+  &__clear {
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: z(default) + 2;
+    transform: translateY(-50%);
+
+    @include media(mobile) {
+      width: 25px;
+      height: 25px;
+    }
+
+    .flatpickr & {
+      right: 0;
     }
   }
 
@@ -181,6 +201,13 @@
         &[disabled] {
           opacity: 0.25;
           pointer-events: none;
+        }
+
+        &:placeholder-shown {
+          ~ .custom-calendar__clear {
+            opacity: 0;
+            pointer-events: none;
+          }
         }
       }
     }

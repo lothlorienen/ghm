@@ -75,10 +75,11 @@
             }}
           </div>
           <div class="form__group">
-            <div class="custom-calendar custom-calendar--outline">
+            <div class="custom-calendar custom-calendar--outline js-datepicker">
               <label class="custom-calendar__label">
-                <input class="custom-calendar__input js-datepicker" data-validation="isNotEmpty" placeholder="выбрать дату" type="text" onchange="this.setAttribute('data-value', this.value ? this.value : '');">
+                <input class="custom-calendar__input js-datepicker__input" data-validation="isNotEmpty" placeholder="Дата посещения" type="text" onchange="this.setAttribute('data-value', this.value ? this.value : '');">
                 <span class="custom-calendar__label-text">Дата посещения</span>
+                <button class="custom-calendar__clear js-datepicker__clear" type="button" data-clear><i class="icon-close"></i></button>
               </label>
             </div>
             {{>form/input placeholder="Количество человек" field-name="Количество человек" type="number" inputmode="numeric" validation="isNotEmpty"}}

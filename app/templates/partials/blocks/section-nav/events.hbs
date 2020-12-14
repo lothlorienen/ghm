@@ -10,10 +10,11 @@
       </select>
     </li>
     <li class="section-nav__item">
-      <div class="custom-calendar">
+      <div class="custom-calendar flatpickr js-datepicker">
         <label class="custom-calendar__label">
-          <input class="custom-calendar__input js-datepicker" placeholder="выбрать дату" type="text" onchange="this.setAttribute('data-value', this.value ? this.value : '');">
+          <input class="custom-calendar__input js-datepicker__input" placeholder="выбрать дату" type="text" data-input>
           <span class="custom-calendar__label-text">выбрать дату</span>
+          <button class="custom-calendar__clear js-datepicker__clear" type="button" data-clear><i class="icon-close"></i></button>
         </label>
       </div>
     </li>

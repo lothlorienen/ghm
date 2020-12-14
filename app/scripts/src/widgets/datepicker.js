@@ -1,86 +1,74 @@
-const locale = {
-  days: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
-  months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-  format: 'dd.MM.yyyy'
-};
-
-//
-// const locale = {
-//   days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-//   months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-//   format: 'dd/MM/yyyy',
-// };
+import {Russian} from "flatpickr/dist/l10n/ru";
 
 class Datepicker extends Widget {
   constructor(node) {
     super(node, '.js-datepicker');
 
-    this.update = this.update.bind(this);
+    this.$input = this.queryElement('.input');
+    this.$clearBtn = this.queryElement('.clear');
 
-    this.movedToBody = false;
+    this.picker = null;
 
     this.init();
   }
 
   build() {
-    const valueParts = this.$node.value ? this.$node.value.split('.') : null;
+    !this.$node.classList.contains('custom-calendar--outline')
+      ? this.picker = flatpickr(this.$input, this.defaultOptions)
+      : this.picker = flatpickr(this.$input, this.withSingleFieldOptions);
 
-    datepicker(this.$node, {
-      disableMobile: true,
-      customDays: locale.days,
-      customMonths: locale.months,
-      disableYearOverlay: true,
-      showAllDates: true,
-      position: this.$node.getBoundingClientRect().x > 200 ? 'br' : 'bl',
-      dateSelected: valueParts ? new Date(valueParts[2], valueParts[1] - 1, valueParts[0]) : null,
-      formatter: (input, date) => {
-        input.value = dateHelper.format(date, locale.format);
-      },
-      onSelect: (instance, date) => {
-        if (typeof window.triggerInputChange !== 'undefined') triggerInputChange(this.$node);
-
-        instance.el.value = dateHelper.format(date, locale.format);
-      },
-      onShow: instance => {
-        const instanceRect = instance.el.getBoundingClientRect();
-        const top = instanceRect.top + getScrollPos() + this.$node.offsetHeight;
-        const left = instanceRect.x < 200 ? instanceRect.left : instanceRect.left + instanceRect.width - 250;
-
-        instance.calendarContainer.style.top = top + 'px';
-        if (!Layout.isMobileLayout()) {
-          instance.calendarContainer.style.left = left + 'px';
-        } else {
-          instance.calendarContainer.style.right = 'auto';
-          instance.calendarContainer.style.left = 'auto';
-        }
-
-        if (!this.movedToBody) {
-          document.body.appendChild(instance.calendarContainer);
-          this.movedToBody = true;
-        }
-      },
-    });
-
-    this.$node.addEventListener('keydown', e => {
+    this.$input.addEventListener('keydown', e => {
       e.preventDefault();
 
       if (e.keyCode === 8) this.$node.value = '';
     });
 
-    this.$node.addEventListener('change', e => {
+    this.$input.addEventListener('change', e => {
       const value = e.target.value;
 
       value ? this.$node.classList.add('filled') : this.$node.classList.remove('filled');
 
-      this.$node.setAttribute('data-value', value.split('-').reverse().join('.'));
+      this.$input.setAttribute('data-value', value.split('-').reverse().join('.'));
     });
 
-    Layout.addListener(this.update);
-    this.update();
+    this.$clearBtn.addEventListener('click', e => {
+      const target = e.target;
+
+      if (target.closest('.js-datepicker__clear')) {
+        this.picker.clear();
+        this.$input.removeAttribute('data-value');
+      }
+    });
   }
 
-  update() {
-    this.$node.setAttribute('type', Layout.isMobileLayout() ? 'date' : 'text');
+  get defaultOptions() {
+    return {
+      disableMobile: "true",
+      altInput: true,
+      altFormat: "F j, Y",
+      dateFormat: "Y-m-d",
+      locale: Russian,
+      nextArrow: '<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">\n' +
+        '<path fill-rule="evenodd" clip-rule="evenodd" d="M5.45712 14.9572L4.04291 13.5429L9.8358 7.75005L4.04291 1.95715L5.45712 0.54294L12.6642 7.75005L5.45712 14.9572Z" fill="currentColor"/>\n' +
+        '</svg>\n',
+      prevArrow: '<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">\n' +
+        '<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5429 0.542847L11.9571 1.95706L6.1642 7.74995L11.9571 13.5428L10.5429 14.9571L3.33577 7.74995L10.5429 0.542847Z" fill="currentColor"/>\n' +
+        '</svg>\n',
+    }
+  }
+
+  get withSingleFieldOptions() {
+    return {
+      disableMobile: "true",
+      dateFormat: "Y-m-d",
+      locale: Russian,
+      nextArrow: '<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">\n' +
+        '<path fill-rule="evenodd" clip-rule="evenodd" d="M5.45712 14.9572L4.04291 13.5429L9.8358 7.75005L4.04291 1.95715L5.45712 0.54294L12.6642 7.75005L5.45712 14.9572Z" fill="currentColor"/>\n' +
+        '</svg>\n',
+      prevArrow: '<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">\n' +
+        '<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5429 0.542847L11.9571 1.95706L6.1642 7.74995L11.9571 13.5428L10.5429 14.9571L3.33577 7.74995L10.5429 0.542847Z" fill="currentColor"/>\n' +
+        '</svg>\n',
+    }
   }
 
   static init(el) {
