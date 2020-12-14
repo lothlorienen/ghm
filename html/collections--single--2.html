@@ -6,7 +6,7 @@
   <link rel="preload" href="../assets/fonts/BookAntiqua-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/BookAntiqua-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
@@ -20,7 +20,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link href="../css/main.css?v=4846" rel="stylesheet">
+  <link href="../css/main.css?v=2204" rel="stylesheet">
 </head>
 
 <body class="page">
@@ -315,10 +315,10 @@
               <iframe width="620" height="350" src="https://www.youtube.com/embed/AAIch8gJ11g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" data-poster-src="../assets/images/collections/single/video.jpg" data-poster-alt="Альтернативный текст"></iframe>
             </div>
           </div>
-          <div class="collection-meta">
-            <p class="collection-meta__author">Имя Фамилия Автора</p>
-            <p class="collection-meta__name">Название произведения</p>
-            <p class="collection-meta__years">1990-1992</p>
+          <div class="collection-page__meta">
+            <p class="collection-page__meta-author">Имя Фамилия Автора</p>
+            <p class="collection-page__meta-name">Название произведения</p>
+            <p class="collection-page__meta-years">1990-1992</p>
           </div>
           <div class="static">
             <p>Картина отражает романтическое видение действительности и социальный оптимизм в Советской России 1920-х –
@@ -331,13 +331,25 @@
               увиденного великолепно передает строка из романа И.Ильфа и Е.Петрова "Золотой теленок"(1931): "Настоящая жизнь
               полетела мимо, радостно трубя и сверкая лаковыми крыльями"</p>
           </div>
-          <div class="media-source">
-            <a class="media-source__link" href="#">
+          <div class="collection-page__actions">
+            <a class="collection-page__actions-link" href="#">
               <img src="../assets/images/logo/izi-travel.svg">          izi.travel
             </a>
-            <a class="media-source__link" href="#">
+            <a class="collection-page__actions-link" href="#">
               <img src="../assets/images/logo/artefact.svg">          artefact
             </a>
+          </div>
+          <div class="collection-page__related">
+            <a class="collection-page__related-prev" href="#"><span class="arrow arrow-left"><svg class="icon icon--arrow">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#arrow"/>
+    </svg>
+    </span>
+    </a>
+            <a class="collection-page__related-next" href="#"><span class="arrow arrow-right"><svg class="icon icon--arrow">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#arrow"/>
+    </svg>
+    </span>
+    </a>
           </div>
         </div>
       </div>
@@ -405,7 +417,7 @@
 
 </div>
 
-<script src="../scripts/vendors.js?v=4846" defer></script>
-  <script src="../scripts/main.js?v=4846" defer></script>
+<script src="../scripts/vendors.js?v=2204" defer></script>
+  <script src="../scripts/main.js?v=2204" defer></script>
 </body>
 </html>
