@@ -16,11 +16,11 @@
     line-height: 20px;
     min-height: 20px;
 
-    &:hover {
+    &:not(span):hover {
       color: $color-primary;
     }
 
-    &:active {
+    &:not(span):active {
       color: $color-primary-hover;
     }
 
@@ -39,5 +39,9 @@
         color: $color-dark;
       }
     }
+  }
+
+  span {
+    pointer-events: none;
   }
 }

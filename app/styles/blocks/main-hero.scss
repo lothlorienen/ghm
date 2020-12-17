@@ -24,25 +24,11 @@
 
   &__nav {
     position: absolute;
+    left: 0;
+    right: 0;
     bottom: 75px;
     z-index: z(default) + 3;
     display: inline-flex;
-
-    @media (min-width: 1320px) {
-      margin-left: calc((100vw - 1280px) / 2);
-    }
-
-    @media (max-width: 1320px) {
-      left: 20px;
-    }
-
-    @include media(tabletSmall, only) {
-      bottom: 140px;
-    }
-
-    @include media(mobile) {
-      left: 10px;
-    }
   }
 
   &__pag {

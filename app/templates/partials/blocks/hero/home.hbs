@@ -42,7 +42,11 @@
         }}
       </div>
     </div>
-    <div class="main-hero__nav">{{>components/slider-nav class="js-slider-hero"}}</div>
+    <div class="main-hero__nav">
+      <div class="container">
+        {{>components/slider-nav class="js-slider-hero"}}
+      </div>
+    </div>
   </div>
   <div class="main-hero__pag js-slider-hero__pagination"></div>
   {{#if isStreamNow}}<a class="main-hero__stream" href="#"><span class="main-hero__stream-inner">online трансляция</span></a>{{/if}}

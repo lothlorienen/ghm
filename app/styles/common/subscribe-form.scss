@@ -47,10 +47,11 @@
 
     @include media(tablet) {
       top: 20px;
+      right: -5px;
     }
 
     @include media(mobile) {
-      right: -5px;
+      right: -6px;
     }
   }
 
