@@ -20,6 +20,8 @@ class GallerySlider_Slider extends Widget {
   constructor(node) {
     super(node, 'js-slider-gallery');
 
+    this.state = this.$node.classList.contains('js-slider-gallery--loop');
+
     this.navPrev = this.queryElement('.prev');
     this.navNext = this.queryElement('.next');
     this.slider = this.queryElement('.slider');
@@ -48,7 +50,7 @@ class GallerySlider_Slider extends Widget {
 
   initSwiper() {
     this.swiper = new Swiper(this.slider, {
-      loop: true,
+      loop: this.state,
       slidesPerView: 1,
       spaceBetween: 10,
       breakpoints: {
@@ -117,9 +119,9 @@ class GallerySlider_Gallery extends Widget {
             <!--  Controls are self-explanatory. Order can be changed. -->
             <div class="pswp__counter"></div>
             <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-            <button class="pswp__button pswp__button--share" title="Share"></button>
+<!--            <button class="pswp__button pswp__button&#45;&#45;share" title="Share"></button>-->
             <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<!--            <button class="pswp__button pswp__button&#45;&#45;zoom" title="Zoom in/out"></button>-->
             <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
             <!-- element will get class pswp__preloader--active when preloader is running -->
             <div class="pswp__preloader">

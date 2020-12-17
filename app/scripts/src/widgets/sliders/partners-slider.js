@@ -2,6 +2,7 @@ class PartnersSlider extends Widget {
   constructor(node) {
     super(node, 'js-slider-partners');
 
+    this.state = this.$node.classList.contains('js-slider-partners--loop')
     this.navPrev = this.queryElement('.prev');
     this.navNext = this.queryElement('.next');
     this.slider = this.queryElement('.slider');
@@ -27,7 +28,7 @@ class PartnersSlider extends Widget {
 
   initSwiper() {
     this.swiper = new Swiper(this.slider, {
-      loop: true,
+      loop: this.state,
       slidesPerView: 2,
       spaceBetween: 20,
       breakpoints: {
