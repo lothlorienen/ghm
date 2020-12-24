@@ -3,11 +3,15 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding: 0 20px 2px 49px;
+    padding: 0 0 2px 49px;
     height: 38px;
     cursor: pointer;
     transition: opacity 350ms ease;
     border-bottom: 1px solid;
+
+    .filled & {
+      padding-right: 20px;
+    }
 
     &:hover {
       opacity: 0.75;
@@ -51,7 +55,7 @@
     display: inline-block;
     padding: 0;
     width: 100%;
-    max-width: 170px;
+    max-width: 130px;
     height: 38px;
     border: none;
     border-radius: unset;
@@ -75,6 +79,13 @@
     &::placeholder {
       display: none;
       opacity: 0;
+    }
+
+    &:placeholder-shown {
+      ~ .custom-calendar__clear {
+        opacity: 0;
+        pointer-events: none;
+      }
     }
 
     .flatpickr &:not(.input) {

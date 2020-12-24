@@ -10,11 +10,11 @@
   }
 
   @include media(tabletSmall, only) {
-    margin-top: -80px;
+    margin-top: -90px;
   }
 
   @include media(mobile) {
-    margin-top: -78px;
+    margin-top: -88px;
   }
 
   .header__grid {
@@ -55,13 +55,6 @@
   }
 
   &.fixed {
-    .header-menu__submenu {
-      //pointer-events: auto;
-      //opacity: initial;
-      //visibility: visible;
-      //box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    }
-
     @include media(tabletSmall, up) {
       top: 134px;
     }
