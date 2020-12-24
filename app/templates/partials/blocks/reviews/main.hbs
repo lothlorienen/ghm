@@ -1,0 +1,55 @@
+{{#>blocks/common/section title="Отзывы"}}
+  <div class="section__content">
+    <div class="reviews-page">
+      <div class="reviews-page__latest">
+        <ul class="reviews-page__latest-list">
+          <li class="reviews-page__latest-item">
+            {{>widgets/reviews-card
+                date="10.02.2020"
+                text="Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. "
+                name="Имя"
+            }}
+          </li>
+          <li class="reviews-page__latest-item">
+            {{>widgets/reviews-card
+                date="10.02.2020"
+                text="Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle."
+                name="Имя"
+            }}
+          </li>
+          <li class="reviews-page__latest-item">
+            {{>widgets/reviews-card
+                date="10.02.2020"
+                text="Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. "
+                name="Имя"
+            }}
+          </li>
+          <li class="reviews-page__latest-item">
+            {{>widgets/reviews-card
+                date="10.02.2020"
+                text="Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. "
+                name="Имя"
+            }}
+          </li>
+        </ul>
+      </div>
+      <div class="reviews-page__form">
+        <h3 class="reviews-page__form-title">Оставить отзыв</h3>
+        <form class="js-form" data-api-url="location.href">
+          <div class="form js-form__container">
+            <div class="form__container form__container--fluid">
+              <div class="form__group">
+                {{>form/input placeholder="Ваше имя" field-name="name" validation="isNotEmpty"}}
+                {{>form/input placeholder="E-mail" field-name="email" type="email" inputmode="email" validation="isValidEmail,isNotEmpty"}}
+              </div>
+              {{>form/textarea placeholder="Ваше сообщение" validation="isNotEmpty" field-name="Сообщение"}}
+              <div class="form__submit">
+                {{>ui/btn-arrow button=1 type="submit" label="Отправить" btn-mode='inline'}}
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{{/blocks/common/section}}
