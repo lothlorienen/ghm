@@ -48,9 +48,27 @@ class ScrollToTop {
   }
 }
 
+class ScrollToSearch {
+  constructor(node) {
+    this.$node = node;
+
+    this.init();
+  }
+
+  init() {
+    this.$node.addEventListener('click', e => {
+      e.preventDefault();
+
+      setTimeout( () => raf2x(() => startScrollTo(document.body)), 0);
+      setTimeout(() => document.querySelector('.js-header-search__open').click(), 500);
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.js-scroll-to').forEach(element => new ScrollToLink(element));
   document.querySelectorAll('.js-scroll-to-top').forEach(element => new ScrollToTop(element));
+  document.querySelectorAll('.js-scroll-to-search').forEach(element => new ScrollToSearch(element));
 });
 
 window.ScrollToLink = ScrollToLink;
