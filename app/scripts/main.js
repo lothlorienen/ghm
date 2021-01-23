@@ -36,6 +36,7 @@ import './src/widgets/collection-grid';
 import './src/widgets/masked-input';
 import './src/widgets/form';
 import './src/widgets/subscribe-form';
+import './src/widgets/ticket';
 
 import './src/app';
 
