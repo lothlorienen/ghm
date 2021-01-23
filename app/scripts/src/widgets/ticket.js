@@ -18,11 +18,11 @@ class Ticket extends Widget {
   }
 
   onHoverOn() {
-    this.$video.play();
+    setTimeout(() => this.$video.play(),0);
   }
 
   onHoverOut() {
-    this.$video.pause();
+    setTimeout(() => this.$video.pause(),0);
   }
 
   static init(el) {
